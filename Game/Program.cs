@@ -1,0 +1,419 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+
+namespace Game
+{
+    #region Level
+    public enum LevelType
+    {
+        Menu,
+        Game
+    }
+    public abstract class Level
+    {
+        protected Texture background;
+        protected LevelType levelType;
+
+        public LevelType LevelType => levelType; 
+        public Level(Texture background, LevelType levelType)
+        {
+            this.background = background;
+            this.levelType = levelType;
+        }
+
+        public abstract void Update();
+        public abstract void Render();
+    }
+
+    public class MenuLevel : Level
+    {
+        //private List<Button> buttons;
+        public MenuLevel(Texture background, LevelType p_levelType) : base(background, p_levelType)
+        {
+
+        }
+
+        public override void Render()
+        {
+        }
+
+        public override void Update()
+        {
+            Engine.Draw(background);
+        }
+    }
+    public class GameLevel : Level
+    {
+        public static Player player = new Player();
+        public static Enemy enemy = new Enemy();
+
+        //private List<Button> buttons;
+        public GameLevel(Texture background, LevelType p_levelType) : base(background, p_levelType) 
+        { 
+
+        }
+
+        public override void Render()
+        {
+            player.Update();
+            enemy.Update();
+        }
+
+        public override void Update()
+        {
+            Engine.Draw(background);
+
+            player.Draw();
+            enemy.Draw();
+        }
+    }
+    #endregion
+
+    #region GameManager
+    public class GameManager
+    {
+        private static GameManager instance;
+        public static GameManager Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new GameManager();
+                }
+                return instance;
+            }
+        }
+
+        private Level currentLevel;
+        private GameManager()
+        {
+            ChangeLevel(LevelType.Menu);
+        }
+        public void ChangeLevel(LevelType levelType) 
+        {
+            if(currentLevel != null)
+            {
+                currentLevel = null;
+            }
+            switch(levelType)
+            {
+                case LevelType.Menu:
+                    currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/MainMenu.png"), LevelType.Menu);
+                    break;
+                case LevelType.Game:
+                    currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/Level.png"), LevelType.Game);
+                    break;
+            }
+        }
+        public void Update()
+        {
+            if (Engine.GetKey(Keys.Q))
+            {
+               ChangeLevel(LevelType.Menu);
+            }
+            if (Engine.GetKey(Keys.E))
+            {
+                ChangeLevel(LevelType.Game);
+            }
+            currentLevel.Update();
+        }
+        public void Render()
+        {
+            currentLevel.Render();
+        }
+    }
+    #endregion
+    #region Player
+    public class Player
+    {
+        public bool isAlive = true;
+        private int life = 3;
+
+        public float x;
+        public float y;
+ 
+
+        public string texturePath;
+
+        private Animation test;
+        private Animation idle;
+        private Animation walkX;
+
+        private Animation currentAnimation;
+
+        private float speed = 5.0f; 
+
+        public Player(string p_texturePath = "Textures/Knight/Idle/0.png")
+        {
+            texturePath = p_texturePath;
+
+            List<Texture> pp = new List<Texture>();
+            pp.Add(new Texture("Textures/Animations/Player/Idle/0.png"));
+            pp.Add(new Texture("Textures/Animations/Player/Idle/1.png"));
+            pp.Add(new Texture("Textures/Animations/Player/Walk/0.png"));
+            pp.Add(new Texture("Textures/Animations/Player/Walk/1.png"));
+            //playerIdles.Add(new Texture("Textures/Animations/Player/Idle/2.png"));
+            //playerIdles.Add(new Texture("Textures/Animations/Player/Idle/3.png"));
+            //playerIdles.Add(new Texture("Textures/Animations/Player/Idle/4.png"));
+            //playerIdles.Add(new Texture("Textures/Animations/Player/Idle/5.png"));
+            test = new Animation("Textures/Animations/Player/Idle/", pp, 1, true);
+            walkX = CreateAnimation("Textures/Knight/Walk/", 6, 0.1f, true); // Animación de caminata más rápida
+            idle = CreateAnimation("Textures/Knight/Idle/", 6, 1f, true);
+
+            currentAnimation = walkX;
+        }
+
+        private void Kill()
+        {
+            isAlive = false;
+            Engine.Debug("Estoy Muerto");
+        }
+        public void GetDamage()
+        {
+            if (!isAlive)
+            {
+                
+            }
+        }
+
+        public void Update()
+        {
+            if (!isAlive)
+            {
+                return;
+            }
+
+            bool isMoving = false;
+            //movement logic
+            if (Engine.GetKey(0x11)) //W
+            {
+                y -= speed;
+                isMoving = true;
+            }
+            if (Engine.GetKey(0x1F)) //S
+            {
+                y += speed;
+                isMoving = true;
+            }
+            if (Engine.GetKey(0x1E)) //A
+            {
+                x -= speed;
+                isMoving = true;
+            }
+            if (Engine.GetKey(0x20)) //D
+            {   
+                x += speed;
+                isMoving = true;
+            }
+
+            if (isMoving && (Engine.GetKey(0x1E)))
+            {
+                currentAnimation = walkX; // Cambiar a la animación de caminata
+            }
+            else
+            {
+                currentAnimation = idle; // Volver a la animación de idle
+            }
+            currentAnimation.Update();
+        }
+
+
+
+
+
+
+
+
+
+        public void Draw()
+        {
+            if (!isAlive)
+            {
+                return;
+            }
+            var path = test.Id + (test.currentFrameIndex + 1) + ".png";
+            Engine.Draw(path, (int)x, (int)y, 1, 1, 0, 0, 0); // Usar 'x' e 'y' para la posición
+        }
+
+        private Animation CreateAnimation(string route, int frames, float speed, bool loop)
+        {
+            var textures = new List<Texture>();
+
+            for (int i = 1; i <= frames; i++)
+            {
+                var tt = route + i + ".png";
+                textures.Add(new Texture(tt));
+            }
+            return new Animation(route, textures, speed, loop);
+        }
+    }
+    #endregion
+    //aaaaaaaaa
+    #region Enemy
+    public class Enemy
+        {
+            public bool isAlive = true;
+            private int life = 3;
+
+            private float x;
+            private float y;
+             private float speed = 5.0f;
+
+        public string texturePath;
+
+            private Animation test;
+            private Animation idle;
+
+            private Animation currentAnimation;
+
+                
+            
+
+            public Enemy(string p_texturePath = "Textures/Enemy/Idle/0.png")
+            {
+                texturePath = p_texturePath;
+
+                List<Texture> pp = new List<Texture>();
+                pp.Add(new Texture("Textures/Animations/Enemy/Idle/0.png"));
+                pp.Add(new Texture("Textures/Animations/Enemy/Idle/1.png"));
+
+                test = new Animation("Textures/Animations/Enemy/Idle/", pp, 1, true);
+                idle = CreateAnimation("Textures/Knight/Idle/", 6, 1f, true);
+
+                currentAnimation = test;
+            }
+
+            private void Kill()
+            {
+                isAlive = false;
+                Engine.Debug("Estoy Muerto");
+            }
+            public void GetDamage()
+            {
+                if (!isAlive)
+                {
+
+                }
+
+            }
+
+            public void Update()
+            {
+                if (!isAlive)
+                {
+                    return;
+                }
+            FollowPlayer();
+            currentAnimation.Update();
+            }
+
+
+
+        private void FollowPlayer()
+        {
+            // Obtener la posición del jugador
+            float playerX = Program.player.x; // Asegúrate de que 'x' e 'y' del jugador sean públicas
+            float playerY = Program.player.y;
+
+            // Calcular la dirección hacia el jugador
+            float directionX = playerX - x;
+            float directionY = playerY - y;
+
+            // Normalizar el vector de dirección para que tenga longitud 1
+            float magnitude = (float)Math.Sqrt(directionX * directionX + directionY * directionY);
+
+            if (magnitude > 0)
+            {
+                directionX /= magnitude;
+                directionY /= magnitude;
+            }
+
+            // Mover al enemigo hacia el jugador
+            x += directionX * speed;
+            y += directionY * speed;
+        }
+        public void Draw()
+            {
+                if (!isAlive)
+                {
+                    return;
+                }
+                var path = test.Id + (test.currentFrameIndex + 1) + ".png";
+                Engine.Draw(path, 1500, 750, -1, 1, 0, 0, 0);
+            }
+            private Animation CreateAnimation(string route, int frames, float speed, bool loop)
+            {
+                var textures = new List<Texture>();
+
+                for (int i = 1; i <= frames; i++)
+                {
+                    var tt = route + i + ".png";
+                    textures.Add(new Texture(tt));
+                }
+                return new Animation(route, textures, speed, loop);
+            }
+        }
+#endregion Enemy
+
+        public class Program
+        {
+            public const int SCREEN_HEIGHT = 980;
+            public const int SCREEN_WIDTH = 1720;
+
+            public static Player player = new Player();
+            public static Enemy enemy = new Enemy();
+
+            private static void Main(string[] args)
+            {
+                Initialization();
+
+                while (true)
+                {
+                    Time.CalculateDeltaTime();
+                    Update();
+                    Render();
+                }
+            }
+
+            private static void Initialization()
+            {
+                Time.Initialize();
+                Engine.Initialize("Paradigmas de programación", SCREEN_WIDTH, SCREEN_HEIGHT);
+            }
+
+            private static void Update()
+            {
+                player.Update();
+                enemy.Update();
+               /* if (Engine.GetKey(Keys.Num1))
+                {
+                    GameManager.Instance.ChangeLevel(LevelType.Menu);
+                }
+                if (Engine.GetKey(Keys.Num2))
+                {
+                    GameManager.Instance.ChangeLevel(LevelType.Game);
+                }*/
+                GameManager.Instance.Update();
+            }
+
+            private static void Render()
+            {
+                Engine.Clear(); // Borra la pantalla
+                //Textura Terreno
+                GameManager.Instance.Render();
+                Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/0.png"),0,852);
+                Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 64, 852);
+                Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 128, 852);
+                Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 192, 852);
+                Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 256, 852);
+                Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 320, 852);
+                Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 384, 852);
+
+                player.Draw();
+                enemy.Draw();
+                Engine.Show(); // Muestra las imagenes dibujadas
+            }
+        }
+    }
