@@ -350,7 +350,7 @@ namespace Game
             var path = test.Id + (test.currentFrameIndex + 1) + ".png";
 
             // Dibuja el enemigo usando las coordenadas actualizadas
-            Engine.Draw(path, (int)x, (int)y, 1, 1, 0, 0, 0); // Cambié las coordenadas a (int)x, (int)y
+            Engine.Draw(path, (int)x, (int)y, 1, 1, 0, 0, 0);
         }
         public Vector2 GetPosition()
         {
