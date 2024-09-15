@@ -132,7 +132,9 @@ namespace Game
 
         public float x;
         public float y;
- 
+        private float width = 50;  // Ancho del jugador
+        private float height = 100; // Alto del jugador
+
 
         public string texturePath;
 
@@ -232,6 +234,16 @@ namespace Game
             Engine.Draw(path, (int)x, (int)y, 1, 1, 0, 0, 0); // Usar 'x' e 'y' para la posición
         }
 
+        public Vector2 GetPosition()
+        {
+            return new Vector2(x, y);
+        }
+
+        public Vector2 GetSize()
+        {
+            return new Vector2(width, height);
+        }
+
         private Animation CreateAnimation(string route, int frames, float speed, bool loop)
         {
             var textures = new List<Texture>();
@@ -245,72 +257,71 @@ namespace Game
         }
     }
     #endregion
-    
-  
+
+
     #region Enemy
     public class Enemy
-        {
-            public bool isAlive = true;
-            private int life = 3;
+    {
+        public bool isAlive = true;
+        private int life = 3;
 
-            private float x;
-            private float y;
-             private float speed = 5.0f;
+        private float x;
+        private float y;
+        private float speed = 5.0f;
+        private float width = 50;  // Ancho del enemigo
+        private float height = 100; // Alto del enemigo
 
         public string texturePath;
 
-            private Animation test;
-            private Animation idle;
+        private Animation test;
+        private Animation idle;
 
-            private Animation currentAnimation;
+        private Animation currentAnimation;
 
-                
-            
+        public Enemy(string p_texturePath = "Textures/Enemy/Idle/0.png")
+        {
+            texturePath = p_texturePath;
 
-            public Enemy(string p_texturePath = "Textures/Enemy/Idle/0.png")
-            {
-                texturePath = p_texturePath;
+            // Inicializar posición inicial del enemigo
+            x = 1500; // Posición inicial en X
+            y = 750;  // Posición inicial en Y
 
-                List<Texture> pp = new List<Texture>();
-                pp.Add(new Texture("Textures/Animations/Enemy/Idle/0.png"));
-                pp.Add(new Texture("Textures/Animations/Enemy/Idle/1.png"));
+            List<Texture> pp = new List<Texture>();
+            pp.Add(new Texture("Textures/Animations/Enemy/Idle/0.png"));
+            pp.Add(new Texture("Textures/Animations/Enemy/Idle/1.png"));
 
-                test = new Animation("Textures/Animations/Enemy/Idle/", pp, 1, true);
-                idle = CreateAnimation("Textures/Knight/Idle/", 6, 1f, true);
+            test = new Animation("Textures/Animations/Enemy/Idle/", pp, 1, true);
+            idle = CreateAnimation("Textures/Knight/Idle/", 6, 1f, true);
 
-                currentAnimation = test;
-            }
+            currentAnimation = test;
+        }
 
-            private void Kill()
-            {
-                isAlive = false;
-                Engine.Debug("Estoy Muerto");
-            }
-            public void GetDamage()
-            {
-                if (!isAlive)
-                {
+        private void Kill()
+        {
+            isAlive = false;
+            Engine.Debug("Estoy Muerto");
+        }
 
-                }
+        public void GetDamage()
+        {
+            if (!isAlive) return;
 
-            }
+            life--;
+            if (life <= 0) Kill();
+        }
 
-            public void Update()
-            {
-                if (!isAlive)
-                {
-                    return;
-                }
-            FollowPlayer();
+        public void Update()
+        {
+            if (!isAlive) return;
+
+            FollowPlayer(); // Movimiento hacia el jugador
             currentAnimation.Update();
-            }
-
-
+        }
 
         private void FollowPlayer()
         {
-            // Obtener la posición del jugador
-            float playerX = Program.player.x; // Asegúrate de que 'x' e 'y' del jugador sean públicas
+            // Obtener la posición del jugador actual en cada frame
+            float playerX = Program.player.x; 
             float playerY = Program.player.y;
 
             // Calcular la dirección hacia el jugador
@@ -320,40 +331,56 @@ namespace Game
             // Normalizar el vector de dirección para que tenga longitud 1
             float magnitude = (float)Math.Sqrt(directionX * directionX + directionY * directionY);
 
+            // Solo se mueve si el enemigo no está ya en la misma posición que el jugador
             if (magnitude > 0)
             {
                 directionX /= magnitude;
                 directionY /= magnitude;
-            }
 
-            // Mover al enemigo hacia el jugador
-            x += directionX * speed;
-            y += directionY * speed;
+                // Mover al enemigo hacia el jugador
+                x += directionX * speed;
+                y += directionY * speed;
+            }
         }
+
         public void Draw()
-            {
-                if (!isAlive)
-                {
-                    return;
-                }
-                var path = test.Id + (test.currentFrameIndex + 1) + ".png";
-                Engine.Draw(path, 1500, 750, -1, 1, 0, 0, 0);
-            }
-            private Animation CreateAnimation(string route, int frames, float speed, bool loop)
-            {
-                var textures = new List<Texture>();
+        {
+            if (!isAlive) return;
 
-                for (int i = 1; i <= frames; i++)
-                {
-                    var tt = route + i + ".png";
-                    textures.Add(new Texture(tt));
-                }
-                return new Animation(route, textures, speed, loop);
-            }
+            var path = test.Id + (test.currentFrameIndex + 1) + ".png";
+
+            // Dibuja el enemigo usando las coordenadas actualizadas
+            Engine.Draw(path, (int)x, (int)y, 1, 1, 0, 0, 0); // Cambié las coordenadas a (int)x, (int)y
         }
-#endregion Enemy
+        public Vector2 GetPosition()
+        {
+            return new Vector2(x, y);
+        }
 
-        public class Program
+        public Vector2 GetSize()
+        {
+            return new Vector2(width, height);
+        }
+
+
+
+        private Animation CreateAnimation(string route, int frames, float speed, bool loop)
+        {
+            var textures = new List<Texture>();
+
+            for (int i = 1; i <= frames; i++)
+            {
+                var tt = route + i + ".png";
+                textures.Add(new Texture(tt));
+            }
+
+            return new Animation(route, textures, speed, loop);
+        }
+    }
+
+    #endregion Enemy
+
+    public class Program
         {
             public const int SCREEN_HEIGHT = 980;
             public const int SCREEN_WIDTH = 1720;
@@ -381,7 +408,16 @@ namespace Game
 
             private static void Update()
             {
-
+                player.Update();
+                enemy.Update();
+            // Verificar colisión entre el jugador y el enemigo
+            if (CollisionsUtilities.IsBoxColliding(
+                player.GetPosition(), player.GetSize(),
+                enemy.GetPosition(), enemy.GetSize()))
+            {
+                // Colisión detectada: se puede reducir la vida del jugador, aplicar un efecto, etc.
+                Engine.Debug("AAAAAAAAAAAAAAAAAAAAA");
+            }
                 GameManager.Instance.Update();
             }
 
