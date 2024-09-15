@@ -134,6 +134,7 @@ namespace Game
         public float y;
         private float width = 50;  // Ancho del jugador
         private float height = 100; // Alto del jugador
+        private int direcFlip = 1;
 
 
         public string texturePath;
@@ -190,6 +191,8 @@ namespace Game
             }
 
             bool isMoving = false;
+             direcFlip = 1;
+
             //movement logic
             if (Engine.GetKey(Keys.W)) //W
             {
@@ -205,6 +208,7 @@ namespace Game
             {
                 x -= speed;
                 isMoving = true;
+                direcFlip = -1;
             }
             if (Engine.GetKey(Keys.D)) //D
             {   
@@ -231,7 +235,7 @@ namespace Game
                 return;
             }
             var path = idle.Id + (idle.currentFrameIndex + 1) + ".png";
-            Engine.Draw(path, (int)x, (int)y, 1, 1, 0, 0, 0); // Usar 'x' e 'y' para la posición
+            Engine.Draw(path, (int)x, (int)y, direcFlip, 1, 0, 0, 0); // Usar 'x' e 'y' para la posición
         }
 
         public Vector2 GetPosition()
@@ -282,9 +286,9 @@ namespace Game
         {
             texturePath = p_texturePath;
 
-            // Inicializar posición inicial del enemigo
-            x = 1500; // Posición inicial en X
-            y = 750;  // Posición inicial en Y
+            // Inicializo posición
+            x = 1500; 
+            y = 750;  
 
             List<Texture> pp = new List<Texture>();
             pp.Add(new Texture("Textures/Animations/Enemy/Idle/0.png"));
@@ -314,17 +318,17 @@ namespace Game
         {
             if (!isAlive) return;
 
-            FollowPlayer(); // Movimiento hacia el jugador
+            FollowPlayer(); 
             currentAnimation.Update();
         }
 
         private void FollowPlayer()
         {
-            // Obtener la posición del jugador actual en cada frame
+           
             float playerX = Program.player.x; 
             float playerY = Program.player.y;
 
-            // Calcular la dirección hacia el jugador
+          
             float directionX = playerX - x;
             float directionY = playerY - y;
 
@@ -332,12 +336,11 @@ namespace Game
             float magnitude = (float)Math.Sqrt(directionX * directionX + directionY * directionY);
 
             // Solo se mueve si el enemigo no está ya en la misma posición que el jugador
-            if (magnitude > 0)
+            if (magnitude > 0) //si la distancia es mayor a cero se mueve. 
             {
                 directionX /= magnitude;
                 directionY /= magnitude;
 
-                // Mover al enemigo hacia el jugador
                 x += directionX * speed;
                 y += directionY * speed;
             }
@@ -349,7 +352,7 @@ namespace Game
 
             var path = test.Id + (test.currentFrameIndex + 1) + ".png";
 
-            // Dibuja el enemigo usando las coordenadas actualizadas
+            
             Engine.Draw(path, (int)x, (int)y, 1, 1, 0, 0, 0);
         }
         public Vector2 GetPosition()
