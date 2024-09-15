@@ -34,11 +34,11 @@ namespace Game
 
         }
 
-        public override void Render()
+        public override void Update()
         {
         }
 
-        public override void Update()
+        public override void Render()
         {
             Engine.Draw(background);
         }
@@ -54,13 +54,13 @@ namespace Game
 
         }
 
-        public override void Render()
+        public override void Update()
         {
             player.Update();
             enemy.Update();
         }
 
-        public override void Update()
+        public override void Render()
         {
             Engine.Draw(background);
 
@@ -103,7 +103,7 @@ namespace Game
                     currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/MainMenu.png"), LevelType.Menu);
                     break;
                 case LevelType.Game:
-                    currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/Level.png"), LevelType.Game);
+                    currentLevel = new GameLevel(Engine.GetTexture("Textures/Screens/Level.png"), LevelType.Game);
                     break;
             }
         }
@@ -152,8 +152,6 @@ namespace Game
             List<Texture> pp = new List<Texture>();
             pp.Add(new Texture("Textures/Animations/Player/Idle/0.png"));
             pp.Add(new Texture("Textures/Animations/Player/Idle/1.png"));
-            pp.Add(new Texture("Textures/Animations/Player/Walk/0.png"));
-            pp.Add(new Texture("Textures/Animations/Player/Walk/1.png"));
             //playerIdles.Add(new Texture("Textures/Animations/Player/Idle/2.png"));
             //playerIdles.Add(new Texture("Textures/Animations/Player/Idle/3.png"));
             //playerIdles.Add(new Texture("Textures/Animations/Player/Idle/4.png"));
@@ -162,8 +160,15 @@ namespace Game
             walkX = CreateAnimation("Textures/Knight/Walk/", 6, 0.1f, true); // Animación de caminata más rápida
             idle = CreateAnimation("Textures/Knight/Idle/", 6, 1f, true);
 
-            currentAnimation = walkX;
+            currentAnimation = test;
         }
+
+
+
+
+
+
+
 
         private void Kill()
         {
@@ -206,6 +211,7 @@ namespace Game
             {   
                 x += speed;
                 isMoving = true;
+
             }
 
             if (isMoving && (Engine.GetKey(0x1E)))
@@ -214,7 +220,7 @@ namespace Game
             }
             else
             {
-                currentAnimation = idle; // Volver a la animación de idle
+                currentAnimation = test; // Volver a la animación de idle
             }
             currentAnimation.Update();
         }
@@ -251,9 +257,7 @@ namespace Game
     }
     #endregion
     //aaaaaaaaa
-    /// <summary>
-    /// fianfuabgubawyfbq2u4bgyuq42bug
-    /// </summary>
+  
     #region Enemy
     public class Enemy
         {
@@ -388,8 +392,8 @@ namespace Game
 
             private static void Update()
             {
-                player.Update();
-                enemy.Update();
+               // player.Update();
+                //enemy.Update();
                /* if (Engine.GetKey(Keys.Num1))
                 {
                     GameManager.Instance.ChangeLevel(LevelType.Menu);
@@ -406,16 +410,16 @@ namespace Game
                 Engine.Clear(); // Borra la pantalla
                 //Textura Terreno
                 GameManager.Instance.Render();
-                Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/0.png"),0,852);
-                Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 64, 852);
-                Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 128, 852);
-                Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 192, 852);
-                Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 256, 852);
-                Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 320, 852);
-                Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 384, 852);
+               // Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/0.png"),0,852);
+              //  Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 64, 852);
+               // Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 128, 852);
+                //Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 192, 852);
+               // Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 256, 852);
+              //  Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 320, 852);
+               // Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 384, 852);
 
-                player.Draw();
-                enemy.Draw();
+                //player.Draw();
+                //enemy.Draw();
                 Engine.Show(); // Muestra las imagenes dibujadas
             }
         }
