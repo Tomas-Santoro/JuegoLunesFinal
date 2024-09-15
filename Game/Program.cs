@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 
 namespace Game
 {
@@ -137,7 +136,6 @@ namespace Game
 
         public string texturePath;
 
-        private Animation test;
         private Animation idle;
         private Animation walkX;
 
@@ -149,26 +147,25 @@ namespace Game
         {
             texturePath = p_texturePath;
 
-            List<Texture> pp = new List<Texture>();
-            pp.Add(new Texture("Textures/Animations/Player/Idle/0.png"));
-            pp.Add(new Texture("Textures/Animations/Player/Idle/1.png"));
-            //playerIdles.Add(new Texture("Textures/Animations/Player/Idle/2.png"));
-            //playerIdles.Add(new Texture("Textures/Animations/Player/Idle/3.png"));
-            //playerIdles.Add(new Texture("Textures/Animations/Player/Idle/4.png"));
-            //playerIdles.Add(new Texture("Textures/Animations/Player/Idle/5.png"));
-            test = new Animation("Textures/Animations/Player/Idle/", pp, 1, true);
-            walkX = CreateAnimation("Textures/Knight/Walk/", 6, 0.1f, true); // Animación de caminata más rápida
-            idle = CreateAnimation("Textures/Knight/Idle/", 6, 1f, true);
+            //Idle animation
+            List<Texture> idleTexture = new List<Texture>();
+            idleTexture.Add(new Texture("Textures/Animations/Player/Idle/0.png"));
+            idleTexture.Add(new Texture("Textures/Animations/Player/Idle/1.png"));
 
-            currentAnimation = test;
+            idle = new Animation("Textures/Animations/Player/Idle/", idleTexture, 1, true);
+
+            //Walk Animation
+            List<Texture> walkXTexture = new List<Texture>();
+            walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/0.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/1.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/2.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/3.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/4.png"));
+
+            walkX = new Animation("Textures/Animations/Player/Idle/", idleTexture, 1, true);
+
+            currentAnimation = idle;
         }
-
-
-
-
-
-
-
 
         private void Kill()
         {
@@ -192,22 +189,22 @@ namespace Game
 
             bool isMoving = false;
             //movement logic
-            if (Engine.GetKey(0x11)) //W
+            if (Engine.GetKey(Keys.W)) //W
             {
                 y -= speed;
                 isMoving = true;
             }
-            if (Engine.GetKey(0x1F)) //S
+            if (Engine.GetKey(Keys.S)) //S
             {
                 y += speed;
                 isMoving = true;
             }
-            if (Engine.GetKey(0x1E)) //A
+            if (Engine.GetKey(Keys.A)) //A
             {
                 x -= speed;
                 isMoving = true;
             }
-            if (Engine.GetKey(0x20)) //D
+            if (Engine.GetKey(Keys.D)) //D
             {   
                 x += speed;
                 isMoving = true;
@@ -218,20 +215,12 @@ namespace Game
             {
                 currentAnimation = walkX; // Cambiar a la animación de caminata
             }
-            else
+            else if(isMoving == false)
             {
-                currentAnimation = test; // Volver a la animación de idle
+                currentAnimation = idle; // Volver a la animación de idle
             }
             currentAnimation.Update();
         }
-
-
-
-
-
-
-
-
 
         public void Draw()
         {
@@ -239,7 +228,7 @@ namespace Game
             {
                 return;
             }
-            var path = test.Id + (test.currentFrameIndex + 1) + ".png";
+            var path = idle.Id + (idle.currentFrameIndex + 1) + ".png";
             Engine.Draw(path, (int)x, (int)y, 1, 1, 0, 0, 0); // Usar 'x' e 'y' para la posición
         }
 
@@ -256,7 +245,7 @@ namespace Game
         }
     }
     #endregion
-    //aaaaaaaaa
+    
   
     #region Enemy
     public class Enemy
@@ -392,16 +381,7 @@ namespace Game
 
             private static void Update()
             {
-               // player.Update();
-                //enemy.Update();
-               /* if (Engine.GetKey(Keys.Num1))
-                {
-                    GameManager.Instance.ChangeLevel(LevelType.Menu);
-                }
-                if (Engine.GetKey(Keys.Num2))
-                {
-                    GameManager.Instance.ChangeLevel(LevelType.Game);
-                }*/
+
                 GameManager.Instance.Update();
             }
 
@@ -410,16 +390,7 @@ namespace Game
                 Engine.Clear(); // Borra la pantalla
                 //Textura Terreno
                 GameManager.Instance.Render();
-               // Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/0.png"),0,852);
-              //  Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 64, 852);
-               // Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 128, 852);
-                //Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 192, 852);
-               // Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 256, 852);
-              //  Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 320, 852);
-               // Engine.Draw(Engine.GetTexture("Textures/Terrain/Grass/1.png"), 384, 852);
 
-                //player.Draw();
-                //enemy.Draw();
                 Engine.Show(); // Muestra las imagenes dibujadas
             }
         }

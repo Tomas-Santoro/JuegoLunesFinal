@@ -82,13 +82,24 @@
     <Content Include="Textures\Animations\Player\Idle\5.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Textures\Animations\Player\Walk\0.png" />
-    <Content Include="Textures\Animations\Player\Walk\1.png" />
-    <Content Include="Textures\Animations\Player\Walk\2.png" />
-    <Content Include="Textures\Animations\Player\Walk\3.png" />
-    <Content Include="Textures\Animations\Player\Walk\4.png" />
-    <Content Include="Textures\Animations\Player\Walk\5.png" />
-    <Content Include="Textures\Animations\Player\Walk\6.png" />
+    <Content Include="Textures\Animations\Player\Walk\0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Animations\Player\Walk\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Animations\Player\Walk\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Animations\Player\Walk\3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Animations\Player\Walk\4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Animations\Player\Walk\5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Textures\Buttons\Credits\CreditsButton1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

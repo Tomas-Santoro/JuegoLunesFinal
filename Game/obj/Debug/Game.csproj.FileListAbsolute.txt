@@ -315,3 +315,44 @@ D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\obj\Debug\Game.csproj.Asse
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\obj\Debug\Game.exe
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\obj\Debug\Game.pdb
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Enemy\Idle\0.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Enemy\Idle\1.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Enemy\Idle\2.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Enemy\Idle\3.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Enemy\Idle\4.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Enemy\Idle\5.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Idle\0.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Idle\1.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Idle\2.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Idle\3.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Idle\4.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Idle\5.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Buttons\Credits\CreditsButton1.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Buttons\Credits\CreditsButton2.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Buttons\Play\PlayButton1.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Buttons\Play\PlayButton2.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Buttons\Quit\QuitButton1.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Buttons\Quit\QuitButton2.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Engine.dll
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Screens\Credits.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Screens\GameOver.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Screens\Level.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Screens\MainMenu.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Screens\Win.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\0.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\1.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\2.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\3.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\4.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Game.exe
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Game.pdb
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\obj\Debug\Game.exe
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\obj\Debug\Game.pdb
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Walk\0.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Walk\1.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Walk\2.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Walk\3.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Walk\4.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Walk\5.png

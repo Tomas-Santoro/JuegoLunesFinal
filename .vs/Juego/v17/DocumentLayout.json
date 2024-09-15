@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\usuario\\Desktop\\Paradigma\\Prototipo\\ProyectoBase - 02-09\\",
+  "WorkspaceRootPath": "C:\\Users\\usuario\\Documents\\GitHub\\JuegoLunesFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\usuario\\Desktop\\Paradigma\\Prototipo\\ProyectoBase - 02-09\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\usuario\\documents\\github\\juegolunesfinal\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\usuario\\desktop\\paradigma\\prototipo\\proyectobase - 02-09\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\usuario\\Documents\\GitHub\\JuegoLunesFinal\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\usuario\\Desktop\\Paradigma\\Prototipo\\ProyectoBase - 02-09\\game\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\usuario\\Documents\\GitHub\\JuegoLunesFinal\\game\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\usuario\\Desktop\\Paradigma\\Prototipo\\ProyectoBase - 02-09\\game\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\usuario\\Documents\\GitHub\\JuegoLunesFinal\\game\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -36,11 +36,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\Paradigma\\Prototipo\\ProyectoBase - 02-09\\Game\\Game.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\JuegoLunesFinal\\Game\\Game.cs",
               "RelativeDocumentMoniker": "Game\\Game.cs",
-              "ToolTip": "C:\\Users\\usuario\\Desktop\\Paradigma\\Prototipo\\ProyectoBase - 02-09\\Game\\Game.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\JuegoLunesFinal\\Game\\Game.cs",
               "RelativeToolTip": "Game\\Game.cs",
-              "ViewState": "AQIAANcAAAAAAAAAAADwv+gAAAAMAAAA",
+              "ViewState": "AQIAANAAAAAAAAAAAAAiwM4AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-02T23:40:07.773Z",
               "EditorCaption": ""
@@ -49,9 +49,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Time.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\Paradigma\\Prototipo\\ProyectoBase - 02-09\\Game\\Time.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\JuegoLunesFinal\\Game\\Time.cs",
               "RelativeDocumentMoniker": "Game\\Time.cs",
-              "ToolTip": "C:\\Users\\usuario\\Desktop\\Paradigma\\Prototipo\\ProyectoBase - 02-09\\Game\\Time.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\JuegoLunesFinal\\Game\\Time.cs",
               "RelativeToolTip": "Game\\Time.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -61,11 +61,11 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Animation.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\Paradigma\\Prototipo\\ProyectoBase - 02-09\\Game\\Animation.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\JuegoLunesFinal\\Game\\Animation.cs",
               "RelativeDocumentMoniker": "Game\\Animation.cs",
-              "ToolTip": "C:\\Users\\usuario\\Desktop\\Paradigma\\Prototipo\\ProyectoBase - 02-09\\Game\\Animation.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\JuegoLunesFinal\\Game\\Animation.cs",
               "RelativeToolTip": "Game\\Animation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAkAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwAsAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-02T23:32:35.289Z",
               "EditorCaption": ""
@@ -74,11 +74,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\Paradigma\\Prototipo\\ProyectoBase - 02-09\\Game\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\JuegoLunesFinal\\Game\\Program.cs",
               "RelativeDocumentMoniker": "Game\\Program.cs",
-              "ToolTip": "C:\\Users\\usuario\\Desktop\\Paradigma\\Prototipo\\ProyectoBase - 02-09\\Game\\Program.cs",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\JuegoLunesFinal\\Game\\Program.cs",
               "RelativeToolTip": "Game\\Program.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAYwHQAAAAsAAAA",
+              "ViewState": "AQIAABUBAAAAAAAAAAAswDMBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-02T23:25:10.325Z",
               "EditorCaption": ""
