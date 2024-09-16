@@ -343,7 +343,7 @@ namespace Game
 
             }
 
-            if (isMoving && (Engine.GetKey(Keys.A)))
+            if (isMoving && (Engine.GetKey(0x1E)))
             {
                 currentAnimation = walkX; // Cambiar a la animación de caminata
             }
@@ -474,7 +474,6 @@ namespace Game
 
         public void Draw()
         {
-<<<<<<< Updated upstream
             if (!isAlive) return;
 
             var path = test.Id + (test.currentFrameIndex + 1) + ".png";
@@ -486,27 +485,6 @@ namespace Game
         {
             return new Vector2(x, y);
         }
-=======
-            if (!isAlive)
-            {
-                return;
-            }
-            var path = test.Id + (test.currentFrameIndex + 1) + ".png";
-            Engine.Draw(path, 1500, 750, -1, 1, 0, 0, 0);
-        }
-        private Animation CreateAnimation(string route, int frames, float speed, bool loop)
-        {
-        var textures = new List<Texture>();
-        for (int i = 1; i <= frames; i++)
-        {
-            var tt = route + i + ".png";
-            textures.Add(new Texture(tt));
-            }
-            return new Animation(route, textures, speed, loop);
-        }
-    }
-#endregion Enemy
->>>>>>> Stashed changes
 
         public Vector2 GetSize()
         {
