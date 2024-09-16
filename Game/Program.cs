@@ -63,7 +63,7 @@ namespace Game
                 {
                     //este codigo pinta todo con bordes, pero pinta una linea feita
                     //creo que es un error de recorte
-                    /*
+                    
                     if (i == 0)
                         if (j == 0)
                             tilemap[i, j] = 0;
@@ -81,13 +81,13 @@ namespace Game
                     else if (j == height - 1)
                         tilemap[i, j] = 10;
                     else tilemap[i, j] = 6;
-                    */
+                    
 
 
 
                     //codigo de prueba para ver algo 
 
-                    if (i == 0)
+                   /* if (i == 0)
                         if (j == 0)
                             tilemap[i, j] = -1;
                         else if (j == height - 1)
@@ -106,7 +106,7 @@ namespace Game
                     else if (i % 2 == 0 || j % 2 == 0)
                         tilemap[i, j] = 6;
                     else tilemap[i, j] = 6;//-1;
-                    
+                    */
                 }
             }
 
@@ -151,7 +151,7 @@ namespace Game
                 }
             }
         }
-
+        //hola banano
         //aca lo deje en float, pero deberia ser int, porque se supone que son pixeles
         public static bool CheckCollisions(float x, float y, float futureX, float futureY, float widthCharacter, float heightCharacter) 
         {
