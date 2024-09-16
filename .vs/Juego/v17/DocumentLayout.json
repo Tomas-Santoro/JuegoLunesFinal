@@ -3,56 +3,16 @@
   "WorkspaceRootPath": "E:\\GitHub\\JuegoLunesFinal\\",
   "Documents": [
     {
-<<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|E:\\GitHub\\JuegoLunesFinal\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinal\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinal\\game\\collisionsutilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\collisionsutilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinal\\game\\textures\\terrain\\grass\\2.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\textures\\terrain\\grass\\2.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinal\\game\\textures\\terrain\\grass\\1.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\textures\\terrain\\grass\\1.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinal\\game\\textures\\terrain\\grass\\0.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\textures\\terrain\\grass\\0.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|E:\\GitHub\\JuegoLunesFinal\\game\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-=======
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\usuario\\Documents\\GitHub\\JuegoLunesFinal\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|E:\\GitHub\\JuegoLunesFinal\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\usuario\\documents\\github\\juegolunesfinal\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\usuario\\Documents\\GitHub\\JuegoLunesFinal\\game\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
->>>>>>> Stashed changes
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|E:\\GitHub\\JuegoLunesFinal\\game\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinal\\game\\textures\\terrain\\grass\\5.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\textures\\terrain\\grass\\5.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinal\\game\\textures\\terrain\\grass\\4.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\textures\\terrain\\grass\\4.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinal\\game\\textures\\terrain\\grass\\3.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\textures\\terrain\\grass\\3.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|E:\\GitHub\\JuegoLunesFinal\\game\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,120 +26,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< Updated upstream
-          "SelectedChildIndex": 7,
-=======
-          "SelectedChildIndex": 1,
->>>>>>> Stashed changes
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CollisionsUtilities.cs",
-              "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinal\\Game\\CollisionsUtilities.cs",
-              "RelativeDocumentMoniker": "Game\\CollisionsUtilities.cs",
-              "ToolTip": "E:\\GitHub\\JuegoLunesFinal\\Game\\CollisionsUtilities.cs",
-              "RelativeToolTip": "Game\\CollisionsUtilities.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T11:24:45.19Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 8,
-              "Title": "4.png",
-              "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinal\\Game\\Textures\\Terrain\\Grass\\4.png",
-              "RelativeDocumentMoniker": "Game\\Textures\\Terrain\\Grass\\4.png",
-              "ToolTip": "E:\\GitHub\\JuegoLunesFinal\\Game\\Textures\\Terrain\\Grass\\4.png",
-              "RelativeToolTip": "Game\\Textures\\Terrain\\Grass\\4.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-09-15T09:11:00.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "3.png",
-              "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinal\\Game\\Textures\\Terrain\\Grass\\3.png",
-              "RelativeDocumentMoniker": "Game\\Textures\\Terrain\\Grass\\3.png",
-              "ToolTip": "E:\\GitHub\\JuegoLunesFinal\\Game\\Textures\\Terrain\\Grass\\3.png",
-              "RelativeToolTip": "Game\\Textures\\Terrain\\Grass\\3.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-09-15T09:10:58.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "2.png",
-              "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinal\\Game\\Textures\\Terrain\\Grass\\2.png",
-              "RelativeDocumentMoniker": "Game\\Textures\\Terrain\\Grass\\2.png",
-              "ToolTip": "E:\\GitHub\\JuegoLunesFinal\\Game\\Textures\\Terrain\\Grass\\2.png",
-              "RelativeToolTip": "Game\\Textures\\Terrain\\Grass\\2.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-09-15T09:10:57.357Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "1.png",
-              "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinal\\Game\\Textures\\Terrain\\Grass\\1.png",
-              "RelativeDocumentMoniker": "Game\\Textures\\Terrain\\Grass\\1.png",
-              "ToolTip": "E:\\GitHub\\JuegoLunesFinal\\Game\\Textures\\Terrain\\Grass\\1.png",
-              "RelativeToolTip": "Game\\Textures\\Terrain\\Grass\\1.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-09-15T09:10:55.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "0.png",
-              "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinal\\Game\\Textures\\Terrain\\Grass\\0.png",
-              "RelativeDocumentMoniker": "Game\\Textures\\Terrain\\Grass\\0.png",
-              "ToolTip": "E:\\GitHub\\JuegoLunesFinal\\Game\\Textures\\Terrain\\Grass\\0.png",
-              "RelativeToolTip": "Game\\Textures\\Terrain\\Grass\\0.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-09-15T09:10:53.798Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "5.png",
-              "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinal\\Game\\Textures\\Terrain\\Grass\\5.png",
-              "RelativeDocumentMoniker": "Game\\Textures\\Terrain\\Grass\\5.png",
-              "ToolTip": "E:\\GitHub\\JuegoLunesFinal\\Game\\Textures\\Terrain\\Grass\\5.png",
-              "RelativeToolTip": "Game\\Textures\\Terrain\\Grass\\5.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-09-15T08:33:27.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-=======
->>>>>>> Stashed changes
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Game.cs",
               "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinal\\Game\\Game.cs",
               "RelativeDocumentMoniker": "Game\\Game.cs",
               "ToolTip": "E:\\GitHub\\JuegoLunesFinal\\Game\\Game.cs",
               "RelativeToolTip": "Game\\Game.cs",
-<<<<<<< Updated upstream
-              "ViewState": "AQIAAMMAAAAAAAAAAADwv84AAAAMAAAA",
-=======
-              "ViewState": "AQIAAMAAAAAAAAAAAADwv9gAAAAmAAAA",
->>>>>>> Stashed changes
+              "ViewState": "AQIAAL8AAAAAAAAAAAAiwM4AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T23:40:07.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-16T01:19:43.799Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "Time.cs",
               "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinal\\Game\\Time.cs",
               "RelativeDocumentMoniker": "Game\\Time.cs",
@@ -187,35 +54,31 @@
               "RelativeToolTip": "Game\\Time.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T23:29:05.554Z"
+              "WhenOpened": "2024-09-16T01:19:43.903Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Animation.cs",
               "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinal\\Game\\Animation.cs",
               "RelativeDocumentMoniker": "Game\\Animation.cs",
               "ToolTip": "E:\\GitHub\\JuegoLunesFinal\\Game\\Animation.cs",
               "RelativeToolTip": "Game\\Animation.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwAsAAAAkAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T23:32:35.289Z"
+              "WhenOpened": "2024-09-16T01:19:43.904Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinal\\Game\\Program.cs",
               "RelativeDocumentMoniker": "Game\\Program.cs",
               "ToolTip": "E:\\GitHub\\JuegoLunesFinal\\Game\\Program.cs",
               "RelativeToolTip": "Game\\Program.cs",
-<<<<<<< Updated upstream
-              "ViewState": "AQIAADIBAAAAAAAAAAAYwEUBAAAqAAAA",
-=======
-              "ViewState": "AQIAAEcBAAAAAAAAAAAowF4BAAAIAAAA",
->>>>>>> Stashed changes
+              "ViewState": "AQIAAIYAAAAAAAAAAAAiwJoAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T23:25:10.325Z",
+              "WhenOpened": "2024-09-16T01:19:44.01Z",
               "EditorCaption": ""
             }
           ]

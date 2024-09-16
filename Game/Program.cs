@@ -152,6 +152,7 @@ namespace Game
             }
         }
         //hola banano
+        //hola pepito
         //aca lo deje en float, pero deberia ser int, porque se supone que son pixeles
         public static bool CheckCollisions(float x, float y, float futureX, float futureY, float widthCharacter, float heightCharacter) 
         {
