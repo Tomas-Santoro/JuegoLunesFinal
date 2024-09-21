@@ -427,3 +427,5 @@ D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Terrain
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Terrain\Grass\7.png
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Terrain\Grass\8.png
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Terrain\Grass\9.png
+D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Screens\SplashScreen.png
+D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Screens\Pantalla.png
