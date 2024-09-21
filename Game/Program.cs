@@ -44,8 +44,8 @@ namespace Game
     }
     public class GameLevel : Level
     {
-        public static Player player = new Player();
-        public static Enemy enemy = new Enemy();
+        public static Player player = new Player();  //REVISAR ESTO PARA UML 
+        public static Enemy enemy = new Enemy();  //REVISAR ESTO PARA UML 
 
         private const int width = 27;//27
         private const int height = 16;//16
@@ -236,12 +236,12 @@ namespace Game
     public class Player
     {
         public bool isAlive = true;
-        private int life = 3;
+        private bool life = true;
 
         public float x;
         public float y;
-        private float width = 50;  // Ancho del jugador
-        private float height = 100; // Alto del jugador
+        private float width = 1.0f;  // Ancho del jugador
+        private float height = 1.0f; // Alto del jugador
         private int direcFlip = 1;
 
 
@@ -292,7 +292,7 @@ namespace Game
         {
             if (!isAlive)
             {
-                
+                life = false;
             }
         }
 
@@ -397,9 +397,9 @@ namespace Game
 
         private float x;
         private float y;
-        private float speed = 5.0f;
-        private float width = 50;  // Ancho del enemigo
-        private float height = 100; // Alto del enemigo
+        private float speed = 3.0f;
+        private float width = 1.0f;  // Ancho del enemigo
+        private float height = 1.0f; // Alto del enemigo
 
         public string texturePath;
 
@@ -446,6 +446,7 @@ namespace Game
 
             FollowPlayer(); 
             currentAnimation.Update();
+           
         }
 
         private void FollowPlayer()
@@ -511,8 +512,8 @@ namespace Game
 
     public class Program
         {
-            public const int SCREEN_HEIGHT = 980;
-            public const int SCREEN_WIDTH = 1720;
+            public const int SCREEN_HEIGHT = 720;
+            public const int SCREEN_WIDTH = 1280;
 
             public static Player player = new Player();
             public static Enemy enemy = new Enemy();
@@ -539,13 +540,14 @@ namespace Game
             {
                 player.Update();
                 enemy.Update();
-            // Verificar colisión entre el jugador y el enemigo
+         
             if (CollisionsUtilities.IsBoxColliding(
                 player.GetPosition(), player.GetSize(),
                 enemy.GetPosition(), enemy.GetSize()))
             {
                 // Colisión detectada: se puede reducir la vida del jugador, aplicar un efecto, etc.
-                Engine.Debug("AAAAAAAAAAAAAAAAAAAAA");
+                Engine.Debug("HIT");
+             
             }
                 GameManager.Instance.Update();
             }

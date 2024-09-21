@@ -121,6 +121,7 @@
     <Content Include="Engine.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Textures\Screens\Pantalla.png" />
     <Content Include="Textures\Screens\Credits.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -133,6 +134,7 @@
     <Content Include="Textures\Screens\MainMenu.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Textures\Screens\SplashScreen.png" />
     <Content Include="Textures\Screens\Win.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

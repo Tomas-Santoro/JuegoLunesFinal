@@ -255,5 +255,10 @@ namespace Game
 
         [DllImport("Engine.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern bool GetKey(int key);
+
+        internal static void DrawText(string v1, int v2, int v3, int v4, object red)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
