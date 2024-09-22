@@ -157,6 +157,9 @@
     <Content Include="Textures\Screens\SplashScreen.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Textures\Screens\SplashScreen3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Textures\Screens\Win.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
