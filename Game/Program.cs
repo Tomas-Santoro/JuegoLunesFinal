@@ -49,12 +49,11 @@ namespace Game
         public static Player player = new Player();  //REVISAR ESTO PARA UML 
         public static Enemy enemy = new Enemy();  //REVISAR ESTO PARA UML 
 
-        private const int width = 27;//27
-        private const int height = 16;//16
+        private const int width = 27;
+        private const int height = 16;
         private const int listlength = 17;
         private static int[,] tilemap = new int[width, height];
         private string[] tilelist = new string[listlength];
-        //private List<Button> buttons;
 
         public GameLevel(Texture background, LevelType p_levelType) : base(background, p_levelType)
         {
@@ -131,10 +130,6 @@ namespace Game
             player.Update();
             enemy.Update();
 
-            if (Engine.GetKey(Keys.SPACE))
-            {
-                //player.Life --;           
-            }
             // Verifica colisión entre jugador y enemigo
             if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(),
                 enemy.GetPosition(), enemy.GetSize()))
@@ -148,6 +143,7 @@ namespace Game
                 {
                     player.TakeDamage(); // El jugador recibe daño si no está atacando
                 }
+               
             }
 
         }
@@ -156,13 +152,13 @@ namespace Game
         {
             Engine.Draw(background);
 
-            drawMap();
+            DrawMap();
 
             player.Draw();
             enemy.Draw();
         }
 
-        private void drawMap()
+        private void DrawMap()
         {
 
             for (int i = 0; i < width; i++)
@@ -198,6 +194,7 @@ namespace Game
             return result;
         }
     }
+
     #endregion
 
     #region GameManager
@@ -254,6 +251,7 @@ namespace Game
             currentLevel.Render();
         }
     }
+
     #endregion
 
     #region Player
@@ -278,14 +276,17 @@ namespace Game
         }
 
         public bool isAlive = true;
-        //private bool life = true;
 
         private float damageCooldown = 3.0f; // En segundos
         private float damageCooldownTimer = 0f; // Temporizador para enfriamiento de daño
 
         private bool isAttacking = false; 
         private float attackDuration = 0.5f; 
-        private float attackTimer = 0f; 
+        private float attackTimer = 0f;
+
+        private bool isHit = false;
+        private float hitDuration = 0.5f; // Duración de la animación de golpe
+        private float hitTimer = 0f; // Temporizador para controlar la duración del golpe
 
         public float x;
         public float y;
@@ -301,6 +302,7 @@ namespace Game
         private Animation idle;
         private Animation walkX;
         private Animation attack;
+        private Animation hit;
 
         private Animation currentAnimation;
 
@@ -317,7 +319,7 @@ namespace Game
             idleTexture.Add(new Texture("Textures/Animations/Player/Idle/2.png"));
             idleTexture.Add(new Texture("Textures/Animations/Player/Idle/3.png"));
             idleTexture.Add(new Texture("Textures/Animations/Player/Idle/4.png"));
-            //idleTexture.Add(new Texture("Textures/Animations/Player/Idle/5.png"));
+            idleTexture.Add(new Texture("Textures/Animations/Player/Idle/5.png"));
 
             idle = new Animation("Textures/Animations/Player/Idle/", idleTexture, 0.5f, true);
 
@@ -345,6 +347,17 @@ namespace Game
 
             attack = new Animation("Textures/Animations/Player/Attack/", attackTexture, 0.1f , true);
 
+            //Hit Animation
+            List<Texture> hitTexture = new List<Texture>();
+            hitTexture.Add(new Texture("Textures/Animations/Player/Hit/0.png"));
+            hitTexture.Add(new Texture("Textures/Animations/Player/Hit/1.png"));
+            hitTexture.Add(new Texture("Textures/Animations/Player/Hit/2.png"));
+            hitTexture.Add(new Texture("Textures/Animations/Player/Hit/3.png"));
+            hitTexture.Add(new Texture("Textures/Animations/Player/Hit/4.png"));
+            hitTexture.Add(new Texture("Textures/Animations/Player/Hit/5.png"));
+
+            hit = new Animation("Textures/Animations/Player/Hit/", hitTexture, 0.5f, true);
+
             currentAnimation = idle;
 
             //Posicion inicial (no encontre donde lo seteaban)
@@ -352,11 +365,16 @@ namespace Game
             y = 150;
         }
 
+        public void SetPosition(Vector2 position)
+        {
+            x = position.X;
+            y = position.Y;
+        }
+
         private void StartAttack()
         {
             isAttacking = true;
             attackTimer = 0f;
-            // Cambiar la animación del jugador a la de ataque
             currentAnimation = attack;
             Debug.Print("Player started attacking.");
         }
@@ -364,9 +382,22 @@ namespace Game
         private void EndAttack()
         {
             isAttacking = false;
-            // Regresar a la animación de inactividad o la animación actual del jugador
             currentAnimation = idle;
             Debug.Print("Player finished attacking.");
+        }
+
+        private void StartHit()
+        {
+            isHit = true;
+            currentAnimation = hit;
+            Debug.Print("Player got hit.");
+        }
+
+        private void EndHit()
+        {
+            isHit = false;
+            currentAnimation = idle;
+            Debug.Print("Hit animation ended.");
         }
 
         public bool IsAttacking()
@@ -389,11 +420,12 @@ namespace Game
             if (CanTakeDamage())
             {
                 Life--;
+                StartHit();
                 damageCooldownTimer = 0f; 
             }
             if (Life <= 0)
             {
-                Die(); // Llama a la función de muerte
+                Die();
             }
         }
 
@@ -406,6 +438,19 @@ namespace Game
 
             damageCooldownTimer += Time.DeltaTime;
 
+            if (isHit)
+            {
+                hitTimer += Time.DeltaTime;
+                if (hitTimer >= hitDuration)
+                {
+                    EndHit(); 
+                }
+                else
+                {
+                    currentAnimation.Update(); 
+                    return;
+                }
+            }
 
             bool isMoving = false;
             direcFlip = 1;
@@ -523,10 +568,12 @@ namespace Game
         private float width = 1.0f;  // Ancho del enemigo
         private float height = 1.0f; // Alto del enemigo
 
+        public bool isMoving = false;
+
         public string texturePath;
 
-        private Animation test;
         private Animation idle;
+        private Animation walk;
 
         private Animation currentAnimation;
 
@@ -538,14 +585,30 @@ namespace Game
             x = 1500; 
             y = 750;  
 
-            List<Texture> pp = new List<Texture>();
-            pp.Add(new Texture("Textures/Animations/Enemy/Idle/0.png"));
-            pp.Add(new Texture("Textures/Animations/Enemy/Idle/1.png"));
+            //Idle animation
+            List<Texture> idleTexture = new List<Texture>();
+            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/0.png"));
+            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/1.png"));
+            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/2.png"));
+            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/3.png"));
+            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/4.png"));
+            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/5.png"));
 
-            test = new Animation("Textures/Animations/Enemy/Idle/", pp, 1, true);
-            idle = CreateAnimation("Textures/Knight/Idle/", 6, 1f, true);
+            idle = new Animation("Textures/Animations/Enemy/Idle/", idleTexture, 0.5f, true);
 
-            currentAnimation = test;
+            //Walk Animation
+            List<Texture> walkXTexture = new List<Texture>();
+            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/0.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/1.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/2.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/3.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/4.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/5.png"));
+
+
+            walk = new Animation("Textures/Animations/Enemy/Walk/", walkXTexture, 0.1f, true);
+
+            currentAnimation = idle;
         }
 
 
@@ -556,8 +619,17 @@ namespace Game
                 return;
             }
             FollowPlayer(); 
+            
+
+            if (isMoving)
+            {
+                currentAnimation = walk; // Asegúrate de que 'walk' esté definida como tu animación de caminar
+            }
+            else
+            {
+                currentAnimation = idle; // Cambiar a animación de inactividad si no se está moviendo
+            }
             currentAnimation.Update();
-           
         }
 
         public void TakeDamage()
@@ -583,7 +655,7 @@ namespace Game
 
         private void FollowPlayer()
         {
-           
+            isMoving = true;
             float playerX = Program.player.x; 
             float playerY = Program.player.y;
 
@@ -609,10 +681,14 @@ namespace Game
         {
             if (!isAlive) return;
 
-            var path = test.Id + (test.currentFrameIndex + 1) + ".png";
+            var texture = currentAnimation.CurrentFrame;
+            Engine.Draw(texture, (int)x, (int)y, -1, 1, 0, 0, 0); // Asegúrate de dibujar la textura correcta
 
-            
-            Engine.Draw(path, (int)x, (int)y, 1, 1, 0, 0, 0);
+        }
+        public void SetPosition(Vector2 position)
+        {
+            x = position.X;
+            y = position.Y;
         }
         public Vector2 GetPosition()
         {
@@ -673,14 +749,6 @@ namespace Game
                 player.Update();
                 enemy.Update();
          
-            /*if (CollisionsUtilities.IsBoxColliding(
-                player.GetPosition(), player.GetSize(),
-                enemy.GetPosition(), enemy.GetSize()))
-            {
-                // Colisión detectada: se puede reducir la vida del jugador, aplicar un efecto, etc.
-                Engine.Debug("HIT");
-             
-            }*/
                 GameManager.Instance.Update();
             }
 

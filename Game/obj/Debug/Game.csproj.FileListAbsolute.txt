@@ -449,3 +449,15 @@ C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animat
 C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Attack\3.png
 C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Attack\4.png
 C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Attack\5.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Hit\0.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Hit\1.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Hit\2.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Hit\3.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Hit\4.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Hit\5.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Enemy\Walk\0.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Enemy\Walk\1.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Enemy\Walk\2.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Enemy\Walk\3.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Enemy\Walk\4.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Enemy\Walk\5.png
