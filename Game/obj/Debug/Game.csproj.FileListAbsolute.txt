@@ -429,3 +429,23 @@ D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Terrain
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Terrain\Grass\9.png
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Screens\SplashScreen.png
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Screens\Pantalla.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Screens\Pantalla.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Screens\SplashScreen.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\10.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\11.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\12.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\13.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\14.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\15.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\16.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\5.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\6.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\7.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\8.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Terrain\Grass\9.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Attack\0.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Attack\1.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Attack\2.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Attack\3.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Attack\4.png
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Player\Attack\5.png
