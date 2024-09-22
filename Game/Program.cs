@@ -133,7 +133,23 @@ namespace Game
 
             if (Engine.GetKey(Keys.SPACE))
             {
-                player.Life --;           }
+                //player.Life --;           
+            }
+            // Verifica colisión entre jugador y enemigo
+            if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(),
+                enemy.GetPosition(), enemy.GetSize()))
+            {
+                // Si el jugador está atacando y el enemigo está vivo
+                if (player.IsAttacking() && enemy.IsAlive())
+                {
+                    enemy.TakeDamage(); // El enemigo recibe daño y puede morir
+                }
+                else if (enemy.IsAlive())
+                {
+                    player.TakeDamage(); // El jugador recibe daño si no está atacando
+                }
+            }
+
         }
 
         public override void Render()
@@ -264,10 +280,19 @@ namespace Game
         public bool isAlive = true;
         //private bool life = true;
 
+        private float damageCooldown = 3.0f; // En segundos
+        private float damageCooldownTimer = 0f; // Temporizador para enfriamiento de daño
+
+        private bool isAttacking = false; 
+        private float attackDuration = 0.5f; 
+        private float attackTimer = 0f; 
+
         public float x;
         public float y;
+
         private float width = 1.0f;  // Ancho del jugador
         private float height = 1.0f; // Alto del jugador
+
         private int direcFlip = 1;
 
 
@@ -327,18 +352,49 @@ namespace Game
             y = 150;
         }
 
-        public void Attack()
+        private void StartAttack()
         {
+            isAttacking = true;
+            attackTimer = 0f;
+            // Cambiar la animación del jugador a la de ataque
             currentAnimation = attack;
+            Debug.Print("Player started attacking.");
         }
-        private void Kill()
+
+        private void EndAttack()
+        {
+            isAttacking = false;
+            // Regresar a la animación de inactividad o la animación actual del jugador
+            currentAnimation = idle;
+            Debug.Print("Player finished attacking.");
+        }
+
+        public bool IsAttacking()
+        {
+            return isAttacking;
+        }
+
+        private void Die()
         {
             isAlive = false;
             Engine.Debug("Estoy Muerto");
         }
-        public void GetDamage()
+        public bool CanTakeDamage()
         {
-
+            return damageCooldownTimer >= damageCooldown;
+        }
+        public void TakeDamage()
+        {
+            
+            if (CanTakeDamage())
+            {
+                Life--;
+                damageCooldownTimer = 0f; 
+            }
+            if (Life <= 0)
+            {
+                Die(); // Llama a la función de muerte
+            }
         }
 
         public void Update()
@@ -348,12 +404,24 @@ namespace Game
                 return;
             }
 
+            damageCooldownTimer += Time.DeltaTime;
+
+
             bool isMoving = false;
             direcFlip = 1;
 
-            if (Engine.GetKey(Keys.J))
+            if (Engine.GetKey(Keys.J) && !isAttacking)
             {
-                currentAnimation = attack;
+                StartAttack();
+            }
+
+            if (isAttacking)
+            {
+                attackTimer += Time.DeltaTime;
+                if (attackTimer >= attackDuration)
+                {
+                    EndAttack();
+                }
             }
             else
             {
@@ -403,6 +471,8 @@ namespace Game
                 }
             }
             currentAnimation.Update();
+
+            Debug.Print(life.ToString());
             Debug.Print(currentAnimation.ToString());
         }
 
@@ -445,7 +515,7 @@ namespace Game
     public class Enemy
     {
         public bool isAlive = true;
-        private int life = 3;
+        private int life = 1;
 
         private float x;
         private float y;
@@ -478,27 +548,37 @@ namespace Game
             currentAnimation = test;
         }
 
-        private void Kill()
-        {
-            isAlive = false;
-            Engine.Debug("Estoy Muerto");
-        }
-
-        public void GetDamage()
-        {
-            if (!isAlive) return;
-
-            life--;
-            if (life <= 0) Kill();
-        }
 
         public void Update()
         {
-            if (!isAlive) return;
-
+            if (!isAlive)
+            {
+                return;
+            }
             FollowPlayer(); 
             currentAnimation.Update();
            
+        }
+
+        public void TakeDamage()
+        {
+            life--;
+            if (life <= 0)
+            {
+                Die();
+            }
+        }
+
+        private void Die()
+        {
+            isAlive = false;
+            Engine.Debug("Enemy has died.");
+            // Lógica adicional al morir, como desaparecer o reproducir animación de muerte
+        }
+
+        public bool IsAlive()
+        {
+            return isAlive;
         }
 
         private void FollowPlayer()
@@ -593,14 +673,14 @@ namespace Game
                 player.Update();
                 enemy.Update();
          
-            if (CollisionsUtilities.IsBoxColliding(
+            /*if (CollisionsUtilities.IsBoxColliding(
                 player.GetPosition(), player.GetSize(),
                 enemy.GetPosition(), enemy.GetSize()))
             {
                 // Colisión detectada: se puede reducir la vida del jugador, aplicar un efecto, etc.
                 Engine.Debug("HIT");
              
-            }
+            }*/
                 GameManager.Instance.Update();
             }
 
