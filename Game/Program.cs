@@ -9,18 +9,26 @@ namespace Game
     public enum LevelType
     {
         Menu,
-        Game
+        Game,
+        Defeat,
+        Victory
     }
     public abstract class Level
     {
-        protected Texture background;
+        protected Texture background; //Composicion, no puede existir el nivel sin la textura (background) 
         protected LevelType levelType;
 
+<<<<<<< Updated upstream
         public LevelType LevelType => levelType;
         public Level(Texture background, LevelType levelType)
+=======
+        public LevelType LevelType => levelType; 
+        public Level(Texture background, LevelType levelType)  //Si un objeto Level es destruido, el objeto Texture asociado también será destruido.
+>>>>>>> Stashed changes
         {
             this.background = background;
-            this.levelType = levelType;
+            this.levelType = levelType; //composicion  misma explicacion que el de arriba
+
         }
 
         public abstract void Update();
@@ -232,7 +240,14 @@ namespace Game
                 case LevelType.Game:
                     currentLevel = new GameLevel(Engine.GetTexture("Textures/Screens/Level.png"), LevelType.Game);
                     break;
-
+                case LevelType.Defeat:
+                    currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/ScreenDefeat.png"), LevelType.Defeat);
+                    break;
+                case LevelType.Victory:
+                    Engine.Debug("DOREMIFASOLLASIDO");
+                    currentLevel = new GameLevel(Engine.GetTexture("Textures/Screens/ScreenVictory.png"), LevelType.Victory);
+                    break;
+              
             }
         }
         public void Update()
@@ -377,28 +392,28 @@ namespace Game
             isAttacking = true;
             attackTimer = 0f;
             currentAnimation = attack;
-            Debug.Print("Player started attacking.");
+           
         }
 
         private void EndAttack()
         {
             isAttacking = false;
             currentAnimation = idle;
-            Debug.Print("Player finished attacking.");
+          
         }
 
         private void StartHit()
         {
             isHit = true;
             currentAnimation = hit;
-            Debug.Print("Player got hit.");
+          
         }
 
         private void EndHit()
         {
             isHit = false;
             currentAnimation = idle;
-            Debug.Print("Hit animation ended.");
+            
         }
 
         public bool IsAttacking()
@@ -410,6 +425,7 @@ namespace Game
         {
             isAlive = false;
             Engine.Debug("Estoy Muerto");
+            GameManager.Instance.ChangeLevel(LevelType.Defeat);
         }
         public bool CanTakeDamage()
         {
@@ -617,6 +633,9 @@ namespace Game
         {
             if (!isAlive)
             {
+                Engine.Debug("cambia");
+                GameManager.Instance.ChangeLevel(LevelType.Victory);
+                
                 return;
             }
             FollowPlayer();
@@ -644,9 +663,10 @@ namespace Game
 
         private void Die()
         {
+            
             isAlive = false;
-            Engine.Debug("Enemy has died.");
-            // Lógica adicional al morir, como desaparecer o reproducir animación de muerte
+
+           
         }
 
         public bool IsAlive()
@@ -657,8 +677,13 @@ namespace Game
         private void FollowPlayer()
         {
             isMoving = true;
+<<<<<<< Updated upstream
             float playerX = Program.player.x;
             float playerY = Program.player.y;
+=======
+            float playerX = GameLevel.player.x; 
+            float playerY = GameLevel.player.y;
+>>>>>>> Stashed changes
 
 
             float directionX = playerX - x;
@@ -683,7 +708,7 @@ namespace Game
             if (!isAlive) return;
 
             var texture = currentAnimation.CurrentFrame;
-            Engine.Draw(texture, (int)x, (int)y, -1, 1, 0, 0, 0); // Asegúrate de dibujar la textura correcta
+            Engine.Draw(texture, (int)x, (int)y, 1, 1, 0, 0, 0); // Asegurate de dibujar la textura correcta
 
         }
         public void SetPosition(Vector2 position)
@@ -731,11 +756,50 @@ namespace Game
         {
             Initialization();
 
+<<<<<<< Updated upstream
             while (true)
             {
                 Time.CalculateDeltaTime();
                 Update();
                 Render();
+=======
+            public static Player player = new Player(); //a
+            public static Enemy enemy = new Enemy();
+
+            private static void Main(string[] args)
+            {
+                Initialization();
+
+                while (true)
+                {
+                    Time.CalculateDeltaTime();
+                    Update();
+                    Render();
+                }
+            }
+
+            private static void Initialization()
+            {
+                Time.Initialize();
+                Engine.Initialize("Paradigmas de programación", SCREEN_WIDTH, SCREEN_HEIGHT);
+            }
+
+            private static void Update()
+            {
+             //   player.Update();
+             //   enemy.Update();
+         
+                GameManager.Instance.Update();
+            }
+
+            private static void Render()
+            {
+                Engine.Clear(); // Borra la pantalla
+                //Textura Terreno
+                GameManager.Instance.Render();
+
+                Engine.Show(); // Muestra las imagenes dibujadas
+>>>>>>> Stashed changes
             }
         }
 
