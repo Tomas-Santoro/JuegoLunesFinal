@@ -471,3 +471,4 @@ D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animati
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Screens\SplashScreen.png
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Screens\SplashScreen3.png
 >>>>>>> d56410de33a87763c4f702a1ac53a94da858dace
+C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Screens\SplashScreen3.png

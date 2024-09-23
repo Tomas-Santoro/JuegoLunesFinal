@@ -16,7 +16,7 @@ namespace Game
         protected Texture background;
         protected LevelType levelType;
 
-        public LevelType LevelType => levelType; 
+        public LevelType LevelType => levelType;
         public Level(Texture background, LevelType levelType)
         {
             this.background = background;
@@ -64,7 +64,7 @@ namespace Game
                 {
                     //este codigo pinta todo con bordes, pero pinta una linea feita
                     //creo que es un error de recorte
-                    
+
                     if (i == 0)
                         if (j == 0)
                             tilemap[i, j] = 0;
@@ -82,32 +82,32 @@ namespace Game
                     else if (j == height - 1)
                         tilemap[i, j] = 10;
                     else tilemap[i, j] = 6;
-                    
+
 
 
 
                     //codigo de prueba para ver algo 
 
-                   /* if (i == 0)
-                        if (j == 0)
-                            tilemap[i, j] = -1;
-                        else if (j == height - 1)
-                            tilemap[i, j] = -1;
-                        else tilemap[i, j] = -1;
-                    else if (i == width - 1)
-                        if (j == 0)
-                            tilemap[i, j] = -1;
-                        else if (j == height - 1)
-                            tilemap[i, j] = -1;
-                        else tilemap[i, j] = -1;
-                    else if (j == 0)
-                        tilemap[i, j] = -1;
-                    else if (j == height - 1)
-                        tilemap[i, j] = -1;
-                    else if (i % 2 == 0 || j % 2 == 0)
-                        tilemap[i, j] = 6;
-                    else tilemap[i, j] = 6;//-1;
-                    */
+                    /* if (i == 0)
+                         if (j == 0)
+                             tilemap[i, j] = -1;
+                         else if (j == height - 1)
+                             tilemap[i, j] = -1;
+                         else tilemap[i, j] = -1;
+                     else if (i == width - 1)
+                         if (j == 0)
+                             tilemap[i, j] = -1;
+                         else if (j == height - 1)
+                             tilemap[i, j] = -1;
+                         else tilemap[i, j] = -1;
+                     else if (j == 0)
+                         tilemap[i, j] = -1;
+                     else if (j == height - 1)
+                         tilemap[i, j] = -1;
+                     else if (i % 2 == 0 || j % 2 == 0)
+                         tilemap[i, j] = 6;
+                     else tilemap[i, j] = 6;//-1;
+                     */
                 }
             }
 
@@ -143,7 +143,7 @@ namespace Game
                 {
                     player.TakeDamage(); // El jugador recibe daño si no está atacando
                 }
-               
+
             }
 
         }
@@ -173,12 +173,12 @@ namespace Game
             }
         }
 
-        public static bool CheckCollisions(float x, float y, float futureX, float futureY, float widthCharacter, float heightCharacter) 
+        public static bool CheckCollisions(float x, float y, float futureX, float futureY, float widthCharacter, float heightCharacter)
         {
             bool result = false;
 
-            int tileX = (int) futureX / 64;
-            int tileY = (int) futureY / 64;
+            int tileX = (int)futureX / 64;
+            int tileY = (int)futureY / 64;
 
             if (tileX < 0 || tileY < 0 || tileX >= width || tileY >= height)
             {
@@ -186,7 +186,7 @@ namespace Game
             }
 
             //aca se va a aplicar una logica mejor diferenciando los tipos de bloques
-            if (tilemap [tileX, tileY] == -1)
+            if (tilemap[tileX, tileY] == -1)
                 result = true;
             else
                 result = false;
@@ -218,13 +218,13 @@ namespace Game
         {
             ChangeLevel(LevelType.Menu);
         }
-        public void ChangeLevel(LevelType levelType) 
+        public void ChangeLevel(LevelType levelType)
         {
-            if(currentLevel != null)
+            if (currentLevel != null)
             {
                 currentLevel = null;
             }
-            switch(levelType)
+            switch (levelType)
             {
                 case LevelType.Menu:
                     currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/SplashScreen3.png"), LevelType.Menu);
@@ -239,7 +239,7 @@ namespace Game
         {
             if (Engine.GetKey(Keys.Q))
             {
-               ChangeLevel(LevelType.Menu);
+                ChangeLevel(LevelType.Menu);
             }
             if (Engine.GetKey(Keys.E))
             {
@@ -281,8 +281,8 @@ namespace Game
         private float damageCooldown = 3.0f; // En segundos
         private float damageCooldownTimer = 0f; // Temporizador para enfriamiento de daño
 
-        private bool isAttacking = false; 
-        private float attackDuration = 0.5f; 
+        private bool isAttacking = false;
+        private float attackDuration = 0.5f;
         private float attackTimer = 0f;
 
         private bool isHit = false;
@@ -307,7 +307,7 @@ namespace Game
 
         private Animation currentAnimation;
 
-        private float speed = 5.0f; 
+        private float speed = 5.0f;
 
         public Player(string p_texturePath = "Textures/Knight/Idle/0.png")
         {
@@ -346,7 +346,7 @@ namespace Game
             attackTexture.Add(new Texture("Textures/Animations/Player/Attack/5.png"));
 
 
-            attack = new Animation("Textures/Animations/Player/Attack/", attackTexture, 0.1f , true);
+            attack = new Animation("Textures/Animations/Player/Attack/", attackTexture, 0.1f, true);
 
             //Hit Animation
             List<Texture> hitTexture = new List<Texture>();
@@ -417,12 +417,12 @@ namespace Game
         }
         public void TakeDamage()
         {
-            
+
             if (CanTakeDamage())
             {
                 Life--;
                 StartHit();
-                damageCooldownTimer = 0f; 
+                damageCooldownTimer = 0f;
             }
             if (Life <= 0)
             {
@@ -444,11 +444,11 @@ namespace Game
                 hitTimer += Time.DeltaTime;
                 if (hitTimer >= hitDuration)
                 {
-                    EndHit(); 
+                    EndHit();
                 }
                 else
                 {
-                    currentAnimation.Update(); 
+                    currentAnimation.Update();
                     return;
                 }
             }
@@ -583,8 +583,8 @@ namespace Game
             texturePath = p_texturePath;
 
             // Inicializo posición
-            x = 1500; 
-            y = 750;  
+            x = 1500;
+            y = 750;
 
             //Idle animation
             List<Texture> idleTexture = new List<Texture>();
@@ -619,8 +619,8 @@ namespace Game
             {
                 return;
             }
-            FollowPlayer(); 
-            
+            FollowPlayer();
+
 
             if (isMoving)
             {
@@ -657,10 +657,10 @@ namespace Game
         private void FollowPlayer()
         {
             isMoving = true;
-            float playerX = Program.player.x; 
+            float playerX = Program.player.x;
             float playerY = Program.player.y;
 
-          
+
             float directionX = playerX - x;
             float directionY = playerY - y;
 
@@ -720,46 +720,46 @@ namespace Game
     #endregion Enemy
 
     public class Program
+    {
+        public const int SCREEN_HEIGHT = 720;
+        public const int SCREEN_WIDTH = 1280;
+
+        public static Player player = new Player();
+        public static Enemy enemy = new Enemy();
+
+        private static void Main(string[] args)
         {
-            public const int SCREEN_HEIGHT = 720;
-            public const int SCREEN_WIDTH = 1280;
+            Initialization();
 
-            public static Player player = new Player();
-            public static Enemy enemy = new Enemy();
-
-            private static void Main(string[] args)
+            while (true)
             {
-                Initialization();
-
-                while (true)
-                {
-                    Time.CalculateDeltaTime();
-                    Update();
-                    Render();
-                }
-            }
-
-            private static void Initialization()
-            {
-                Time.Initialize();
-                Engine.Initialize("Paradigmas de programación", SCREEN_WIDTH, SCREEN_HEIGHT);
-            }
-
-            private static void Update()
-            {
-                player.Update();
-                enemy.Update();
-         
-                GameManager.Instance.Update();
-            }
-
-            private static void Render()
-            {
-                Engine.Clear(); // Borra la pantalla
-                //Textura Terreno
-                GameManager.Instance.Render();
-
-                Engine.Show(); // Muestra las imagenes dibujadas
+                Time.CalculateDeltaTime();
+                Update();
+                Render();
             }
         }
+
+        private static void Initialization()
+        {
+            Time.Initialize();
+            Engine.Initialize("Paradigmas de programación", SCREEN_WIDTH, SCREEN_HEIGHT);
+        }
+
+        private static void Update()
+        {
+            player.Update();
+            enemy.Update();
+
+            GameManager.Instance.Update();
+        }
+
+        private static void Render()
+        {
+            Engine.Clear(); // Borra la pantalla
+                            //Textura Terreno
+            GameManager.Instance.Render();
+
+            Engine.Show(); // Muestra las imagenes dibujadas
+        }
     }
+}
