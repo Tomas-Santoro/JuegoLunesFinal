@@ -471,3 +471,15 @@ D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animati
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Screens\SplashScreen.png
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Screens\SplashScreen3.png
 >>>>>>> d56410de33a87763c4f702a1ac53a94da858dace
+D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\Enemy\Walk\0.png
+D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\Enemy\Walk\1.png
+D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\Enemy\Walk\2.png
+D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\Enemy\Walk\3.png
+D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\Enemy\Walk\4.png
+D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\Enemy\Walk\5.png
+D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\Player\Hit\0.png
+D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\Player\Hit\1.png
+D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\Player\Hit\2.png
+D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\Player\Hit\3.png
+D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\Player\Hit\4.png
+D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\Player\Hit\5.png
