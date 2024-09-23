@@ -175,6 +175,9 @@
     <Content Include="Engine.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Textures\Screens\Level.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Textures\Screens\ScreenDefeat.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

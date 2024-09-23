@@ -18,13 +18,10 @@ namespace Game
         protected Texture background; //Composicion, no puede existir el nivel sin la textura (background) 
         protected LevelType levelType;
 
-<<<<<<< Updated upstream
-        public LevelType LevelType => levelType;
-        public Level(Texture background, LevelType levelType)
-=======
+
         public LevelType LevelType => levelType; 
         public Level(Texture background, LevelType levelType)  //Si un objeto Level es destruido, el objeto Texture asociado también será destruido.
->>>>>>> Stashed changes
+
         {
             this.background = background;
             this.levelType = levelType; //composicion  misma explicacion que el de arriba
@@ -244,7 +241,6 @@ namespace Game
                     currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/ScreenDefeat.png"), LevelType.Defeat);
                     break;
                 case LevelType.Victory:
-                    Engine.Debug("DOREMIFASOLLASIDO");
                     currentLevel = new GameLevel(Engine.GetTexture("Textures/Screens/ScreenVictory.png"), LevelType.Victory);
                     break;
               
@@ -677,13 +673,10 @@ namespace Game
         private void FollowPlayer()
         {
             isMoving = true;
-<<<<<<< Updated upstream
-            float playerX = Program.player.x;
-            float playerY = Program.player.y;
-=======
+
             float playerX = GameLevel.player.x; 
             float playerY = GameLevel.player.y;
->>>>>>> Stashed changes
+
 
 
             float directionX = playerX - x;
@@ -756,27 +749,15 @@ namespace Game
         {
             Initialization();
 
-<<<<<<< Updated upstream
+
             while (true)
             {
                 Time.CalculateDeltaTime();
                 Update();
                 Render();
-=======
-            public static Player player = new Player(); //a
-            public static Enemy enemy = new Enemy();
 
-            private static void Main(string[] args)
-            {
-                Initialization();
-
-                while (true)
-                {
-                    Time.CalculateDeltaTime();
-                    Update();
-                    Render();
-                }
             }
+        }
 
             private static void Initialization()
             {
@@ -799,31 +780,11 @@ namespace Game
                 GameManager.Instance.Render();
 
                 Engine.Show(); // Muestra las imagenes dibujadas
->>>>>>> Stashed changes
+
             }
         }
 
-        private static void Initialization()
-        {
-            Time.Initialize();
-            Engine.Initialize("Paradigmas de programación", SCREEN_WIDTH, SCREEN_HEIGHT);
-        }
+      
 
-        private static void Update()
-        {
-            player.Update();
-            enemy.Update();
-
-            GameManager.Instance.Update();
-        }
-
-        private static void Render()
-        {
-            Engine.Clear(); // Borra la pantalla
-                            //Textura Terreno
-            GameManager.Instance.Render();
-
-            Engine.Show(); // Muestra las imagenes dibujadas
-        }
-    }
+   
 }
