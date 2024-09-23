@@ -161,7 +161,7 @@ namespace Game
             public int height;
         }
 
-        public int Id { get; private set; }
+        public int Id { get; private set; } // GET Y SET ESTAN ACA
         public int Width { get; private set; }
         public int Height { get; private set; }
 

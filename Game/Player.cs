@@ -246,7 +246,7 @@ namespace Game
                     {
                         x -= speed;
                         isMoving = true;
-                        direcFlip = -1;
+                        direcFlip = 1;
                     }
                 }
                 if (Engine.GetKey(Keys.D)) // D

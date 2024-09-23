@@ -32,8 +32,8 @@ namespace Game
             texturePath = p_texturePath;
 
             // Inicializo posición
-            x = 1500;
-            y = 750;
+            x = 800;
+            y = 400;
 
             //Idle animation
             List<Texture> idleTexture = new List<Texture>();
@@ -66,7 +66,7 @@ namespace Game
         {
             if (!isAlive)
             {
-                Engine.Debug("cambia");
+               
                 GameManager.Instance.ChangeLevel(LevelType.Victory);
 
                 return;
