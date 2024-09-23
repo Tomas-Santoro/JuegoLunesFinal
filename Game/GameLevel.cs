@@ -20,7 +20,7 @@ namespace Game
 
         public GameLevel(Texture background, LevelType p_levelType) : base(background, p_levelType)
         {
-            //Creation of tile map
+            //Creacion mapa de tiles
             for (int i = 0; i < width; i++)
             {
                 for (int j = 0; j < height; j++)
@@ -46,31 +46,7 @@ namespace Game
                         tilemap[i, j] = 10;
                     else tilemap[i, j] = 6;
 
-
-
-
-                    //codigo de prueba para ver algo 
-
-                    /* if (i == 0)
-                         if (j == 0)
-                             tilemap[i, j] = -1;
-                         else if (j == height - 1)
-                             tilemap[i, j] = -1;
-                         else tilemap[i, j] = -1;
-                     else if (i == width - 1)
-                         if (j == 0)
-                             tilemap[i, j] = -1;
-                         else if (j == height - 1)
-                             tilemap[i, j] = -1;
-                         else tilemap[i, j] = -1;
-                     else if (j == 0)
-                         tilemap[i, j] = -1;
-                     else if (j == height - 1)
-                         tilemap[i, j] = -1;
-                     else if (i % 2 == 0 || j % 2 == 0)
-                         tilemap[i, j] = 6;
-                     else tilemap[i, j] = 6;//-1;
-                     */
+                   
                 }
             }
 
@@ -113,11 +89,16 @@ namespace Game
 
         public override void Render()
         {
+
             Engine.Draw(background);
 
+            if(enemy.isAlive)
+            {
             DrawMap();
 
             player.Draw();
+            }
+
             enemy.Draw();
         }
 
@@ -140,15 +121,15 @@ namespace Game
         {
             bool result = false;
 
-            int tileX = (int)futureX / 64;
-            int tileY = (int)futureY / 64;
+            int tileX = (int)futureX / 64; //se redondea para abajo la division
+            int tileY = (int)futureY / 64; //se redondea para abajo la division
 
-            if (tileX < 0 || tileY < 0 || tileX >= width - 2 || tileY >= height - 2)
+            if (tileX < 0 || tileY < 0 || tileX >= width - 2 || tileY >= height - 2) 
             {
-                return true; // Si está fuera del mapa, se considera colisión
+                return true; //si está fuera del mapa, se considera colisión
             }
 
-            //aca se va a aplicar una logica mejor diferenciando los tipos de bloques
+            //aca se va a aplicar una logica mejor diferenciando los tipos de bloques en un futuro
             if (tilemap[tileX, tileY] == -1)
                 result = true;
             else

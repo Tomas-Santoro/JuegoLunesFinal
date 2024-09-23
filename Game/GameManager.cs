@@ -38,7 +38,7 @@ namespace Game
                     currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/SplashScreen3.png"), LevelType.Menu);
                     break;
                 case LevelType.Game:
-                    currentLevel = new GameLevel(Engine.GetTexture("Textures/Screens/Level.png"), LevelType.Game);
+                    currentLevel = new GameLevel(Engine.GetTexture("Textures/Screens/FondoNubes.png"), LevelType.Game);
                     break;
                 case LevelType.Defeat:
                     currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/ScreenDefeat.png"), LevelType.Defeat);
