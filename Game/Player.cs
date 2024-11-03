@@ -170,7 +170,7 @@ namespace Game
         public void TakeDamage()
         {
 
-            if (CanTakeDamage())
+            if (CanTakeDamage()) //INVOKE
             {
                 Life--;
                 StartHit();
@@ -306,6 +306,5 @@ namespace Game
             return new Animation(route, textures, speed, loop);
         }
     }
-
 
 }
