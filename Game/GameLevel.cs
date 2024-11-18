@@ -10,7 +10,17 @@ namespace Game
     public class GameLevel : Level
     {
         public static Player player = new Player();  //REVISAR ESTO PARA UML agregacion
-        public static Enemy enemy = new Enemy();  //REVISAR ESTO PARA UML agregacion
+
+        //public static string p_texturePathe ="";
+
+
+        //public static Vector2 startpos = new Vector2 (0,0);
+
+        //public static Enemy enemy = new Enemy(p_texturePathe, startpos);
+
+        public static Enemy enemy = new Enemy();
+
+        //public static Enemy enemy = new Enemy("p_texturePathe", new Vector2(0, 0));  //REVISAR ESTO PARA UML agregacion
 
         private const int width = 20;//27;
         private const int height = 10;// 16;

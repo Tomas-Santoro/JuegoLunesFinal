@@ -244,3 +244,4 @@ paket-files/
 .idea/
 *.sln.iml
 .vs/Juego/v17/.suo
+/Game/obj/Debug
