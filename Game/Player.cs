@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    public class Player
+    public class Player : Character
     {
         private event TestDel OnChangeLifeEvent;
         public event TestDel OnChangedLife
@@ -27,7 +27,7 @@ namespace Game
             }
         }
 
-        public bool isAlive = true;
+        //public bool isAlive = true;
 
         private float damageCooldown = 3.0f; // En segundos
         private float damageCooldownTimer = 0f; // Temporizador para enfriamiento de daño
@@ -40,52 +40,31 @@ namespace Game
         private float hitDuration = 0.5f; // Duración de la animación de golpe
         private float hitTimer = 0f; // Temporizador para controlar la duración del golpe
 
-        public float x;
-        public float y;
+        //public float x;
+        //public float y;
 
-        private float width = 1.0f;  // Ancho del jugador
-        private float height = 1.0f; // Alto del jugador
+        //private float width = 1.0f;  // Ancho del jugador
+        //private float height = 1.0f; // Alto del jugador
 
         private int direcFlip = 1;
 
 
-        public string texturePath;
+        //public string texturePath;
 
         private Animation idle;
-        private Animation walkX;
+        private Animation walk;
         private Animation attack;
         private Animation hit;
 
-        private Animation currentAnimation;
+        //public static Animation currentAnimation;
+
+        //private Animation currentAnimation;
 
         private float speed = 5.0f;
 
-        public Player(string p_texturePath = "Textures/Knight/Idle/0.png")
+        public Player() : base("Textures/Animations/Player", new Vector2(150.0f, 150.0f))
         {
-            texturePath = p_texturePath;
 
-            //Idle animation
-            List<Texture> idleTexture = new List<Texture>();
-            idleTexture.Add(new Texture("Textures/Animations/Player/Idle/0.png"));
-            idleTexture.Add(new Texture("Textures/Animations/Player/Idle/1.png"));
-            idleTexture.Add(new Texture("Textures/Animations/Player/Idle/2.png"));
-            idleTexture.Add(new Texture("Textures/Animations/Player/Idle/3.png"));
-            idleTexture.Add(new Texture("Textures/Animations/Player/Idle/4.png"));
-            idleTexture.Add(new Texture("Textures/Animations/Player/Idle/5.png"));
-
-            idle = new Animation("Textures/Animations/Player/Idle/", idleTexture, 0.5f, true);
-
-            //Walk Animation
-            List<Texture> walkXTexture = new List<Texture>();
-            walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/0.png"));
-            walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/1.png"));
-            walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/2.png"));
-            walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/3.png"));
-            walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/4.png"));
-            walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/5.png"));
-
-
-            walkX = new Animation("Textures/Animations/Player/Walk/", walkXTexture, 0.1f, true);
 
             //Attack Animation
             List<Texture> attackTexture = new List<Texture>();
@@ -110,45 +89,117 @@ namespace Game
 
             hit = new Animation("Textures/Animations/Player/Hit/", hitTexture, 0.5f, true);
 
-            currentAnimation = idle;
+            string p_texturePath = "Textures/Animations/Player";
 
-            //Posicion inicial (no encontre donde lo seteaban)
-            x = 150;
-            y = 150;
+            List<Texture> idleTexture = new List<Texture>();
+            for (int i = 0; i < 6; i++)
+            {
+                idleTexture.Add(new Texture(p_texturePath + "/Idle/" + i + ".png"));
+            }
+            idle = new Animation(p_texturePath + "/Idle/", idleTexture, 0.5f, true);
+
+            //Walk Animation
+            List<Texture> walkXTexture = new List<Texture>();
+            for (int i = 0; i < 6; i++)
+            {
+                walkXTexture.Add(new Texture(p_texturePath + "/Walk/" + i + ".png"));
+                Engine.Debug($"cargando la textura de la caminacion: {i}   {p_texturePath}/Walk/{i} .png ");
+
+            }
+
+            walk = new Animation(p_texturePath + "/Walk/", walkXTexture, 0.1f, true);
+
+            Engine.Debug($"cargando las texturas del jugadorrrrrrrrrrrrrrrrrrrrrrrrr");
         }
+
+        //public Player(string p_texturePath = "Textures/Knight/Idle/0.png")
+        //{
+        //    texturePath = p_texturePath;
+
+        //    //Idle animation
+        //    List<Texture> idleTexture = new List<Texture>();
+        //    idleTexture.Add(new Texture("Textures/Animations/Player/Idle/0.png"));
+        //    idleTexture.Add(new Texture("Textures/Animations/Player/Idle/1.png"));
+        //    idleTexture.Add(new Texture("Textures/Animations/Player/Idle/2.png"));
+        //    idleTexture.Add(new Texture("Textures/Animations/Player/Idle/3.png"));
+        //    idleTexture.Add(new Texture("Textures/Animations/Player/Idle/4.png"));
+        //    idleTexture.Add(new Texture("Textures/Animations/Player/Idle/5.png"));
+
+        //    idle = new Animation("Textures/Animations/Player/Idle/", idleTexture, 0.5f, true);
+
+        //    //Walk Animation
+        //    List<Texture> walkXTexture = new List<Texture>();
+        //    walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/0.png"));
+        //    walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/1.png"));
+        //    walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/2.png"));
+        //    walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/3.png"));
+        //    walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/4.png"));
+        //    walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/5.png"));
+
+
+        //    walkX = new Animation("Textures/Animations/Player/Walk/", walkXTexture, 0.1f, true);
+
+        //    //Attack Animation
+        //    List<Texture> attackTexture = new List<Texture>();
+        //    attackTexture.Add(new Texture("Textures/Animations/Player/Attack/0.png"));
+        //    attackTexture.Add(new Texture("Textures/Animations/Player/Attack/1.png"));
+        //    attackTexture.Add(new Texture("Textures/Animations/Player/Attack/2.png"));
+        //    attackTexture.Add(new Texture("Textures/Animations/Player/Attack/3.png"));
+        //    attackTexture.Add(new Texture("Textures/Animations/Player/Attack/4.png"));
+        //    attackTexture.Add(new Texture("Textures/Animations/Player/Attack/5.png"));
+
+
+        //    attack = new Animation("Textures/Animations/Player/Attack/", attackTexture, 0.1f, true);
+
+        //    //Hit Animation
+        //    List<Texture> hitTexture = new List<Texture>();
+        //    hitTexture.Add(new Texture("Textures/Animations/Player/Hit/0.png"));
+        //    hitTexture.Add(new Texture("Textures/Animations/Player/Hit/1.png"));
+        //    hitTexture.Add(new Texture("Textures/Animations/Player/Hit/2.png"));
+        //    hitTexture.Add(new Texture("Textures/Animations/Player/Hit/3.png"));
+        //    hitTexture.Add(new Texture("Textures/Animations/Player/Hit/4.png"));
+        //    hitTexture.Add(new Texture("Textures/Animations/Player/Hit/5.png"));
+
+        //    hit = new Animation("Textures/Animations/Player/Hit/", hitTexture, 0.5f, true);
+
+        //    currentAnimation = idle;
+
+        //    //Posicion inicial (no encontre donde lo seteaban)
+        //    x = 150;
+        //    y = 150;
+        //}
 
         public void SetPosition(Vector2 position)
         {
-            x = position.X;
-            y = position.Y;
+            Position = position;
         }
 
         private void StartAttack()
         {
             isAttacking = true;
             attackTimer = 0f;
-            currentAnimation = attack;
+            CurrentAnimation = attack;
 
         }
 
         private void EndAttack()
         {
             isAttacking = false;
-            currentAnimation = idle;
+            CurrentAnimation = idle;
 
         }
 
         private void StartHit()
         {
             isHit = true;
-            currentAnimation = hit;
+            CurrentAnimation = hit;
 
         }
 
         private void EndHit()
         {
             isHit = false;
-            currentAnimation = idle;
+            CurrentAnimation = idle;
 
         }
 
@@ -182,6 +233,7 @@ namespace Game
             }
         }
 
+
         public void Update()
         {
             if (!isAlive)
@@ -200,7 +252,7 @@ namespace Game
                 }
                 else
                 {
-                    currentAnimation.Update();
+                    CurrentAnimation.Update();
                     return;
                 }
             }
@@ -226,34 +278,35 @@ namespace Game
                 // Lógica de movimiento
                 if (Engine.GetKey(Keys.W)) // W
                 {
-                    if (!GameLevel.CheckCollisions(x, y - speed, width, height))
+                    if (!GameLevel.CheckCollisions(Position.X, Position.Y - speed, Transform.Scale.X, Transform.Scale.Y))
                     {
-                        y -= speed;
+                        SetPosition(Position - new Vector2(0.0f, speed));
                         isMoving = true;
                     }
                 }
                 if (Engine.GetKey(Keys.S)) // S
                 {
-                    if (!GameLevel.CheckCollisions(x, y + speed + height, width, height))
+                    if (!GameLevel.CheckCollisions(Position.X, Position.Y + speed + Transform.Scale.Y, Transform.Scale.X, Transform.Scale.Y))
                     {
-                        y += speed;
+                        SetPosition(Position + new Vector2(0.0f, speed));
                         isMoving = true;
                     }
                 }
                 if (Engine.GetKey(Keys.A)) // A
                 {
-                    if (!GameLevel.CheckCollisions(x - speed, y, width, height))
+                    if (!GameLevel.CheckCollisions(Position.X - speed, Position.Y, Transform.Scale.X, Transform.Scale.Y))
                     {
-                        x -= speed;
+                        SetPosition(Position - new Vector2(speed, 0.0f));
+                        //x -= speed;
                         isMoving = true;
                         direcFlip = 1;
                     }
                 }
                 if (Engine.GetKey(Keys.D)) // D
                 {
-                    if (!GameLevel.CheckCollisions(x + speed + width, y, width, height))
+                    if (!GameLevel.CheckCollisions(Position.X + speed + Transform.Scale.X, Position.Y, Transform.Scale.X, Transform.Scale.Y))
                     {
-                        x += speed;
+                        SetPosition(Position + new Vector2(speed, 0.0f));
                         isMoving = true;
                     }
                 }
@@ -261,38 +314,38 @@ namespace Game
                 // Cambiar a animación de caminar si se está moviendo
                 if (isMoving)
                 {
-                    currentAnimation = walkX; // Asegúrate de que 'walk' esté definida como tu animación de caminar
+                    CurrentAnimation = walk; // Asegúrate de que 'walk' esté definida como tu animación de caminar
                 }
                 else
                 {
-                    currentAnimation = idle; // Cambiar a animación de inactividad si no se está moviendo
+                    CurrentAnimation = idle; // Cambiar a animación de inactividad si no se está moviendo
                 }
             }
-            currentAnimation.Update();
+            CurrentAnimation.Update();
 
             Debug.Print(life.ToString());
-            Debug.Print(currentAnimation.ToString());
+            Debug.Print(CurrentAnimation.ToString());
         }
 
-        public void Draw()
-        {
-            if (!isAlive)
-            {
-                return;
-            }
-            var texture = currentAnimation.CurrentFrame;
-            Engine.Draw(texture, (int)x, (int)y, direcFlip, 1, 0, 0, 0); // Asegúrate de dibujar la textura correcta
-        }
+        //public void Draw()
+        //{
+        //    if (!isAlive)
+        //    {
+        //        return;
+        //    }
+        //    var texture = currentAnimation.CurrentFrame;
+        //    Engine.Draw(texture, (int)x, (int)y, direcFlip, 1, 0, 0, 0); // Asegúrate de dibujar la textura correcta
+        //}
 
-        public Vector2 GetPosition()
-        {
-            return new Vector2(x, y);
-        }
+        //public Vector2 GetPosition()
+        //{
+        //    return new Vector2(x, y);
+        //}
 
-        public Vector2 GetSize()
-        {
-            return new Vector2(width, height);
-        }
+        //public Vector2 GetSize()
+        //{
+        //    return new Vector2(width, height);
+        //}
 
         private Animation CreateAnimation(string route, int frames, float speed, bool loop)
         {

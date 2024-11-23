@@ -20,6 +20,9 @@ namespace Game
         //public bool isAlive = true;
         private int life = 1;
 
+        private Animation idle;
+        private Animation walk;
+
         //private float x;
         //private float y;
         private float speed = 3.0f;
@@ -39,6 +42,28 @@ namespace Game
 
         public Enemy() : base("Textures/Animations/Enemy", new Vector2(800.0f, 400.0f))
         {
+            //Idle animation
+            List<Texture> idleTexture = new List<Texture>();
+            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/0.png"));
+            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/1.png"));
+            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/2.png"));
+            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/3.png"));
+            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/4.png"));
+            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/5.png"));
+
+            idle = new Animation("Textures/Animations/Enemy/Idle/", idleTexture, 0.5f, true);
+
+            //Walk Animation
+            List<Texture> walkXTexture = new List<Texture>();
+            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/0.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/1.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/2.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/3.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/4.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/5.png"));
+
+
+            walk = new Animation("Textures/Animations/Enemy/Walk/", walkXTexture, 0.1f, true);
         }
 
 
@@ -131,8 +156,8 @@ namespace Game
         {
             isMoving = true;
 
-            float playerX = GameLevel.player.x;
-            float playerY = GameLevel.player.y;
+            float playerX = GameLevel.player.Position.X;
+            float playerY = GameLevel.player.Position.Y;
 
 
 

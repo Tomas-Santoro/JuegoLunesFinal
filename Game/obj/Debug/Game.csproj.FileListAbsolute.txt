@@ -221,3 +221,13 @@ C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animat
 C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Spawn\4.png
 C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Spawn\5.png
 C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Spawn\6.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Idle\4.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Idle\5.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Idle\6.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Spawn\0.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Spawn\1.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Spawn\2.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Spawn\3.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Spawn\4.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Spawn\5.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Spawn\6.png

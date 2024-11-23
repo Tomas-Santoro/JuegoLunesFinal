@@ -42,22 +42,22 @@ namespace Game
 
             //Idle animation
 
-            List<Texture> idleTexture = new List<Texture>();
-            for (int i = 0; i < 6; i++)
-            {
-                idleTexture.Add(new Texture(p_texturePath + "/Idle/" + i + ".png"));
-            }
-            idle = new Animation(p_texturePath + "/Idle/", idleTexture, 0.5f, true);
+            //List<Texture> idleTexture = new List<Texture>();
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    idleTexture.Add(new Texture(p_texturePath + "/Idle/" + i + ".png"));
+            //}
+            //idle = new Animation(p_texturePath + "/Idle/", idleTexture, 0.5f, true);
 
-            //Walk Animation
-            List<Texture> walkXTexture = new List<Texture>();
-            for (int i = 0; i < 6; i++)
-            {
-                walkXTexture.Add(new Texture(p_texturePath + "/Walk/" + i + ".png"));
-                Engine.Debug($"cargando la textura de la caminacion: {i}");
-            }
+            ////Walk Animation
+            //List<Texture> walkXTexture = new List<Texture>();
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    walkXTexture.Add(new Texture(p_texturePath + "/Walk/" + i + ".png"));
+            //    Engine.Debug($"cargando la textura de la caminacion: {i}   {p_texturePath}/Walk/{i} .png ");
+            //}
 
-            walk = new Animation(p_texturePath + "/Walk/", walkXTexture, 0.1f, true);
+            //walk = new Animation(p_texturePath + "/Walk/", walkXTexture, 0.1f, true);
 
             currentAnimation = idle;
             transform = new TransformData(startposition, new Vector2(1.0f, 1.0f),0.0f);
@@ -120,5 +120,9 @@ namespace Game
         public Animation Animation { get { return currentAnimation; } set => currentAnimation = value; }
 
         public Vector2 Position { get => transform.Position; set => transform.Position = value; }
+
+        public TransformData Transform { get => transform; }
+
+        public Animation CurrentAnimation { get => currentAnimation; set => currentAnimation = value; }
     }
 }

@@ -9,9 +9,9 @@ namespace Game
 
     public class GameLevel : Level
     {
-        public static Player player = new Player();  //REVISAR ESTO PARA UML agregacion
 
         //public static string p_texturePathe ="";
+        public static Player player = new Player();  //REVISAR ESTO PARA UML agregacion
 
 
         //public static Vector2 startpos = new Vector2 (0,0);
