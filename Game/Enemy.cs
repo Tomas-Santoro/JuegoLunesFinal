@@ -7,8 +7,16 @@ using System.Threading.Tasks;
 namespace Game
 {
 
-    public class Enemy:Character
+    public class Enemy:Character, IDamageable
     {
+
+        //Implementacion de Interfaz de Daño
+        private int hitPoints;
+        public int HitPoints => hitPoints;
+
+        public bool IsDestroyed { get; set; }
+        public event Action<IDamageable> OnDestroyed;
+
         //public bool isAlive = true;
         private int life = 1;
 
@@ -158,6 +166,16 @@ namespace Game
         public void SetPosition(Vector2 position)
         {
             Position = position;
+        }
+        //Implementacion de interfaz de daño
+        public void GetDamage(int damage)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Destroy()
+        {
+            throw new NotImplementedException();
         }
         //public Vector2 GetPosition()
         //{
