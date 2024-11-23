@@ -245,3 +245,9 @@ paket-files/
 *.sln.iml
 .vs/Juego/v17/.suo
 /Game/obj/Debug
+.vs/Juego/v17/.suo
+.vs/Juego/v17/.suo
+.vs/Juego/v17/DocumentLayout.json
+Game/.vs/Game.csproj.dtbcache.json
+Game/bin/Debug/Game.exe
+Game/bin/Debug/Game.pdb

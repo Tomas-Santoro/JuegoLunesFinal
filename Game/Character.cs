@@ -9,7 +9,7 @@ namespace Game
     public class Character
     {
         public bool isAlive = false;
-        private int life = 1;
+        private int life;
 
 
         private TransformData transform;
@@ -64,12 +64,12 @@ namespace Game
             //transform.Position = startposition;
             //transform.Rotation = 0f;
             //transform.Scale = new Vector2(1.0f, 1.0f);
-
         }
 
         public void TakeDamage()
         {
             life--;
+            Engine.Debug($"Golpe recibido");
             if (life <= 0)
             {
                 Die();
@@ -124,5 +124,7 @@ namespace Game
         public TransformData Transform { get => transform; }
 
         public Animation CurrentAnimation { get => currentAnimation; set => currentAnimation = value; }
+
+        //public int Life { get => life; set => life = value; }
     }
 }

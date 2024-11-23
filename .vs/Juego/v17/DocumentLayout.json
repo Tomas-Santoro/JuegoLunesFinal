@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinalfinalfinal\\game\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinalfinalfinal\\game\\enemigor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\enemigor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinalfinalfinal\\game\\enemigon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\enemigon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinalfinalfinal\\game\\enemigol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\enemigol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|E:\\GitHub\\JuegoLunesFinalFinalFinal\\game\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinalfinalfinal\\game\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|E:\\GitHub\\JuegoLunesFinalFinalFinal\\game\\gamelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\gamelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinalfinalfinal\\game\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinalfinalfinal\\game\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|E:\\GitHub\\JuegoLunesFinalFinalFinal\\game\\gamelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\gamelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|e:\\github\\juegolunesfinalfinalfinal\\game\\transformdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\transformdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|E:\\GitHub\\JuegoLunesFinalFinalFinal\\game\\idamageable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,33 +78,111 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EnemigoL.cs",
+              "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\EnemigoL.cs",
+              "RelativeDocumentMoniker": "Game\\EnemigoL.cs",
+              "ToolTip": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\EnemigoL.cs*",
+              "RelativeToolTip": "Game\\EnemigoL.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T21:54:22.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "EnemigoR.cs",
+              "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\EnemigoR.cs",
+              "RelativeDocumentMoniker": "Game\\EnemigoR.cs",
+              "ToolTip": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\EnemigoR.cs*",
+              "RelativeToolTip": "Game\\EnemigoR.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T21:55:01.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnemigoN.cs",
+              "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\EnemigoN.cs",
+              "RelativeDocumentMoniker": "Game\\EnemigoN.cs",
+              "ToolTip": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\EnemigoN.cs*",
+              "RelativeToolTip": "Game\\EnemigoN.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T21:54:46.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Enemy.cs",
               "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\Enemy.cs",
               "RelativeDocumentMoniker": "Game\\Enemy.cs",
-              "ToolTip": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\Enemy.cs*",
-              "RelativeToolTip": "Game\\Enemy.cs*",
-              "ViewState": "AQIAABMAAAAAAAAAAADwvzkAAAAQAAAA",
+              "ToolTip": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\Enemy.cs",
+              "RelativeToolTip": "Game\\Enemy.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAoAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T20:41:48.658Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
+              "Title": "Animation.cs",
+              "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\Animation.cs",
+              "RelativeDocumentMoniker": "Game\\Animation.cs",
+              "ToolTip": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\Animation.cs",
+              "RelativeToolTip": "Game\\Animation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T21:41:49.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameLevel.cs",
+              "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\GameLevel.cs",
+              "RelativeDocumentMoniker": "Game\\GameLevel.cs",
+              "ToolTip": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\GameLevel.cs",
+              "RelativeToolTip": "Game\\GameLevel.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAowA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T06:06:59.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Player.cs",
               "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\Player.cs",
               "RelativeDocumentMoniker": "Game\\Player.cs",
               "ToolTip": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\Player.cs",
               "RelativeToolTip": "Game\\Player.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAwwDUAAAAAAAAA",
+              "ViewState": "AQIAAMgAAAAAAAAAAAAuwEAAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T20:40:20.5Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
+              "Title": "TransformData.cs",
+              "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\TransformData.cs",
+              "RelativeDocumentMoniker": "Game\\TransformData.cs",
+              "ToolTip": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\TransformData.cs",
+              "RelativeToolTip": "Game\\TransformData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T21:38:58.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "CollisionsUtilities.cs",
               "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\CollisionsUtilities.cs",
               "RelativeDocumentMoniker": "Game\\CollisionsUtilities.cs",
@@ -97,20 +195,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Character.cs",
               "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\Character.cs",
               "RelativeDocumentMoniker": "Game\\Character.cs",
-              "ToolTip": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\Character.cs*",
-              "RelativeToolTip": "Game\\Character.cs*",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAQwCYAAAAWAAAA",
+              "ToolTip": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\Character.cs",
+              "RelativeToolTip": "Game\\Character.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAcwBkAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T04:44:56.087Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "Food.cs",
               "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\Food.cs",
               "RelativeDocumentMoniker": "Game\\Food.cs",
@@ -123,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "IDamageable.cs",
               "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\IDamageable.cs",
               "RelativeDocumentMoniker": "Game\\IDamageable.cs",
@@ -136,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "GameManager.cs",
               "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\GameManager.cs",
               "RelativeDocumentMoniker": "Game\\GameManager.cs",
@@ -148,20 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameLevel.cs",
-              "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\GameLevel.cs",
-              "RelativeDocumentMoniker": "Game\\GameLevel.cs",
-              "ToolTip": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\GameLevel.cs",
-              "RelativeToolTip": "Game\\GameLevel.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T06:06:59.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "IGameObject.cs",
               "DocumentMoniker": "E:\\GitHub\\JuegoLunesFinalFinalFinal\\Game\\IGameObject.cs",
               "RelativeDocumentMoniker": "Game\\IGameObject.cs",
