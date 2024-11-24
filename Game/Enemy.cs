@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 namespace Game
 {
 
-    public class Enemy:Character, IDamageable
+    public class Enemy:Character, IDamageable, IPoolable
     {
 
         //Implementacion de Interfaz de Daño
-        private int hitPoints;
+        protected int hitPoints;
         public int HitPoints => hitPoints;
 
         public bool IsDestroyed { get; set; }
@@ -210,6 +210,11 @@ namespace Game
         public void Destroy()
         {
             isAlive = false;
+        }
+        public void Reset() //funcion de interfaz Ipool
+        {
+            IsDestroyed = false;
+            hitPoints = 1;
         }
         //public Vector2 GetPosition()
         //{

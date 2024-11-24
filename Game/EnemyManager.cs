@@ -26,10 +26,12 @@ namespace Game
 
         private int enemyQuantity;
         private List<Enemy> enemies;
+        private ObjectPool<Enemy> enemyPool;
 
         private EnemyManager() {
             enemyQuantity = 10;
             enemies = new List<Enemy>();
+            enemyPool = new ObjectPool<Enemy>();
         }
 
         public int quantity { get => enemyQuantity; set => enemyQuantity = value; }
