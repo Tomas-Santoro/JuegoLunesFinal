@@ -11,12 +11,6 @@ namespace Game
     {
         private TransformData transform;
 
-        public float x;
-        public float y;
-
-        private float width = 1.0f;  
-        private float height = 1.0f; 
-
         float swapAnim = 0f;
         public bool isActive = true;
 
@@ -24,6 +18,12 @@ namespace Game
         private Animation idle;
 
         private Animation currentAnimation;
+
+        int healPoints = 1;
+        public int Heal => healPoints;
+
+        public bool IsDestroyed { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public Food(Vector2 startposition, string p_texturePath = "Textures/Animations/Resources/Food/Idle/4.png") 
         { 
             texturePath = p_texturePath;
@@ -39,8 +39,7 @@ namespace Game
             currentAnimation = idle;
 
             transform = new TransformData(startposition, new Vector2(1.0f, 1.0f), 0.0f);
-            x = 185;
-            y = 150;
+            transform.Scale = new Vector2(1.0f, 1.0f);  
         }
 
         public void Draw()
@@ -53,11 +52,8 @@ namespace Game
             Engine.Draw(texture, transform.Position.X, transform.Position.Y, transform.Scale.X, transform.Scale.Y, transform.Rotation, 0, 0);
         }
 
-        public void SetPosition(Vector2 position)
-        {
-            x = transform.Position.X;
-            y = transform.Position.Y;
-        }
+        public Vector2 Position { get => transform.Position; set => transform.Position = value; }
+
         public Vector2 GetPosition()
         {
             return transform.Position;
@@ -74,13 +70,30 @@ namespace Game
                 return;
             }
             currentAnimation.Update();
+            Collision();
+            
         }
 
         public void Destroy()
         {
             isActive = false;
         }
+        
+        public void Collision()
+        {
+            if (CollisionsUtilities.IsBoxColliding(GetPosition(), GetSize(), Player.player.GetPosition(), Player.player.GetSize()))
+            {
 
+                Engine.Debug("player healed");
+
+
+            }
+        }
+
+        public void GetHeal(int heal)
+        {
+            throw new NotImplementedException();
+        }
     }
        
 }

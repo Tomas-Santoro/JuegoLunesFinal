@@ -21,7 +21,7 @@ namespace Game
         public static Enemy enemy = new Enemy();
      //  public static EnemigoR enemyR = new EnemigoR(new Vector2());
        // public EnemigoR enemy = new EnemigoR(new Vector2(185f, 185f));
-        public static Food food = new Food(new Vector2(185f,150f));
+        public static Food food = new Food(new Vector2(200f,500));
 
         //public EnemyManager = new EnemyManager();
 
@@ -93,8 +93,11 @@ namespace Game
             player.Update();
             enemy.Update();
             food.Update();
-         
-           
+
+            if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(), food.GetPosition(), food.GetSize()))
+            {
+                Engine.Debug("healed");
+            }
             // Verifica colisión entre jugador y enemigo
             if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(),
                 enemy.GetPosition(), enemy.GetSize()))
@@ -102,7 +105,7 @@ namespace Game
                 // Si el jugador está atacando y el enemigo está vivo
                 if (player.IsAttacking() && enemy.IsAlive())
                 {
-                    enemy.TakeDamage(); // El enemigo recibe daño y puede morir
+                    enemy.GetDamage(1); // El enemigo recibe daño y puede morir
 
 
                     //Hardcodeado para testear********************************************************************************
@@ -113,16 +116,6 @@ namespace Game
                 else if (enemy.IsAlive())
                 {
                     player.TakeDamage(); // El jugador recibe daño si no está atacando
-                }
-
-            }
-            if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(),
-               food.GetPosition(), food.GetSize()))
-            {
-                if (Engine.GetKey(Keys.K))
-                {
-                    food.Destroy();
-                    Engine.Debug("player healed");
                 }
 
             }

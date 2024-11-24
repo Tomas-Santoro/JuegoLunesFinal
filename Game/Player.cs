@@ -40,9 +40,6 @@ namespace Game
         //agregada esta instanciacion de player para poder usar los eventos, revisar
         public static Player player = new Player();
 
-
-        //public bool isAlive = true;
-
         private float damageCooldown = 3.0f; // En segundos
         private float damageCooldownTimer = 0f; // Temporizador para enfriamiento de daño
 
@@ -54,25 +51,13 @@ namespace Game
         private float hitDuration = 0.5f; // Duración de la animación de golpe
         private float hitTimer = 0f; // Temporizador para controlar la duración del golpe
 
-        //public float x;
-        //public float y;
-
-        //private float width = 1.0f;  // Ancho del jugador
-        //private float height = 1.0f; // Alto del jugador
-
         private int direcFlip = 1;
 
-
-        //public string texturePath;
 
         private Animation idle;
         private Animation walk;
         private Animation attack;
         private Animation hit;
-
-        //public static Animation currentAnimation;
-
-        //private Animation currentAnimation;
 
         private float speed = 5.0f;
 
@@ -123,65 +108,8 @@ namespace Game
 
             walk = new Animation(p_texturePath + "/Walk/", walkXTexture, 0.1f, true);
 
-            Engine.Debug($"cargando las texturas del jugadorrrrrrrrrrrrrrrrrrrrrrrrr");
+            Engine.Debug($"cargando las texturas del jugador");
         }
-
-        //public Player(string p_texturePath = "Textures/Knight/Idle/0.png")
-        //{
-        //    texturePath = p_texturePath;
-
-        //    //Idle animation
-        //    List<Texture> idleTexture = new List<Texture>();
-        //    idleTexture.Add(new Texture("Textures/Animations/Player/Idle/0.png"));
-        //    idleTexture.Add(new Texture("Textures/Animations/Player/Idle/1.png"));
-        //    idleTexture.Add(new Texture("Textures/Animations/Player/Idle/2.png"));
-        //    idleTexture.Add(new Texture("Textures/Animations/Player/Idle/3.png"));
-        //    idleTexture.Add(new Texture("Textures/Animations/Player/Idle/4.png"));
-        //    idleTexture.Add(new Texture("Textures/Animations/Player/Idle/5.png"));
-
-        //    idle = new Animation("Textures/Animations/Player/Idle/", idleTexture, 0.5f, true);
-
-        //    //Walk Animation
-        //    List<Texture> walkXTexture = new List<Texture>();
-        //    walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/0.png"));
-        //    walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/1.png"));
-        //    walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/2.png"));
-        //    walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/3.png"));
-        //    walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/4.png"));
-        //    walkXTexture.Add(new Texture("Textures/Animations/Player/Walk/5.png"));
-
-
-        //    walkX = new Animation("Textures/Animations/Player/Walk/", walkXTexture, 0.1f, true);
-
-        //    //Attack Animation
-        //    List<Texture> attackTexture = new List<Texture>();
-        //    attackTexture.Add(new Texture("Textures/Animations/Player/Attack/0.png"));
-        //    attackTexture.Add(new Texture("Textures/Animations/Player/Attack/1.png"));
-        //    attackTexture.Add(new Texture("Textures/Animations/Player/Attack/2.png"));
-        //    attackTexture.Add(new Texture("Textures/Animations/Player/Attack/3.png"));
-        //    attackTexture.Add(new Texture("Textures/Animations/Player/Attack/4.png"));
-        //    attackTexture.Add(new Texture("Textures/Animations/Player/Attack/5.png"));
-
-
-        //    attack = new Animation("Textures/Animations/Player/Attack/", attackTexture, 0.1f, true);
-
-        //    //Hit Animation
-        //    List<Texture> hitTexture = new List<Texture>();
-        //    hitTexture.Add(new Texture("Textures/Animations/Player/Hit/0.png"));
-        //    hitTexture.Add(new Texture("Textures/Animations/Player/Hit/1.png"));
-        //    hitTexture.Add(new Texture("Textures/Animations/Player/Hit/2.png"));
-        //    hitTexture.Add(new Texture("Textures/Animations/Player/Hit/3.png"));
-        //    hitTexture.Add(new Texture("Textures/Animations/Player/Hit/4.png"));
-        //    hitTexture.Add(new Texture("Textures/Animations/Player/Hit/5.png"));
-
-        //    hit = new Animation("Textures/Animations/Player/Hit/", hitTexture, 0.5f, true);
-
-        //    currentAnimation = idle;
-
-        //    //Posicion inicial (no encontre donde lo seteaban)
-        //    x = 150;
-        //    y = 150;
-        //}
 
         public void SetPosition(Vector2 position)
         {
