@@ -71,12 +71,21 @@ namespace Game
             }
 
             player.OnChangedLife += OnLifeChangedHandler;
+            player.OnDeathAction += GameManager.Instance.OnDeathHandler;
         }
 
         private void OnLifeChangedHandler(int life)
         {
             Engine.Debug($"vida del jugador: {life}");
         }
+
+        //public void OnDeathHandler()
+        //{
+        //    Engine.Debug("aaaaaaaaa");
+        //}
+
+
+
         public override void Update()
         {
             player.Update();

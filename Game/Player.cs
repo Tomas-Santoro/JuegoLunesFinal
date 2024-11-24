@@ -9,6 +9,7 @@ namespace Game
 {
     public class Player : Character
     {
+
         private event TestDel OnChangeLifeEvent;
         public event TestDel OnChangedLife
         {
@@ -26,6 +27,19 @@ namespace Game
                 OnChangeLifeEvent?.Invoke(life);
             }
         }
+
+        public delegate void Death();
+        private event Death OnDeath;
+        public event Death OnDeathAction
+        {
+            add => OnDeath += value;
+            remove => OnDeath -= value;
+        }
+
+
+        //agregada esta instanciacion de player para poder usar los eventos, revisar
+        public static Player player = new Player();
+
 
         //public bool isAlive = true;
 
@@ -209,10 +223,18 @@ namespace Game
         }
 
         private void Die()
-        {
+        {   
+
             isAlive = false;
             Engine.Debug("Estoy Muerto");
+            OnDeath?.Invoke();
+            Engine.Debug("Se invoco al evento de muerte");
+
             GameManager.Instance.ChangeLevel(LevelType.Defeat);
+
+
+
+
         }
         public bool CanTakeDamage()
         {

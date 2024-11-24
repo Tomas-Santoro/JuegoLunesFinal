@@ -9,6 +9,9 @@ namespace Game
     public class GameManager
     {
         private static GameManager instance;
+        //public Player player;
+
+        //public static LevelType currentState = LevelType.Game;
         public static GameManager Instance
         {
             get
@@ -25,7 +28,11 @@ namespace Game
         private GameManager()
         {
             ChangeLevel(LevelType.Menu);
+
+            //player.OnDeathAction += OnDeathHandler;
+
         }
+
         public void ChangeLevel(LevelType levelType)
         {
             if (currentLevel != null)
@@ -49,6 +56,11 @@ namespace Game
 
             }
         }
+
+        public void OnDeathHandler() {
+            Engine.Debug("aaaaaaaaa");
+        }
+
         public void Update()
         {
             if (Engine.GetKey(Keys.Q))

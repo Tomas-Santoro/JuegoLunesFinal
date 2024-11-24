@@ -41,30 +41,30 @@ namespace Game
         //    startposition = new Vector2(800.0f, 400.0f);
         //}
 
-        public Enemy() : base("Textures/Animations/Enemy", new Vector2(800.0f, 400.0f))
+        public Enemy() : base("Textures/Animations/EnemigoR", new Vector2(800.0f, 400.0f))
         {
             //Idle animation
             List<Texture> idleTexture = new List<Texture>();
-            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/0.png"));
-            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/1.png"));
-            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/2.png"));
-            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/3.png"));
-            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/4.png"));
-            idleTexture.Add(new Texture("Textures/Animations/Enemy/Idle/5.png"));
+            idleTexture.Add(new Texture("Textures/Animations/EnemigoR/Idle/0.png"));
+            idleTexture.Add(new Texture("Textures/Animations/EnemigoR/Idle/1.png"));
+            idleTexture.Add(new Texture("Textures/Animations/EnemigoR/Idle/2.png"));
+            idleTexture.Add(new Texture("Textures/Animations/EnemigoR/Idle/3.png"));
+            idleTexture.Add(new Texture("Textures/Animations/EnemigoR/Idle/4.png"));
+            idleTexture.Add(new Texture("Textures/Animations/EnemigoR/Idle/5.png"));
 
-            idle = new Animation("Textures/Animations/Enemy/Idle/", idleTexture, 0.5f, true);
+            idle = new Animation("Textures/Animations/EnemigoR/Idle/", idleTexture, 0.5f, true);
 
             //Walk Animation
             List<Texture> walkXTexture = new List<Texture>();
-            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/0.png"));
-            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/1.png"));
-            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/2.png"));
-            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/3.png"));
-            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/4.png"));
-            walkXTexture.Add(new Texture("Textures/Animations/Enemy/Walk/5.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/EnemigoR/Walk/0.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/EnemigoR/Walk/1.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/EnemigoR/Walk/2.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/EnemigoR/Walk/3.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/EnemigoR/Walk/4.png"));
+            walkXTexture.Add(new Texture("Textures/Animations/EnemigoR/Walk/5.png"));
 
 
-            walk = new Animation("Textures/Animations/Enemy/Walk/", walkXTexture, 0.1f, true);
+            walk = new Animation("Textures/Animations/EnemigoR/Walk/", walkXTexture, 0.1f, true);
         }
 
         public Enemy(string p_texturePath, Vector2 startposition) : base(p_texturePath, startposition)

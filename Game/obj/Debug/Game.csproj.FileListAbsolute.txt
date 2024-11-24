@@ -231,18 +231,6 @@ E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Resources
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Spawn\4.png
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Spawn\5.png
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Resources\Food\Spawn\6.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy2\Idle\0.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy2\Idle\1.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy2\Idle\2.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy2\Idle\3.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy2\Idle\4.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy2\Idle\5.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy2\Walk\0.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy2\Walk\1.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy2\Walk\2.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy2\Walk\3.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy2\Walk\4.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy2\Walk\5.png
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy3\Idle\0.png
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy3\Idle\1.png
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Enemy3\Idle\2.png
@@ -289,3 +277,15 @@ D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animati
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\EnemigoR\Walk\3.png
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\EnemigoR\Walk\4.png
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animations\EnemigoR\Walk\5.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\EnemigoR\Idle\0.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\EnemigoR\Idle\1.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\EnemigoR\Idle\2.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\EnemigoR\Idle\3.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\EnemigoR\Idle\4.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\EnemigoR\Idle\5.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\EnemigoR\Walk\0.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\EnemigoR\Walk\1.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\EnemigoR\Walk\2.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\EnemigoR\Walk\3.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\EnemigoR\Walk\4.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\EnemigoR\Walk\5.png
