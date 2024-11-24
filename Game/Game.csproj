@@ -59,40 +59,40 @@
     <Compile Include="Vector2.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Textures\Animations\Enemy2\Idle\0.png">
+    <Content Include="Textures\Animations\EnemigoR\Idle\0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Textures\Animations\Enemy2\Idle\1.png">
+    <Content Include="Textures\Animations\EnemigoR\Idle\1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Textures\Animations\Enemy2\Idle\2.png">
+    <Content Include="Textures\Animations\EnemigoR\Idle\2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Textures\Animations\Enemy2\Idle\3.png">
+    <Content Include="Textures\Animations\EnemigoR\Idle\3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Textures\Animations\Enemy2\Idle\4.png">
+    <Content Include="Textures\Animations\EnemigoR\Idle\4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Textures\Animations\Enemy2\Idle\5.png">
+    <Content Include="Textures\Animations\EnemigoR\Idle\5.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Textures\Animations\Enemy2\Walk\0.png">
+    <Content Include="Textures\Animations\EnemigoR\Walk\0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Textures\Animations\Enemy2\Walk\1.png">
+    <Content Include="Textures\Animations\EnemigoR\Walk\1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Textures\Animations\Enemy2\Walk\2.png">
+    <Content Include="Textures\Animations\EnemigoR\Walk\2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Textures\Animations\Enemy2\Walk\3.png">
+    <Content Include="Textures\Animations\EnemigoR\Walk\3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Textures\Animations\Enemy2\Walk\4.png">
+    <Content Include="Textures\Animations\EnemigoR\Walk\4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Textures\Animations\Enemy2\Walk\5.png">
+    <Content Include="Textures\Animations\EnemigoR\Walk\5.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Textures\Animations\Enemy3\Idle\0.png">

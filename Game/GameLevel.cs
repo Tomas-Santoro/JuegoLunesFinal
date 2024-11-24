@@ -19,7 +19,8 @@ namespace Game
         //public static Enemy enemy = new Enemy(p_texturePathe, startpos);
 
         public static Enemy enemy = new Enemy();
-
+     //  public static EnemigoR enemyR = new EnemigoR(new Vector2());
+       // public EnemigoR enemy = new EnemigoR(new Vector2(185f, 185f));
         public static Food food = new Food(new Vector2(185f,150f));
 
         //public static Enemy enemy = new Enemy("p_texturePathe", new Vector2(0, 0));  //REVISAR ESTO PARA UML agregacion
@@ -81,6 +82,8 @@ namespace Game
             player.Update();
             enemy.Update();
             food.Update();
+         
+           
             // Verifica colisión entre jugador y enemigo
             if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(),
                 enemy.GetPosition(), enemy.GetSize()))
@@ -120,6 +123,7 @@ namespace Game
             }
             food.Draw();
             enemy.Draw();
+            
         }
 
         private void DrawMap()

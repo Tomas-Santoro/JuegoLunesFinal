@@ -67,6 +67,10 @@ namespace Game
             walk = new Animation("Textures/Animations/Enemy/Walk/", walkXTexture, 0.1f, true);
         }
 
+        public Enemy(string p_texturePath, Vector2 startposition) : base(p_texturePath, startposition)
+        {
+        }
+
 
         //private Animation idle;
         //private Animation walk;
