@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    internal class PooledObject
+    public class PooledObject : IPoolable
     {
+        public void Reset()
+        {
+            // aca metes para restablecer el estado del onjeto que quieras
+        }
     }
 }

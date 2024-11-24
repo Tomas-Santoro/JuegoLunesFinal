@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    internal interface IPoolable
+    public interface IPoolable
     {
+        void Reset();
     }
 }

@@ -50,11 +50,15 @@
     <Compile Include="GameManager.cs" />
     <Compile Include="IDamageable.cs" />
     <Compile Include="IGameObject.cs" />
+    <Compile Include="IPoolable.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="MenuLevel.cs" />
+    <Compile Include="ObjectPool.cs" />
     <Compile Include="Player.cs" />
+    <Compile Include="PooledObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="CollisionsUtilities.cs" />
+    <Compile Include="renderer.cs" />
     <Compile Include="Time.cs" />
     <Compile Include="TransformData.cs" />
     <Compile Include="Vector2.cs" />
