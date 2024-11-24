@@ -23,6 +23,8 @@ namespace Game
        // public EnemigoR enemy = new EnemigoR(new Vector2(185f, 185f));
         public static Food food = new Food(new Vector2(185f,150f));
 
+        //public EnemyManager = new EnemyManager();
+
         //public static Enemy enemy = new Enemy("p_texturePathe", new Vector2(0, 0));  //REVISAR ESTO PARA UML agregacion
 
         private const int width = 20;//27;
@@ -101,6 +103,12 @@ namespace Game
                 if (player.IsAttacking() && enemy.IsAlive())
                 {
                     enemy.TakeDamage(); // El enemigo recibe daño y puede morir
+
+
+                    //Hardcodeado para testear********************************************************************************
+                    Engine.Debug("El enemigo ha muerto");
+                    //enemy = new Enemy();************************************************************************************
+
                 }
                 else if (enemy.IsAlive())
                 {
@@ -118,6 +126,13 @@ namespace Game
                 }
 
             }
+
+            //Puesto solo para testear********************************************************************************
+            if (Engine.GetKey(Keys.H))
+            {
+                Engine.Debug($"Cantidad de enemigos a derrotar: {EnemyManager.Instance.quantity}");
+            }
+            //*********************************************************************************************************
         }
         public override void Render()
         {

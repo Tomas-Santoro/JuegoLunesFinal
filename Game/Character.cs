@@ -81,6 +81,11 @@ namespace Game
 
             isAlive = false;
 
+
+            //Puesto aca para testear, sería el contador de enemigos***************************************************
+            EnemyManager.Instance.quantity--;
+            //*********************************************************************************************************
+
         }
 
         public void Draw()
