@@ -200,12 +200,16 @@ namespace Game
         //Implementacion de interfaz de daño
         public void GetDamage(int damage)
         {
-            throw new NotImplementedException();
+            hitPoints -= damage;
+            if (hitPoints < 0)
+            {
+                Destroy();
+            }
         }
 
         public void Destroy()
         {
-            throw new NotImplementedException();
+            isAlive = false;
         }
         //public Vector2 GetPosition()
         //{
