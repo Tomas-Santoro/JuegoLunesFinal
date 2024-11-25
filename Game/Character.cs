@@ -125,5 +125,7 @@ namespace Game
 
         public Animation CurrentAnimation { get => currentAnimation; set => currentAnimation = value; }
 
+        public float Speed { get => speed; set => speed = value; }
+
     }
 }

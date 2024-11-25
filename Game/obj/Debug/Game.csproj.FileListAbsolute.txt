@@ -104,12 +104,6 @@ E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Player\Wa
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Player\Walk\3.png
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Player\Walk\4.png
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Player\Walk\5.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Buttons\Credits\CreditsButton1.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Buttons\Credits\CreditsButton2.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Buttons\Play\PlayButton1.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Buttons\Play\PlayButton2.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Buttons\Quit\QuitButton1.png
-E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Buttons\Quit\QuitButton2.png
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Engine.dll
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Screens\Level.png
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Screens\ScreenDefeat.png
@@ -315,3 +309,11 @@ C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animat
 C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Dead\2.png
 C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Dead\3.png
 C:\Users\usuario\Documents\GitHub\JuegoLunesFinal\Game\bin\Debug\Textures\Animations\Dead\4.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Audio\backgroundMusic.wav
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Audio\swing.wav
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Dead\0.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Dead\1.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Dead\2.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Dead\3.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Dead\4.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Sprites\arrow.png
