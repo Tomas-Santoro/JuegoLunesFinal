@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,7 +10,7 @@ namespace Game
 {
     public class Player : Character
     {
-
+        private SoundPlayer attackSound = new SoundPlayer("Audio/swing.wav");
         private event TestDel OnChangeLifeEvent;
         public event TestDel OnChangedLife
         {
@@ -121,6 +122,7 @@ namespace Game
             isAttacking = true;
             attackTimer = 0f;
             CurrentAnimation = attack;
+            //attackSound.Play(); Otro Audio por si las dudas, no andan 2 a la vez
 
         }
 
@@ -179,11 +181,6 @@ namespace Game
             {
                 Die();
             }
-        }
-
-        public void heal(int healed)
-        {
-
         }
 
         public void Update()

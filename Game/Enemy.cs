@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.Remoting.Lifetime;
 using System.Text;
@@ -19,6 +20,7 @@ namespace Game
 
         public bool isMoving = false;
 
+        protected Animation dead;
 
         public Enemy() : base("Textures/Animations/EnemigoR", new Vector2(800.0f, 400.0f))
         {
@@ -42,8 +44,16 @@ namespace Game
             walkXTexture.Add(new Texture("Textures/Animations/EnemigoR/Walk/4.png"));
             walkXTexture.Add(new Texture("Textures/Animations/EnemigoR/Walk/5.png"));
 
-
             walk = new Animation("Textures/Animations/EnemigoR/Walk/", walkXTexture, 0.1f, true);
+
+            List<Texture> deadTexture = new List<Texture>();
+            deadTexture.Add(new Texture("Textures/Animations/Dead/0.png"));
+            deadTexture.Add(new Texture("Textures/Animations/Dead/1.png"));
+            deadTexture.Add(new Texture("Textures/Animations/Dead/2.png"));
+            deadTexture.Add(new Texture("Textures/Animations/Dead/3.png"));
+            deadTexture.Add(new Texture("Textures/Animations/Dead/4.png"));
+
+            dead = new Animation("Textures/Animations/Dead/", deadTexture, 0.7f, true);
         }
 
         public Enemy(string p_texturePath, Vector2 startposition) : base(p_texturePath, startposition)

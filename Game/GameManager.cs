@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,7 @@ namespace Game
     {
         private static GameManager instance;
 
+        SoundPlayer soundPlayer = new SoundPlayer("Audio/backgroundMusic.wav");
         public static GameManager Instance
         {
             get
@@ -42,12 +44,15 @@ namespace Game
                     break;
                 case LevelType.Game:
                     currentLevel = new GameLevel(Engine.GetTexture("Textures/Screens/FondoNubes.png"), LevelType.Game);
+                    soundPlayer.PlayLooping();
                     break;
                 case LevelType.Defeat:
                     currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/ScreenDefeat.png"), LevelType.Defeat);
+                    soundPlayer.Stop();
                     break;
                 case LevelType.Victory:
                     currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/ScreenVictory.png"), LevelType.Victory);
+                    soundPlayer.Stop();
                     break;
 
             }
