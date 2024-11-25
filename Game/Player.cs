@@ -38,7 +38,19 @@ namespace Game
 
 
         //agregada esta instanciacion de player para poder usar los eventos, revisar
-        public static Player player = new Player();
+        private static Player instance;
+
+        public static Player Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Player();
+                }
+                return instance;
+            }
+        }
 
         private float damageCooldown = 3.0f; // En segundos
         private float damageCooldownTimer = 0f; // Temporizador para enfriamiento de daño
@@ -59,7 +71,7 @@ namespace Game
         private Animation attack;
         private Animation hit;
 
-        private float speed = 5.0f;
+        //private float speed = 5.0f;
 
         public Player() : base("Textures/Animations/Player", new Vector2(150.0f, 150.0f))
         {
@@ -111,7 +123,10 @@ namespace Game
             Engine.Debug($"cargando las texturas del jugador");
 
             life = 7;
+            speed = 5.0f;
         }
+
+
 
         public void SetPosition(Vector2 position)
         {
@@ -163,8 +178,6 @@ namespace Game
             GameManager.Instance.ChangeLevel(LevelType.Defeat);
 
 
-
-
         }
         public bool CanTakeDamage()
         {
@@ -185,6 +198,10 @@ namespace Game
             }
         }
 
+        public void heal(int healed)
+        {
+
+        }
 
         public void Update()
         {

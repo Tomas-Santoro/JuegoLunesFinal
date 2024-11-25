@@ -11,10 +11,10 @@ namespace Game
         int Heal { get;}
         bool IsDestroyed { get; set; }
 
-        void GetHeal(int heal);
+        void GetHeal(int heal,Player player);
 
-        void Update();
+       // void Update();
         
-        void Draw();
+       // void Draw();
     }
 }

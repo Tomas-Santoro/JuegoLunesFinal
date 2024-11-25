@@ -66,14 +66,14 @@ namespace Game
 
             //return transform.Scale;
         }
-        public void Update()
+        public void Update(Player player)
         {
             if (!isActive)
             {
                 return;
             }
             currentAnimation.Update();
-            Collision();
+            Collision(player);
             
         }
 
@@ -82,20 +82,24 @@ namespace Game
             isActive = false;
         }
         
-        public void Collision()
+        public void Collision(Player player)
         {
-            if (CollisionsUtilities.IsBoxColliding(GetPosition(), GetSize(), Player.player.GetPosition(), Player.player.GetSize()))
+            if (CollisionsUtilities.IsCircleColliding(player.GetPosition() + (player.GetSize() / 2), 30, GetPosition() + (GetSize() / 2), 30))
             {
+                GetHeal(1, player);
 
-                Engine.Debug("Food: player healed");
 
 
             }
+               // Engine.Debug($"NO se CURA         {GetPosition()} pos jugador  {Player.Instance.Position}" );
         }
 
-        public void GetHeal(int heal)
+        public void GetHeal(int heal,Player player)
         {
-            throw new NotImplementedException();
+            player.Life += heal;
+            Engine.Debug($"Food healed by {heal}, total heal points: {healPoints}");
+            Destroy();
+
         }
     }
        
