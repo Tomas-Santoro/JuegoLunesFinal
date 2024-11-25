@@ -24,6 +24,8 @@ namespace Game
             }
         }
 
+        public object CurrentLevel { get; set; }
+
         private Level currentLevel;
         private GameManager()
         {
