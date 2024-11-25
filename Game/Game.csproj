@@ -58,7 +58,8 @@
     <Compile Include="PooledObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="CollisionsUtilities.cs" />
-    <Compile Include="renderer.cs" />
+    <Compile Include="IRenderer.cs" />
+    <Compile Include="Renderer.cs" />
     <Compile Include="Time.cs" />
     <Compile Include="TransformData.cs" />
     <Compile Include="Vector2.cs" />

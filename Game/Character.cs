@@ -22,6 +22,8 @@ namespace Game
 
         protected Animation currentAnimation;
 
+        protected Renderer render;
+
         public Character(string p_texturePath, Vector2 startposition)// = "Textures/Enemy/Idle/0.png")    ====>  //Textures/Enemy/
         {
             texturePath = p_texturePath;
@@ -52,6 +54,7 @@ namespace Game
             //Position = startposition;
             //Rotation = 0f;
             //Scale = (1.0f, 1.0f);
+            render = new Renderer();
         }
 
         public void TakeDamage()
@@ -80,11 +83,14 @@ namespace Game
         {
             if (!isAlive) return;
 
-            var texture = currentAnimation.CurrentFrame;
-            Engine.Draw(texture, transform.Position.X, transform.Position.Y, transform.Scale.X, transform.Scale.Y, transform.Rotation, 0, 0);
-            //Engine.Draw(texture, 400, 800, 1, 1, 0, 0, 0);
-            //Engine.Draw(texture, (int)x, (int)y, 1, 1, 0, 0, 0); // Asegurate de dibujar la textura correcta
 
+            //Nueva version usando el componente Render
+            render.Texture = currentAnimation.CurrentFrame;
+            render.Render(transform);
+
+            //Version original sin componente Render
+            //var texture = currentAnimation.CurrentFrame;
+            //Engine.Draw(texture, transform.Position.X, transform.Position.Y, transform.Scale.X, transform.Scale.Y, transform.Rotation, 0, 0);
         }
 
         public Vector2 GetPosition()
@@ -94,7 +100,9 @@ namespace Game
 
         public Vector2 GetSize()
         {
-            return transform.Scale;
+            return new Vector2(currentAnimation.CurrentFrame.Width,currentAnimation.CurrentFrame.Height);
+
+            //return transform.Scale;
         }
 
         protected Animation CreateAnimation(string route, int frames, float speed, bool loop)

@@ -61,7 +61,10 @@ namespace Game
 
         public Vector2 GetSize()
         {
-            return transform.Scale;
+
+            return new Vector2(currentAnimation.CurrentFrame.Width, currentAnimation.CurrentFrame.Height);
+
+            //return transform.Scale;
         }
         public void Update()
         {
@@ -84,7 +87,7 @@ namespace Game
             if (CollisionsUtilities.IsBoxColliding(GetPosition(), GetSize(), Player.player.GetPosition(), Player.player.GetSize()))
             {
 
-                Engine.Debug("player healed");
+                Engine.Debug("Food: player healed");
 
 
             }

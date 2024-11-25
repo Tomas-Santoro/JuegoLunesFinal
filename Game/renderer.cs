@@ -6,21 +6,17 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    public interface Irenderer
+    public class Renderer
     {
+        private Texture texture;
 
-        Texture Texture { get; set; }
+        public Renderer() { 
+        }
 
+        public Texture Texture { get => texture; set => texture = value; }
 
-        float Width { get; set; }
-        float Height { get; set; }
-
-
-        void Draw(TransformData transform);
-
+        public void Render(TransformData transform) {
+            Engine.Draw(texture, transform.Position.X, transform.Position.Y, transform.Scale.X, transform.Scale.Y, transform.Rotation,0,0);
+        }
     }
-
-
-
 }
-

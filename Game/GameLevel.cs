@@ -107,9 +107,11 @@ namespace Game
             food.Update();
             EnemyManager.Instance.Update();
 
-            if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(), food.GetPosition(), food.GetSize()))
+            //if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(), food.GetPosition(), food.GetSize()))
+            if (CollisionsUtilities.IsCircleColliding(player.GetPosition() + (player.GetSize()/2), 30,food.GetPosition() + (food.GetSize()/2),30))
             {
-                Engine.Debug("healed");
+
+                Engine.Debug($"healed         {food.GetPosition()}");
             }
 
 
@@ -137,6 +139,8 @@ namespace Game
                     }
 
                 }
+
+                //Nueva colisión entre Jugador y Enemigo
             }
 
             //Puesto solo para testear********************************************************************************
