@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Game
 {
+    //NO ESTA EN USO
     public interface IRenderer
     {
 

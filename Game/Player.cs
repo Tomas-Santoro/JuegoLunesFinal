@@ -41,17 +41,17 @@ namespace Game
         //agregada esta instanciacion de player para poder usar los eventos, revisar
         private static Player instance;
 
-        public static Player Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new Player();
-                }
-                return instance;
-            }
-        }
+        //public static Player Instance
+        //{
+        //    get
+        //    {
+        //        if (instance == null)
+        //        {
+        //            instance = new Player();
+        //        }
+        //        return instance;
+        //    }
+        //}
 
         private float damageCooldown = 3.0f; // En segundos
         private float damageCooldownTimer = 0f; // Temporizador para enfriamiento de daño

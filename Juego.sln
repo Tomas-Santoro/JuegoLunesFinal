@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game\Game.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{853C1950-8C18-4575-BCC4-AA4FF401F3FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject3", "UnitTestProject3\UnitTestProject3.csproj", "{AFEBA5F6-8011-40BE-9F30-B0A1AE5CA77F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject4", "UnitTestProject4\UnitTestProject4.csproj", "{F2385415-4D4A-4592-AC65-DB2BFC303025}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{4B96137A-5E6A-434B-BBF0-8B3C9342750C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4B96137A-5E6A-434B-BBF0-8B3C9342750C}.Release|Win32.ActiveCfg = Release|Any CPU
 		{4B96137A-5E6A-434B-BBF0-8B3C9342750C}.Release|Win32.Build.0 = Release|Any CPU
-		{AFEBA5F6-8011-40BE-9F30-B0A1AE5CA77F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AFEBA5F6-8011-40BE-9F30-B0A1AE5CA77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AFEBA5F6-8011-40BE-9F30-B0A1AE5CA77F}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{AFEBA5F6-8011-40BE-9F30-B0A1AE5CA77F}.Debug|Win32.Build.0 = Debug|Any CPU
-		{AFEBA5F6-8011-40BE-9F30-B0A1AE5CA77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AFEBA5F6-8011-40BE-9F30-B0A1AE5CA77F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AFEBA5F6-8011-40BE-9F30-B0A1AE5CA77F}.Release|Win32.ActiveCfg = Release|Any CPU
-		{AFEBA5F6-8011-40BE-9F30-B0A1AE5CA77F}.Release|Win32.Build.0 = Release|Any CPU
+		{F2385415-4D4A-4592-AC65-DB2BFC303025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2385415-4D4A-4592-AC65-DB2BFC303025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2385415-4D4A-4592-AC65-DB2BFC303025}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{F2385415-4D4A-4592-AC65-DB2BFC303025}.Debug|Win32.Build.0 = Debug|Any CPU
+		{F2385415-4D4A-4592-AC65-DB2BFC303025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2385415-4D4A-4592-AC65-DB2BFC303025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2385415-4D4A-4592-AC65-DB2BFC303025}.Release|Win32.ActiveCfg = Release|Any CPU
+		{F2385415-4D4A-4592-AC65-DB2BFC303025}.Release|Win32.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
