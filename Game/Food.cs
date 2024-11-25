@@ -62,7 +62,7 @@ namespace Game
         public Vector2 GetSize()
         {
 
-            return new Vector2(currentAnimation.CurrentFrame.Width, currentAnimation.CurrentFrame.Height);
+            return new Vector2(currentAnimation.CurrentFrame.Width * transform.Scale.X, currentAnimation.CurrentFrame.Height * transform.Scale.Y); ;
 
             //return transform.Scale;
         }

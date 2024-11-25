@@ -173,7 +173,7 @@ namespace Game
             float magnitude = (float)Math.Sqrt(directionX * directionX + directionY * directionY);
 
             // Solo se mueve si el enemigo no está ya en la misma posición que el jugador
-            if (magnitude > 0) //si la distancia es mayor a cero se mueve. 
+            if (magnitude > 30) //si la distancia es mayor a cero se mueve. 
             {
                 directionX /= magnitude;
                 directionY /= magnitude;

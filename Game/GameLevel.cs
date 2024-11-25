@@ -119,28 +119,49 @@ namespace Game
             foreach (var enemy in EnemyManager.Instance.GetEnemies())
             {
                 // Verifica colisión entre jugador y enemigo
-                if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(),
-                    enemy.GetPosition(), enemy.GetSize()))
+                //if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(),
+                //    enemy.GetPosition(), enemy.GetSize()))
+                //{
+                //    // Si el jugador está atacando y el enemigo está vivo
+                //    if (player.IsAttacking() && enemy.IsAlive())
+                //    {
+                //        enemy.GetDamage(1); // El enemigo recibe daño y puede morir
+
+
+                //        //Hardcodeado para testear********************************************************************************
+                //        Engine.Debug("El enemigo ha muerto");
+                //        //enemy = new Enemy();************************************************************************************
+
+                //    }
+                //    else if (enemy.IsAlive())
+                //    {
+                //        player.TakeDamage(); // El jugador recibe daño si no está atacando
+                //    }
+
+                //}
+
+                //Nueva colisión entre Jugador y Enemigo
+                // Si el jugador está atacando y el enemigo está vivo
+                if (player.IsAttacking() && enemy.IsAlive())
                 {
-                    // Si el jugador está atacando y el enemigo está vivo
-                    if (player.IsAttacking() && enemy.IsAlive())
+                    if (CollisionsUtilities.IsCircleColliding(player.GetPosition() + (player.GetSize() / 2), 45, enemy.GetPosition() + (enemy.GetSize() / 2), 30))
+                    //if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(), enemy.GetPosition(), enemy.GetSize()))
                     {
+                        Engine.Debug("Chequeo de colisiones con los enemigos");
+                        Engine.Debug($"Jugador {player.GetPosition() + (player.GetSize() / 2)}");
+                        Engine.Debug($"Enemigo {enemy.GetPosition() + (enemy.GetSize() / 2)}");
                         enemy.GetDamage(1); // El enemigo recibe daño y puede morir
-
-
-                        //Hardcodeado para testear********************************************************************************
                         Engine.Debug("El enemigo ha muerto");
-                        //enemy = new Enemy();************************************************************************************
-
                     }
-                    else if (enemy.IsAlive())
+                }
+                else if (enemy.IsAlive()) {
+                    //CollisionsUtilities.IsCircleColliding(player.GetPosition() + (player.GetSize()/2), 30,food.GetPosition() + (food.GetSize()/2),30)
+                    if (CollisionsUtilities.IsCircleColliding(player.GetPosition() + (player.GetSize() / 2), 20, enemy.GetPosition() + (enemy.GetSize() / 2), 20))
                     {
                         player.TakeDamage(); // El jugador recibe daño si no está atacando
                     }
-
                 }
 
-                //Nueva colisión entre Jugador y Enemigo
             }
 
             //Puesto solo para testear********************************************************************************
