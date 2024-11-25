@@ -41,22 +41,26 @@ namespace Game
 
             //Idle animation
 
-            List<Texture> idleTexture = new List<Texture>();
-            for (int i = 0; i < 6; i++)
-            {
-                idleTexture.Add(new Texture(p_texturePath + "/Idle/" + i + ".png"));
-            }
-            idle = new Animation(p_texturePath + "/Idle/", idleTexture, 0.5f, true);
+            //List<Texture> idleTexture = new List<Texture>();
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    idleTexture.Add(new Texture(p_texturePath + "/Idle/" + i + ".png"));
+            //}
+            //idle = new Animation(p_texturePath + "/Idle/", idleTexture, 0.5f, true);
+
+            idle = CreateAnimation(p_texturePath + "/Idle/", 5, 0.5f, true);
 
             //Walk Animation
-            List<Texture> walkXTexture = new List<Texture>();
-            for (int i = 0; i < 6; i++)
-            {
-                walkXTexture.Add(new Texture(p_texturePath + "/Walk/" + i + ".png"));
-                Engine.Debug($"cargando la textura de la caminacion: {i}   {p_texturePath}/Walk/{i} .png ");
-            }
+            //List<Texture> walkXTexture = new List<Texture>();
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    walkXTexture.Add(new Texture(p_texturePath + "/Walk/" + i + ".png"));
+            //    Engine.Debug($"cargando la textura de la caminacion: {i}   {p_texturePath}/Walk/{i} .png ");
+            //}
 
-            walk = new Animation(p_texturePath + "/Walk/", walkXTexture, 0.1f, true);
+            //walk = new Animation(p_texturePath + "/Walk/", walkXTexture, 0.1f, true);
+
+            walk = CreateAnimation(p_texturePath + "/Walk/", 5, 0.1f, true);
 
             currentAnimation = idle;
             transform = new TransformData(startposition, new Vector2(1.0f, 1.0f),0.0f);

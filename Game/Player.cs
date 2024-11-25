@@ -77,31 +77,46 @@ namespace Game
         public Player() : base("Textures/Animations/Player", new Vector2(150.0f, 150.0f))
         {
 
+            string p_texturePath = "Textures/Animations/Player";
 
             //Attack Animation
-            List<Texture> attackTexture = new List<Texture>();
-            attackTexture.Add(new Texture("Textures/Animations/Player/Attack/0.png"));
-            attackTexture.Add(new Texture("Textures/Animations/Player/Attack/1.png"));
-            attackTexture.Add(new Texture("Textures/Animations/Player/Attack/2.png"));
-            attackTexture.Add(new Texture("Textures/Animations/Player/Attack/3.png"));
-            attackTexture.Add(new Texture("Textures/Animations/Player/Attack/4.png"));
-            attackTexture.Add(new Texture("Textures/Animations/Player/Attack/5.png"));
+            //List<Texture> attackTexture = new List<Texture>();
+            ////attackTexture.Add(new Texture("Textures/Animations/Player/Attack/0.png"));
+            ////attackTexture.Add(new Texture("Textures/Animations/Player/Attack/1.png"));
+            ////attackTexture.Add(new Texture("Textures/Animations/Player/Attack/2.png"));
+            ////attackTexture.Add(new Texture("Textures/Animations/Player/Attack/3.png"));
+            ////attackTexture.Add(new Texture("Textures/Animations/Player/Attack/4.png"));
+            ////attackTexture.Add(new Texture("Textures/Animations/Player/Attack/5.png"));
 
 
-            attack = new Animation("Textures/Animations/Player/Attack/", attackTexture, 0.1f, true);
+            ////attack = new Animation("Textures/Animations/Player/Attack/", attackTexture, 0.1f, true);
 
-            //Hit Animation
-            List<Texture> hitTexture = new List<Texture>();
-            hitTexture.Add(new Texture("Textures/Animations/Player/Hit/0.png"));
-            hitTexture.Add(new Texture("Textures/Animations/Player/Hit/1.png"));
-            hitTexture.Add(new Texture("Textures/Animations/Player/Hit/2.png"));
-            hitTexture.Add(new Texture("Textures/Animations/Player/Hit/3.png"));
-            hitTexture.Add(new Texture("Textures/Animations/Player/Hit/4.png"));
-            hitTexture.Add(new Texture("Textures/Animations/Player/Hit/5.png"));
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    attackTexture.Add(new Texture("Textures/Animations/Player/Attack/" + i + ".png"));
+            //}
+            //attack = new Animation("Textures/Animations/Player/Attack/", attackTexture, 0.1f, true);
 
-            hit = new Animation("Textures/Animations/Player/Hit/", hitTexture, 0.5f, true);
+            attack = CreateAnimation(p_texturePath + "/Attack/", 5, 0.1f, true);
 
-            string p_texturePath = "Textures/Animations/Player";
+            ////Hit Animation
+            //List<Texture> hitTexture = new List<Texture>();
+            ////hitTexture.Add(new Texture("Textures/Animations/Player/Hit/0.png"));
+            ////hitTexture.Add(new Texture("Textures/Animations/Player/Hit/1.png"));
+            ////hitTexture.Add(new Texture("Textures/Animations/Player/Hit/2.png"));
+            ////hitTexture.Add(new Texture("Textures/Animations/Player/Hit/3.png"));
+            ////hitTexture.Add(new Texture("Textures/Animations/Player/Hit/4.png"));
+            ////hitTexture.Add(new Texture("Textures/Animations/Player/Hit/5.png"));
+
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    hitTexture.Add(new Texture("Textures/Animations/Player/Hit/" + i + ".png"));
+            //}
+
+            //hit = new Animation("Textures/Animations/Player/Hit/", hitTexture, 0.5f, true);
+
+            hit = CreateAnimation(p_texturePath + "/Hit/", 5, 0.5f, true);
+
 
 
             Engine.Debug($"cargando las texturas del jugador");
@@ -247,7 +262,7 @@ namespace Game
                     {
                         SetPosition(Position - new Vector2(speed, 0.0f));
                         //x -= speed;
-                        isMoving = true;
+                        isMoving = true; 
                         direcFlip = 1;
                     }
                 }
@@ -276,17 +291,17 @@ namespace Game
             Debug.Print(CurrentAnimation.ToString());
         }
 
-        private Animation CreateAnimation(string route, int frames, float speed, bool loop)
-        {
-            var textures = new List<Texture>();
+        //private Animation CreateAnimation(string route, int frames, float speed, bool loop)
+        //{
+        //    var textures = new List<Texture>();
 
-            for (int i = 1; i <= frames; i++)
-            {
-                var tt = route + i + ".png";
-                textures.Add(new Texture(tt));
-            }
-            return new Animation(route, textures, speed, loop);
-        }
+        //    for (int i = 1; i <= frames; i++)
+        //    {
+        //        var tt = route + i + ".png";
+        //        textures.Add(new Texture(tt));
+        //    }
+        //    return new Animation(route, textures, speed, loop);
+        //}
     }
 
 }
