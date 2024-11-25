@@ -12,7 +12,7 @@ namespace Game
 
         //public static string p_texturePathe ="";
         public static Player player = new Player();  //REVISAR ESTO PARA UML agregacion
-
+        ObjectPool<Enemy> enemyPool = new ObjectPool<Enemy>(5);
 
         //public static Vector2 startpos = new Vector2 (0,0);
 
@@ -74,6 +74,8 @@ namespace Game
 
             player.OnChangedLife += OnLifeChangedHandler;
             player.OnDeathAction += GameManager.Instance.OnDeathHandler;
+         
+
         }
 
         private void OnLifeChangedHandler(int life)

@@ -29,7 +29,7 @@ namespace Game
         private ObjectPool<Enemy> enemyPool;
 
         private EnemyManager() {
-            enemyQuantity = 10;
+            enemyQuantity = 5;
             enemies = new List<Enemy>();
             enemyPool = new ObjectPool<Enemy>();
         }
@@ -60,19 +60,24 @@ namespace Game
         }
 
         enemies.Add(enemyTemplate);
-        return enemyTemplate;
+            enemyTemplate.SetPosition(position);
+            return enemyTemplate;
     }
 
-    // Método para obtener la lista de enemigos
-    public List<Enemy> GetEnemies()
+        // Método para liberar un enemigo de vuelta a la pool
+        public void ReleaseEnemy(Enemy enemy)
+        {
+            enemies.Remove(enemy);
+            enemyPool.ReleaseObject(enemy);
+        }
+
+
+        // Método para obtener la lista de enemigos
+        public List<Enemy> GetEnemies()
     {
         return enemies;
     }
     }
-
-
-
-
 
 
 
