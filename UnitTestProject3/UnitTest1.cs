@@ -173,6 +173,26 @@ namespace UnitTestProject1
         }
     }
 
+    [TestClass]
+    public class CharacterTests
+    {
+        [TestMethod]
+        public void CharacterTestVoid()
+        {
+            // Arrange
+            var character = new Character();
+            enemy.SetPosition(new Vector2(0, 0));
+            GameLevel.player = new Player();
+            GameLevel.player.Position = new Vector2(100, 0);
+
+            // Act
+            enemy.Update();
+
+            // Assert
+            Assert.IsTrue(enemy.Position.X > 0); // Se mueve hacia el jugador
+        }
+    }
+
 
 
 

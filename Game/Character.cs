@@ -14,7 +14,7 @@ namespace Game
 
         protected TransformData transform;
 
-        protected float speed;
+        protected float speed = 0;
         public string texturePath;
 
         protected Animation idle;
@@ -23,6 +23,15 @@ namespace Game
         protected Animation currentAnimation;
 
         protected Renderer render;
+
+        public Character() {
+            isAlive = true;
+            speed = 0;
+            currentAnimation = idle;
+            transform = new TransformData(new Vector2(0, 0), new Vector2(1.0f, 1.0f), 0.0f);
+            render = new Renderer();
+            life = 1;
+        }
 
         public Character(string p_texturePath, Vector2 startposition)// = "Textures/Enemy/Idle/0.png")    ====>  //Textures/Enemy/
         {

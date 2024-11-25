@@ -24,27 +24,27 @@ namespace UnitTestProject4
         }
     }
 
-    public class UnitTest2
-    {
-        [TestClass]
-        public class EnemyTests
-        {
-            [TestMethod]
-            public void Enemy_FollowsPlayer_WhenFar()
-            {
-                // Arrange
-                var enemy = new EnemyN();
-                enemy.SetPosition(new Vector2(0, 0));
+    //public class UnitTest2
+    //{
+    //    [TestClass]
+    //    public class EnemyTests
+    //    {
+    //        [TestMethod]
+    //        public void Enemy_FollowsPlayer_WhenFar()
+    //        {
+    //            // Arrange
+    //            var enemy = new EnemyN();
+    //            enemy.SetPosition(new Vector2(0, 0));
 
 
-                // Act
+    //            // Act
 
 
-                // Assert
-                Assert.AreEqual(enemy.Position.X, 0); // Se mueve hacia el jugador
-            }
-        }
-    }
+    //            // Assert
+    //            Assert.AreEqual(enemy.Position.X, 0); // Se mueve hacia el jugador
+    //        }
+    //    }
+    //}
 
     //[TestClass]
     //public class EnemyTests
@@ -121,8 +121,28 @@ namespace UnitTestProject4
         }
 
        
+    }
+
+    [TestClass]
+    public class CharacterTests
+    {
+        [TestMethod]
+        public void CharacterTestVoid()
+        {
+            // Arrange
+            var character = new Character();
+
+            // Speed de los enemigos creados con el constructor ()
+            float expectedSpeed = 0;
+
+
+            // Assert de velocidad
+            Assert.AreEqual(character.Speed,expectedSpeed); // Se mueve hacia el jugador
         }
     }
+
+
+}
    
 
 
