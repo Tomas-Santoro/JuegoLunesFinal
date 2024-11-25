@@ -9,24 +9,18 @@ namespace Game
     public class Character
     {
         public bool isAlive = false;
-        private int life;
+        protected int life;
 
 
-        private TransformData transform;
-        //private float x;
-        //private float y;
-        //private float width = 1.0f;  // Ancho del enemigo
-        //private float height = 1.0f; // Alto del enemigo
+        protected TransformData transform;
 
-        // private Vector2 size; //tamano de la imagen, no sabemos si se usa o no en algun lado
-
-        private float speed;
+        protected float speed;
         public string texturePath;
 
-        public static Animation idle;
-        public static Animation walk;
+        protected Animation idle;
+        protected Animation walk;
 
-        private Animation currentAnimation;
+        protected Animation currentAnimation;
 
         public Character(string p_texturePath, Vector2 startposition)// = "Textures/Enemy/Idle/0.png")    ====>  //Textures/Enemy/
         {
@@ -34,36 +28,30 @@ namespace Game
 
             isAlive = true;
 
-            // Inicializo posición
-            //x = 800;
-            //y = 400;
-
-            //p_texturePath = "Textures/Animations/Enemy";
-
             //Idle animation
 
-            //List<Texture> idleTexture = new List<Texture>();
-            //for (int i = 0; i < 6; i++)
-            //{
-            //    idleTexture.Add(new Texture(p_texturePath + "/Idle/" + i + ".png"));
-            //}
-            //idle = new Animation(p_texturePath + "/Idle/", idleTexture, 0.5f, true);
+            List<Texture> idleTexture = new List<Texture>();
+            for (int i = 0; i < 6; i++)
+            {
+                idleTexture.Add(new Texture(p_texturePath + "/Idle/" + i + ".png"));
+            }
+            idle = new Animation(p_texturePath + "/Idle/", idleTexture, 0.5f, true);
 
-            ////Walk Animation
-            //List<Texture> walkXTexture = new List<Texture>();
-            //for (int i = 0; i < 6; i++)
-            //{
-            //    walkXTexture.Add(new Texture(p_texturePath + "/Walk/" + i + ".png"));
-            //    Engine.Debug($"cargando la textura de la caminacion: {i}   {p_texturePath}/Walk/{i} .png ");
-            //}
+            //Walk Animation
+            List<Texture> walkXTexture = new List<Texture>();
+            for (int i = 0; i < 6; i++)
+            {
+                walkXTexture.Add(new Texture(p_texturePath + "/Walk/" + i + ".png"));
+                Engine.Debug($"cargando la textura de la caminacion: {i}   {p_texturePath}/Walk/{i} .png ");
+            }
 
-            //walk = new Animation(p_texturePath + "/Walk/", walkXTexture, 0.1f, true);
+            walk = new Animation(p_texturePath + "/Walk/", walkXTexture, 0.1f, true);
 
             currentAnimation = idle;
             transform = new TransformData(startposition, new Vector2(1.0f, 1.0f),0.0f);
-            //transform.Position = startposition;
-            //transform.Rotation = 0f;
-            //transform.Scale = new Vector2(1.0f, 1.0f);
+            //Position = startposition;
+            //Rotation = 0f;
+            //Scale = (1.0f, 1.0f);
         }
 
         public void TakeDamage()
@@ -76,7 +64,7 @@ namespace Game
             }
         }
 
-        private void Die()
+        protected void Die()
         {
 
             isAlive = false;
@@ -109,7 +97,7 @@ namespace Game
             return transform.Scale;
         }
 
-        private Animation CreateAnimation(string route, int frames, float speed, bool loop)
+        protected Animation CreateAnimation(string route, int frames, float speed, bool loop)
         {
             var textures = new List<Texture>();
 

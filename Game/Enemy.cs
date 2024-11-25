@@ -21,12 +21,12 @@ namespace Game
         //public bool isAlive = true;
         //private int life = 3;
 
-        private Animation idle;
-        private Animation walk;
+        //private Animation idle;
+        //private Animation walk;
 
         //private float x;
         //private float y;
-        private float speed = 3.0f;
+        //private float speed = 3.0f;
         //private float width = 1.0f;  // Ancho del enemigo
         //private float height = 1.0f; // Alto del enemigo
 
@@ -157,7 +157,7 @@ namespace Game
             return isAlive;
         }
 
-        private void FollowPlayer()
+        protected void FollowPlayer()
         {
             isMoving = true;
 

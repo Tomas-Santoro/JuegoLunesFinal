@@ -54,8 +54,8 @@ namespace Game
         private int direcFlip = 1;
 
 
-        private Animation idle;
-        private Animation walk;
+        //private Animation idle;
+        //private Animation walk;
         private Animation attack;
         private Animation hit;
 
@@ -90,23 +90,23 @@ namespace Game
 
             string p_texturePath = "Textures/Animations/Player";
 
-            List<Texture> idleTexture = new List<Texture>();
-            for (int i = 0; i < 6; i++)
-            {
-                idleTexture.Add(new Texture(p_texturePath + "/Idle/" + i + ".png"));
-            }
-            idle = new Animation(p_texturePath + "/Idle/", idleTexture, 0.5f, true);
+            //List<Texture> idleTexture = new List<Texture>();
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    idleTexture.Add(new Texture(p_texturePath + "/Idle/" + i + ".png"));
+            //}
+            //idle = new Animation(p_texturePath + "/Idle/", idleTexture, 0.5f, true);
 
-            //Walk Animation
-            List<Texture> walkXTexture = new List<Texture>();
-            for (int i = 0; i < 6; i++)
-            {
-                walkXTexture.Add(new Texture(p_texturePath + "/Walk/" + i + ".png"));
-                Engine.Debug($"cargando la textura de la caminacion: {i}   {p_texturePath}/Walk/{i} .png ");
+            ////Walk Animation
+            //List<Texture> walkXTexture = new List<Texture>();
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    walkXTexture.Add(new Texture(p_texturePath + "/Walk/" + i + ".png"));
+            //    Engine.Debug($"cargando la textura de la caminacion: {i}   {p_texturePath}/Walk/{i} .png ");
 
-            }
+            //}
 
-            walk = new Animation(p_texturePath + "/Walk/", walkXTexture, 0.1f, true);
+            //walk = new Animation(p_texturePath + "/Walk/", walkXTexture, 0.1f, true);
 
             Engine.Debug($"cargando las texturas del jugador");
         }

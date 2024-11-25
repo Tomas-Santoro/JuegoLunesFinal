@@ -12,13 +12,16 @@ namespace Game
 
         //public static string p_texturePathe ="";
         public static Player player = new Player();  //REVISAR ESTO PARA UML agregacion
-        ObjectPool<Enemy> enemyPool = new ObjectPool<Enemy>(5);
+        
+        //Pool de enemigos creada aca
+        //decidimos no ponerla aca y dejarla en el enemy manager
+        //ObjectPool<Enemy> enemyPool = new ObjectPool<Enemy>(5);
 
         //public static Vector2 startpos = new Vector2 (0,0);
 
         //public static Enemy enemy = new Enemy(p_texturePathe, startpos);
 
-        public static Enemy enemy = new Enemy();
+        public static Enemy enemy = new EnemyL();
      //  public static EnemigoR enemyR = new EnemigoR(new Vector2());
        // public EnemigoR enemy = new EnemigoR(new Vector2(185f, 185f));
         public static Food food = new Food(new Vector2(200f,500));
@@ -35,6 +38,8 @@ namespace Game
 
         public GameLevel(Texture background, LevelType p_levelType) : base(background, p_levelType)
         {
+
+            Engine.Debug($"El primer mapa se generó satisfactoriamente");
             //Creacion mapa de tiles
             for (int i = 0; i < width; i++)
             {
@@ -61,7 +66,7 @@ namespace Game
                         tilemap[i, j] = 10;
                     else tilemap[i, j] = 6;
 
-                   
+
                 }
             }
 
@@ -74,6 +79,8 @@ namespace Game
 
             player.OnChangedLife += OnLifeChangedHandler;
             player.OnDeathAction += GameManager.Instance.OnDeathHandler;
+            Engine.Debug($"Enemigos totales a ser vencidos: {EnemyManager.Instance.quantity}");
+            EnemyManager.Instance.OnEnemyDefeated += GameManager.Instance.OnEnemyDefeatedHandler;
          
 
         }

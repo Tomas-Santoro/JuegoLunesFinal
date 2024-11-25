@@ -28,57 +28,64 @@ namespace Game
         private List<Enemy> enemies;
         private ObjectPool<Enemy> enemyPool;
 
+        public delegate void Defeat();
+        private event Defeat OnDefeat;
+        public event Defeat OnEnemyDefeated
+        {
+            add => OnDefeat += value;
+            remove => OnDefeat -= value;
+        }
+
         private EnemyManager() {
             enemyQuantity = 5;
             enemies = new List<Enemy>();
-            enemyPool = new ObjectPool<Enemy>();
+            enemyPool = new ObjectPool<Enemy>(5);
         }
 
         public int quantity { get => enemyQuantity; set => enemyQuantity = value; }
-    public Enemy CreateRandomEnemy(Vector2 position)
-    {
-        // Generar un número aleatorio entre 1 y 3
-        Random random = new Random();
-        int enemyType = random.Next(1, 4); // 1, 2, o 3
+        public Enemy CreateRandomEnemy(Vector2 position)
+        {
+            // Generar un número aleatorio entre 1 y 3
+            Random random = new Random();
+            int enemyType = random.Next(1, 4); // 1, 2, o 3
 
-        Enemy enemyTemplate;
-        if (enemyType == 1)
-        {
-            enemyTemplate = new Enemy("Textures/Animations/Enemy", position);
-        }
-        else if (enemyType == 2)
-        {
-            enemyTemplate = new EnemigoR(position);
-        }
-        //else if (enemyType == 3)
-        //{
-        //    enemyTemplate = new EnemyL(position);
-        //}
-        else
-        {
-            throw new ArgumentException("Tipo de enemigo desconocido.");
-        }
+            Enemy enemyTemplate;
+            if (enemyType == 1)
+            {
+                enemyTemplate = new EnemyN();//("Textures/Animations/Enemy", position);
+            }
+            else if (enemyType == 2)
+            {
+                    enemyTemplate = new EnemigoR();//(position);
+            }
+            else if (enemyType == 3)
+            {
+                enemyTemplate = new EnemyL();
+            }
+            else
+            {
+                throw new ArgumentException("Tipo de enemigo desconocido.");
+            }
 
-        enemies.Add(enemyTemplate);
+            enemies.Add(enemyTemplate);
             enemyTemplate.SetPosition(position);
             return enemyTemplate;
-    }
+        }
 
         // Método para liberar un enemigo de vuelta a la pool
         public void ReleaseEnemy(Enemy enemy)
         {
             enemies.Remove(enemy);
+            OnDefeat.Invoke();
             enemyPool.ReleaseObject(enemy);
         }
 
 
         // Método para obtener la lista de enemigos
         public List<Enemy> GetEnemies()
-    {
-        return enemies;
+        {
+            return enemies;
+        }
     }
-    }
-
-
 
 }

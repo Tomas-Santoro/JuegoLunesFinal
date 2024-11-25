@@ -51,7 +51,7 @@ namespace Game
                     currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/ScreenDefeat.png"), LevelType.Defeat);
                     break;
                 case LevelType.Victory:
-                    currentLevel = new GameLevel(Engine.GetTexture("Textures/Screens/ScreenVictory.png"), LevelType.Victory);
+                    currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/ScreenVictory.png"), LevelType.Victory);
                     break;
 
             }
@@ -73,6 +73,14 @@ namespace Game
             }
             currentLevel.Update();
         }
+
+        public void OnEnemyDefeatedHandler()
+        {
+            if (EnemyManager.Instance.quantity <= 0) {
+                ChangeLevel(LevelType.Victory);
+            }
+        }
+
         public void Render()
         {
             currentLevel.Render();
