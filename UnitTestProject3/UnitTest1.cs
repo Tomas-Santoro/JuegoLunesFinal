@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Media;
 
+
 namespace UnitTestProject1
 {
     [TestClass]
@@ -101,7 +102,7 @@ namespace UnitTestProject1
                 Assert.AreEqual(resultadoEsperado, texture.Path);
             }
         }
-
+    //NO BORRAR SON PARTE DEL TEST
         public static class TextureManager
         {
             private static Dictionary<string, Texture> textures = new Dictionary<string, Texture>();
@@ -129,9 +130,57 @@ namespace UnitTestProject1
             }
         }
 
+    //***************************************************************
 
 
+    //[TestClass]
+    //public class EnemyTests
+    //{
+    //    [TestMethod]
+    //    public void Enemy_FollowsPlayer_WhenFar()
+    //    {
+    //        // Arrange
+    //        var enemy = new Enemy();
+    //        enemy.SetPosition(new Vector2(0, 0));
+    //        GameLevel.player = new Player();
+    //        GameLevel.player.Position = new Vector2(100, 0);
+
+    //        // Act
+    //        enemy.Update();
+
+    //        // Assert
+    //        Assert.IsTrue(enemy.Position.X > 0); // Se mueve hacia el jugador
+    //    }
+    //}
+
+    [TestClass]
+    public class EnemyTests
+    {
+        [TestMethod]
+        public void Enemy_FollowsPlayer_WhenFar()
+        {
+            // Arrange
+            var enemy = new Enemy();
+            enemy.SetPosition(new Vector2(0, 0));
+            GameLevel.player = new Player();
+            GameLevel.player.Position = new Vector2(100, 0);
+
+            // Act
+            enemy.Update();
+
+            // Assert
+            Assert.IsTrue(enemy.Position.X > 0); // Se mueve hacia el jugador
+        }
     }
+
+
+
+
+
+
+
+
+}
 
 
 
