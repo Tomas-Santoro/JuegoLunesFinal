@@ -55,7 +55,6 @@
     <Compile Include="MenuLevel.cs" />
     <Compile Include="ObjectPool.cs" />
     <Compile Include="Player.cs" />
-    <Compile Include="PooledObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="CollisionsUtilities.cs" />
     <Compile Include="IRenderer.cs" />

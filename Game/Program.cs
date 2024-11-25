@@ -46,8 +46,6 @@ namespace Game
 
             private static void Update()
             {
-             //   player.Update();
-             //   enemy.Update();
          
                 GameManager.Instance.Update();
             }

@@ -86,20 +86,7 @@ namespace Game
 
         public void Update()
         {
-            //foreach (var enemy in GetEnemies())
-            //{
-            //    if (!enemy.isAlive)
-            //    {
-            //        ReleaseEnemy(enemy);
-            //        quantity--;
-            //    }
-            //    else
-            //    {
-            //        enemy.Update();
-            //    }
-            //}
 
-            
             for (int i = enemies.Count() - 1; i >= 0; i--) // Iterar de atrás hacia adelante
             {
                 Enemy enemy = enemies[i];

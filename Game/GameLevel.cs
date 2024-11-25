@@ -10,28 +10,12 @@ namespace Game
     public class GameLevel : Level
     {
 
-        //public static string p_texturePathe ="";
-        public static Player player = new Player();  //REVISAR ESTO PARA UML agregacion
+
+        public static Player player = new Player(); 
         
-        //Pool de enemigos creada aca
-        //decidimos no ponerla aca y dejarla en el enemy manager
-        //ObjectPool<Enemy> enemyPool = new ObjectPool<Enemy>(5);
-
-        //public static Vector2 startpos = new Vector2 (0,0);
-
-        //public static Enemy enemy = new Enemy(p_texturePathe, startpos);
-
-
-        //Enemigo original comentado para testear
-        //public static Enemy enemy = new EnemyL();
-        
-        //  public static EnemigoR enemyR = new EnemigoR(new Vector2());
-       // public EnemigoR enemy = new EnemigoR(new Vector2(185f, 185f));
         public static Food food = new Food(new Vector2(200f,500));
 
-        //public EnemyManager = new EnemyManager();
 
-        //public static Enemy enemy = new Enemy("p_texturePathe", new Vector2(0, 0));  //REVISAR ESTO PARA UML agregacion
 
         private const int width = 20;//27;
         private const int height = 10;// 16;
@@ -93,13 +77,6 @@ namespace Game
             Engine.Debug($"vida del jugador: {life}");
         }
 
-        //public void OnDeathHandler()
-        //{
-        //    Engine.Debug("aaaaaaaaa");
-        //}
-
-
-
         public override void Update()
         {
             player.Update();
@@ -107,34 +84,8 @@ namespace Game
             food.Update(player);
             EnemyManager.Instance.Update();
 
-            //if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(), food.GetPosition(), food.GetSize()))
-       
-
-
-            //for (int i = 0; i < EnemyManager.Instance.GetEnemies().Count(); i++)
             foreach (var enemy in EnemyManager.Instance.GetEnemies())
             {
-                // Verifica colisión entre jugador y enemigo
-                //if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(),
-                //    enemy.GetPosition(), enemy.GetSize()))
-                //{
-                //    // Si el jugador está atacando y el enemigo está vivo
-                //    if (player.IsAttacking() && enemy.IsAlive())
-                //    {
-                //        enemy.GetDamage(1); // El enemigo recibe daño y puede morir
-
-
-                //        //Hardcodeado para testear********************************************************************************
-                //        Engine.Debug("El enemigo ha muerto");
-                //        //enemy = new Enemy();************************************************************************************
-
-                //    }
-                //    else if (enemy.IsAlive())
-                //    {
-                //        player.TakeDamage(); // El jugador recibe daño si no está atacando
-                //    }
-
-                //}
 
                 //Nueva colisión entre Jugador y Enemigo
                 // Si el jugador está atacando y el enemigo está vivo

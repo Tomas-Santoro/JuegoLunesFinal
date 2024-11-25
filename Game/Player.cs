@@ -102,23 +102,6 @@ namespace Game
 
             string p_texturePath = "Textures/Animations/Player";
 
-            //List<Texture> idleTexture = new List<Texture>();
-            //for (int i = 0; i < 6; i++)
-            //{
-            //    idleTexture.Add(new Texture(p_texturePath + "/Idle/" + i + ".png"));
-            //}
-            //idle = new Animation(p_texturePath + "/Idle/", idleTexture, 0.5f, true);
-
-            ////Walk Animation
-            //List<Texture> walkXTexture = new List<Texture>();
-            //for (int i = 0; i < 6; i++)
-            //{
-            //    walkXTexture.Add(new Texture(p_texturePath + "/Walk/" + i + ".png"));
-            //    Engine.Debug($"cargando la textura de la caminacion: {i}   {p_texturePath}/Walk/{i} .png ");
-
-            //}
-
-            //walk = new Animation(p_texturePath + "/Walk/", walkXTexture, 0.1f, true);
 
             Engine.Debug($"cargando las texturas del jugador");
 
@@ -295,26 +278,6 @@ namespace Game
             Debug.Print(life.ToString());
             Debug.Print(CurrentAnimation.ToString());
         }
-
-        //public void Draw()
-        //{
-        //    if (!isAlive)
-        //    {
-        //        return;
-        //    }
-        //    var texture = currentAnimation.CurrentFrame;
-        //    Engine.Draw(texture, (int)x, (int)y, direcFlip, 1, 0, 0, 0); // Asegúrate de dibujar la textura correcta
-        //}
-
-        //public Vector2 GetPosition()
-        //{
-        //    return new Vector2(x, y);
-        //}
-
-        //public Vector2 GetSize()
-        //{
-        //    return new Vector2(width, height);
-        //}
 
         private Animation CreateAnimation(string route, int frames, float speed, bool loop)
         {

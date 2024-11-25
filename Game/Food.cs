@@ -86,10 +86,14 @@ namespace Game
         {
             if (CollisionsUtilities.IsCircleColliding(player.GetPosition() + (player.GetSize() / 2), 30, GetPosition() + (GetSize() / 2), 30))
             {
-                GetHeal(1, player);
-
-
-
+                if(player.Life == 7)
+                {
+                    return ;
+                }
+                else
+                {
+                    GetHeal(1, player);
+                }
             }
                // Engine.Debug($"NO se CURA         {GetPosition()} pos jugador  {Player.Instance.Position}" );
         }

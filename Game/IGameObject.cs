@@ -13,8 +13,5 @@ namespace Game
 
         void GetHeal(int heal,Player player);
 
-       // void Update();
-        
-       // void Draw();
     }
 }

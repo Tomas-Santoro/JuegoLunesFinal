@@ -11,8 +11,6 @@ namespace Game
         int HitPoints { get; }
         bool IsDestroyed { get; set; }
 
-        event Action<IDamageable> OnDestroyed;
-
         void GetDamage(int damage);
         void Destroy();
     }

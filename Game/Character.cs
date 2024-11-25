@@ -88,9 +88,6 @@ namespace Game
             render.Texture = currentAnimation.CurrentFrame;
             render.Render(transform);
 
-            //Version original sin componente Render
-            //var texture = currentAnimation.CurrentFrame;
-            //Engine.Draw(texture, transform.Position.X, transform.Position.Y, transform.Scale.X, transform.Scale.Y, transform.Rotation, 0, 0);
         }
 
         public Vector2 GetPosition()
@@ -128,6 +125,5 @@ namespace Game
 
         public Animation CurrentAnimation { get => currentAnimation; set => currentAnimation = value; }
 
-        //public int Life { get => life; set => life = value; }
     }
 }
