@@ -76,7 +76,7 @@ namespace Game
 
         public void OnEnemyDefeatedHandler()
         {
-            if (EnemyManager.Instance.quantity <= 0) {
+            if (EnemyManager.Instance.quantity == 0) {
                 ChangeLevel(LevelType.Victory);
             }
         }

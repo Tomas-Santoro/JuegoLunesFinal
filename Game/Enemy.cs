@@ -116,8 +116,8 @@ namespace Game
         {
             if (!isAlive)
             {
-               
-                GameManager.Instance.ChangeLevel(LevelType.Victory);
+                //COmentado para testear la pool de enemigos
+                //GameManager.Instance.ChangeLevel(LevelType.Victory);
 
                 return;
             }

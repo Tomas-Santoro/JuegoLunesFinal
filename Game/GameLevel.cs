@@ -21,8 +21,11 @@ namespace Game
 
         //public static Enemy enemy = new Enemy(p_texturePathe, startpos);
 
-        public static Enemy enemy = new EnemyL();
-     //  public static EnemigoR enemyR = new EnemigoR(new Vector2());
+
+        //Enemigo original comentado para testear
+        //public static Enemy enemy = new EnemyL();
+        
+        //  public static EnemigoR enemyR = new EnemigoR(new Vector2());
        // public EnemigoR enemy = new EnemigoR(new Vector2(185f, 185f));
         public static Food food = new Food(new Vector2(200f,500));
 
@@ -100,33 +103,40 @@ namespace Game
         public override void Update()
         {
             player.Update();
-            enemy.Update();
+            //enemy.Update();
             food.Update();
+            EnemyManager.Instance.Update();
 
             if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(), food.GetPosition(), food.GetSize()))
             {
                 Engine.Debug("healed");
             }
-            // Verifica colisión entre jugador y enemigo
-            if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(),
-                enemy.GetPosition(), enemy.GetSize()))
+
+
+            //for (int i = 0; i < EnemyManager.Instance.GetEnemies().Count(); i++)
+            foreach (var enemy in EnemyManager.Instance.GetEnemies())
             {
-                // Si el jugador está atacando y el enemigo está vivo
-                if (player.IsAttacking() && enemy.IsAlive())
+                // Verifica colisión entre jugador y enemigo
+                if (CollisionsUtilities.IsBoxColliding(player.GetPosition(), player.GetSize(),
+                    enemy.GetPosition(), enemy.GetSize()))
                 {
-                    enemy.GetDamage(1); // El enemigo recibe daño y puede morir
+                    // Si el jugador está atacando y el enemigo está vivo
+                    if (player.IsAttacking() && enemy.IsAlive())
+                    {
+                        enemy.GetDamage(1); // El enemigo recibe daño y puede morir
 
 
-                    //Hardcodeado para testear********************************************************************************
-                    Engine.Debug("El enemigo ha muerto");
-                    //enemy = new Enemy();************************************************************************************
+                        //Hardcodeado para testear********************************************************************************
+                        Engine.Debug("El enemigo ha muerto");
+                        //enemy = new Enemy();************************************************************************************
+
+                    }
+                    else if (enemy.IsAlive())
+                    {
+                        player.TakeDamage(); // El jugador recibe daño si no está atacando
+                    }
 
                 }
-                else if (enemy.IsAlive())
-                {
-                    player.TakeDamage(); // El jugador recibe daño si no está atacando
-                }
-
             }
 
             //Puesto solo para testear********************************************************************************
@@ -141,14 +151,22 @@ namespace Game
 
             Engine.Draw(background);
 
-            if(enemy.isAlive)
+            if(EnemyManager.Instance.quantity >= 0)
             {
-            DrawMap();
+                DrawMap();
 
-            player.Draw();
+                player.Draw();
+
+
             }
+
             food.Draw();
-            enemy.Draw();
+
+            foreach (var enemy in EnemyManager.Instance.GetEnemies())
+            {
+                enemy.Draw();
+            }
+
             
         }
 

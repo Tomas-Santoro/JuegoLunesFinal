@@ -43,7 +43,9 @@ namespace Game
         }
 
         public int quantity { get => enemyQuantity; set => enemyQuantity = value; }
-        public Enemy CreateRandomEnemy(Vector2 position)
+        //Version original, la modificada no recibe parámetros de entrada
+        //public Enemy CreateRandomEnemy(Vector2 position)
+        public Enemy CreateRandomEnemy()
         {
             // Generar un número aleatorio entre 1 y 3
             Random random = new Random();
@@ -68,7 +70,7 @@ namespace Game
             }
 
             enemies.Add(enemyTemplate);
-            enemyTemplate.SetPosition(position);
+            //enemyTemplate.SetPosition(position);
             return enemyTemplate;
         }
 
@@ -76,10 +78,50 @@ namespace Game
         public void ReleaseEnemy(Enemy enemy)
         {
             enemies.Remove(enemy);
+
+
             OnDefeat.Invoke();
             enemyPool.ReleaseObject(enemy);
         }
 
+        public void Update()
+        {
+            //foreach (var enemy in GetEnemies())
+            //{
+            //    if (!enemy.isAlive)
+            //    {
+            //        ReleaseEnemy(enemy);
+            //        quantity--;
+            //    }
+            //    else
+            //    {
+            //        enemy.Update();
+            //    }
+            //}
+
+            
+            for (int i = enemies.Count() - 1; i >= 0; i--) // Iterar de atrás hacia adelante
+            {
+                Enemy enemy = enemies[i];
+                if (!enemy.isAlive)
+                {
+                    ReleaseEnemy(enemy);
+                    Engine.Debug($"El enemigo que tiene que morir es el numero: {i}");
+                    //enemies.RemoveAt(i); // Elimina el enemigo
+
+                    Engine.Debug($"Cantidad de enemigos restantes a derrotar es: {quantity}");  
+                    quantity--;
+                }
+                else
+                {
+                    enemy.Update();
+                }
+            }
+
+            if (quantity > 0 && GetEnemies().Count() <= 2) {
+                CreateRandomEnemy();
+            }
+        }
 
         // Método para obtener la lista de enemigos
         public List<Enemy> GetEnemies()

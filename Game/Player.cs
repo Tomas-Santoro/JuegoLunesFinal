@@ -17,7 +17,7 @@ namespace Game
             remove => OnChangeLifeEvent -= value;
         }
 
-        private int life = 3;
+        //private int life = 7;
         public int Life
         {
             get => life;
@@ -109,6 +109,8 @@ namespace Game
             //walk = new Animation(p_texturePath + "/Walk/", walkXTexture, 0.1f, true);
 
             Engine.Debug($"cargando las texturas del jugador");
+
+            life = 7;
         }
 
         public void SetPosition(Vector2 position)

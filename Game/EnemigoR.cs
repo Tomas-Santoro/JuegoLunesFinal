@@ -8,7 +8,7 @@ namespace Game
 {
     public class EnemigoR : Enemy
     {
-        public EnemigoR() : base("Textures/Animations/EnemigoR", new Vector2(400.0f, 400.0f))
+        public EnemigoR() : base("Textures/Animations/EnemigoR", new Vector2(800.0f, 200.0f))
         {
             // Cambiar la velocidad del enemigo
             Engine.Debug("se creo enemigo rapido");
