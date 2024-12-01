@@ -6,13 +6,7 @@ namespace Game
 {
     public delegate void TestDel(int a);
     #region Level
-    public enum LevelType
-    {
-        Menu,
-        Game,
-        Defeat,
-        Victory
-    }
+   
     
 
     #endregion

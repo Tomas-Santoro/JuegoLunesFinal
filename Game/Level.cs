@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace Game
 {
+    public enum LevelType
+    {
+        Menu,
+        Game,
+        Defeat,
+        Victory,
+        Credits,
+        GameB
+
+    }
     public abstract class Level
     {
         protected Texture background; //Composicion, no puede existir el nivel sin la textura (background) 

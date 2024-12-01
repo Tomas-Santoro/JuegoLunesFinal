@@ -64,12 +64,17 @@ namespace Game
 
                 tilelist[i] = "Textures/Terrain/Grass/" + i + ".png";
             }
-
+            if(p_levelType == LevelType.Game)
+            {
             player.OnChangedLife += OnLifeChangedHandler;
             player.OnDeathAction += GameManager.Instance.OnDeathHandler;
             Engine.Debug($"Enemigos totales a ser vencidos: {EnemyManager.Instance.quantity}");
             EnemyManager.Instance.OnEnemyDefeated += GameManager.Instance.OnEnemyDefeatedHandler;
+            EnemyManager.Instance.quantity = 5;
+            }
+
          
+            
 
         }
 

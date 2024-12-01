@@ -10,6 +10,7 @@ namespace Game
     public class GameManager
     {
         private static GameManager instance;
+        private bool bossLevel = false;
 
         SoundPlayer soundPlayer = new SoundPlayer("Audio/backgroundMusic.wav");
         public static GameManager Instance
@@ -24,9 +25,9 @@ namespace Game
             }
         }
 
-        public object CurrentLevel { get; set; }
 
         private Level currentLevel;
+        public LevelType CurrentLevelType { get => currentLevel.LevelType; }
         private GameManager()
         {
             ChangeLevel(LevelType.Menu);
@@ -56,7 +57,12 @@ namespace Game
                     currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/ScreenVictory.png"), LevelType.Victory);
                     soundPlayer.Stop();
                     break;
-
+                case LevelType.Credits:
+                    currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/CreditsScreen.png"), LevelType.Credits);
+                    break;
+                case LevelType.GameB:
+                    currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/FondoNubes.png"), LevelType.Credits);
+                    break;
             }
         }
 
@@ -74,13 +80,23 @@ namespace Game
             {
                 ChangeLevel(LevelType.Game);
             }
+            if(Engine.GetKey(Keys.C)) 
+            {
+                ChangeLevel(LevelType.Credits);
+            }
             currentLevel.Update();
         }
 
         public void OnEnemyDefeatedHandler()
         {
-            if (EnemyManager.Instance.quantity == 0) {
+            if(EnemyManager.Instance.quantity == 0 && bossLevel == true)
+            {
                 ChangeLevel(LevelType.Victory);
+            }
+            if (EnemyManager.Instance.quantity == 0) 
+            {
+                ChangeLevel(LevelType.GameB);
+                bossLevel = true;
             }
         }
 

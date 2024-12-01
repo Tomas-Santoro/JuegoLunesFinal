@@ -298,6 +298,9 @@
     <Content Include="Engine.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Textures\Screens\CreditsScreen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Textures\Screens\FondoNubes.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
