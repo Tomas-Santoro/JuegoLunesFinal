@@ -12,7 +12,7 @@ namespace Game
     {
 
 
-        public static Player player = new Player(); 
+        public static Player player;// = new Player(); 
         
         public static Food food = new Food(new Vector2(200f,500));
 
@@ -27,7 +27,7 @@ namespace Game
         public GameLevel(Texture background, LevelType p_levelType) : base(background, p_levelType)
         {
 
-            Engine.Debug($"El primer mapa se generó satisfactoriamente");
+            Engine.Debug($"El mapa se generó satisfactoriamente");
             //Creacion mapa de tiles
             for (int i = 0; i < width; i++)
             {
@@ -58,21 +58,26 @@ namespace Game
                 }
             }
 
+            player = new Player(); 
+
             //tilelist[0] = null;
             for (int i = 0; i < listlength; i++)
             {
 
                 tilelist[i] = "Textures/Terrain/Grass/" + i + ".png";
             }
-            if(p_levelType == LevelType.Game)
+            if (p_levelType == LevelType.Game)
             {
-            player.OnChangedLife += OnLifeChangedHandler;
-            player.OnDeathAction += GameManager.Instance.OnDeathHandler;
-            Engine.Debug($"Enemigos totales a ser vencidos: {EnemyManager.Instance.quantity}");
-            EnemyManager.Instance.OnEnemyDefeated += GameManager.Instance.OnEnemyDefeatedHandler;
-            EnemyManager.Instance.quantity = 5;
+                player.OnChangedLife += OnLifeChangedHandler;
+                player.OnDeathAction += GameManager.Instance.OnDeathHandler;
+                Engine.Debug($"Enemigos totales a ser vencidos: {EnemyManager.Instance.quantity}");
+                EnemyManager.Instance.OnEnemyDefeated += GameManager.Instance.OnEnemyDefeatedHandler;
+                EnemyManager.Instance.quantity = 5;
             }
-
+            else if (p_levelType == LevelType.GameB) {
+                EnemyManager.Instance.quantity = 1;
+                Engine.Debug("El nivel 2 se cargó satisfactoriamente");
+            }
          
             
 

@@ -37,7 +37,7 @@ namespace Game
         }
 
         private EnemyManager() {
-            enemyQuantity = 5;
+            //enemyQuantity = 5;
             enemies = new List<Enemy>();
             enemyPool = new ObjectPool<Enemy>(5);
         }
@@ -77,38 +77,60 @@ namespace Game
         // Método para liberar un enemigo de vuelta a la pool
         public void ReleaseEnemy(Enemy enemy)
         {
+            Engine.Debug($"Cantidad de enemigos restantes a derrotar es: {quantity}");
+            quantity--;
             enemies.Remove(enemy);
-
-
             OnDefeat.Invoke();
             enemyPool.ReleaseObject(enemy);
         }
 
         public void Update()
         {
-
-            for (int i = enemies.Count() - 1; i >= 0; i--) // Iterar de atrás hacia adelante
-            {
-                Enemy enemy = enemies[i];
-                if (!enemy.isAlive)
+            if (GameManager.Instance.CurrentLevelType == LevelType.Game) {
+                //Engine.Debug($"------- Enemy Count = {enemies.Count()}");
+                for (int i = enemies.Count() - 1; i >= 0; i--) // Iterar de atrás hacia adelante
                 {
-                    ReleaseEnemy(enemy);
-                    Engine.Debug($"El enemigo que tiene que morir es el numero: {i}");
-                    //enemies.RemoveAt(i); // Elimina el enemigo
+                    Enemy enemy = enemies[i];
+                    if (!enemy.isAlive)
+                    {
+                        ReleaseEnemy(enemy);
+                        Engine.Debug($"El enemigo que tiene que morir es el numero: {i}");
+                        //enemies.RemoveAt(i); // Elimina el enemigo
 
-                    Engine.Debug($"Cantidad de enemigos restantes a derrotar es: {quantity}");  
-                    quantity--;
+
+
+                    }
+                    else
+                    {
+                        enemy.Update();
+                    }
                 }
-                else
+
+
+                //quantity = 5
+                //Count = actuales
+                // cuando count es 3, quantity sigue siendo 5
+                // tenemos 5 manzanas para repartir entre 
+                // quantity - count > 0
+                if (quantity > 0 && GetEnemies().Count() <= 2 && (quantity - GetEnemies().Count() > 0)) {
+                    CreateRandomEnemy();
+                }
+            } else {
+                //Engine.Debug("-------------------------- Se supone que estamos en el nivel 2");
+                if (quantity > 0 && GetEnemies().Count() <= 1 && (quantity - GetEnemies().Count() > 0))
                 {
-                    enemy.Update();
+                    CreateRandomEnemy();
                 }
-            }
-
-            if (quantity > 0 && GetEnemies().Count() <= 2) {
-                CreateRandomEnemy();
             }
         }
+
+        //public void KillAll() {
+        //    foreach (Enemy enemy in enemies) {
+        //        if (enemy.isAlive) { 
+        //            enemy.isAlive = false;
+        //        }
+        //    }
+        //}
 
         // Método para obtener la lista de enemigos
         public List<Enemy> GetEnemies()

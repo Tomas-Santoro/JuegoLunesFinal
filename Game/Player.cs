@@ -227,6 +227,7 @@ namespace Game
             if (Engine.GetKey(Keys.J) && !isAttacking)
             {
                 StartAttack();
+                Engine.Debug($" La cantidad de enemigos a derrotar es: {EnemyManager.Instance.quantity}");
             }
 
             if (isAttacking)

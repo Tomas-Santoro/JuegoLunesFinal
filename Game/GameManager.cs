@@ -61,7 +61,8 @@ namespace Game
                     currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/CreditsScreen.png"), LevelType.Credits);
                     break;
                 case LevelType.GameB:
-                    currentLevel = new MenuLevel(Engine.GetTexture("Textures/Screens/FondoNubes.png"), LevelType.Credits);
+                    currentLevel = new GameLevel(Engine.GetTexture("Textures/Screens/FondoNubes.png"), LevelType.GameB);
+                    Engine.Debug("Nivel 2Game");
                     break;
             }
         }
@@ -89,14 +90,17 @@ namespace Game
 
         public void OnEnemyDefeatedHandler()
         {
-            if(EnemyManager.Instance.quantity == 0 && bossLevel == true)
+            Engine.Debug($"-------------- La cantidad de enemigos restantes luego de matar al último es {EnemyManager.Instance.quantity}");
+
+            if (EnemyManager.Instance.quantity == 0 && bossLevel == true)
             {
                 ChangeLevel(LevelType.Victory);
             }
-            if (EnemyManager.Instance.quantity == 0) 
+            else if (EnemyManager.Instance.quantity == 0) 
             {
                 ChangeLevel(LevelType.GameB);
                 bossLevel = true;
+                Engine.Debug("Estamos en el nivel dos vaaaaaamooooooooooooooooooooosssss");
             }
         }
 
