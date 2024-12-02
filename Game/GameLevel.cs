@@ -63,8 +63,13 @@ namespace Game
             //tilelist[0] = null;
             for (int i = 0; i < listlength; i++)
             {
-
-                tilelist[i] = "Textures/Terrain/Grass/" + i + ".png";
+                if (p_levelType == LevelType.Game)
+                {
+                    tilelist[i] = "Textures/Terrain/Grass/" + i + ".png";
+                }
+                else {
+                    tilelist[i] = "Textures/Terrain/Farm/" + i + ".png";
+                }
             }
 
 
@@ -78,7 +83,7 @@ namespace Game
                 EnemyManager.Instance.quantity = 5;
             }
             else if (p_levelType == LevelType.GameB) {
-                EnemyManager.Instance.quantity = 1;
+                EnemyManager.Instance.quantity = 15;
                 EnemyManager.Instance.SetBossLevel();
                 Engine.Debug("*************************El nivel 2 se cargó satisfactoriamente");
             }

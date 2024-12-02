@@ -70,7 +70,7 @@ namespace Game
             render = new Renderer();
         }
 
-        public void TakeDamage()
+        protected void TakeDamage()
         {
             life--;
             Engine.Debug($"Golpe recibido");

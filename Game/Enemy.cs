@@ -61,7 +61,7 @@ namespace Game
         }
 
 
-        public void Update()
+        public virtual void Update()
         {
             if (!isAlive)
             {
@@ -120,7 +120,7 @@ namespace Game
             Position = position;
         }
         //Implementacion de interfaz de daño
-        public void GetDamage(int damage)
+        public virtual void GetDamage(int damage)
         {
             hitPoints -= damage;
             if (hitPoints < 0)

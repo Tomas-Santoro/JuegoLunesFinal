@@ -335,3 +335,17 @@ E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Walk
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Walk\3.png
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Walk\4.png
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Walk\5.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Terrain\Farm\0.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Terrain\Farm\1.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Terrain\Farm\10.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Terrain\Farm\11.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Terrain\Farm\2.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Terrain\Farm\5.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Terrain\Farm\6.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Terrain\Farm\7.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Terrain\Farm\9.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Hit\5.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Hit\1.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Hit\2.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Hit\3.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Hit\4.png

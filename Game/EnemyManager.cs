@@ -51,6 +51,10 @@ namespace Game
             Random random = new Random();
             int enemyType = random.Next(1, 4); // 1, 2, o 3
 
+            if (GameManager.Instance.CurrentLevelType == LevelType.GameB) {
+                enemyType = 4;
+            }
+
             Enemy enemyTemplate = CreateSpecificEnemy(enemyType);
             //if (enemyType == 1)
             //{
@@ -155,7 +159,12 @@ namespace Game
                 return enemyTemplate = new EnemyL();
             }
             else if (enemyType == 4) {
-                return enemyTemplate = new Boss();
+                //return enemyTemplate = new Boss();
+                enemyTemplate = new Boss();
+
+                //enemyTemplate.SetPosition = RandomPos();
+                enemyTemplate.Position = RandomPos();
+                return enemyTemplate;
             }
             else
             {
@@ -175,6 +184,13 @@ namespace Game
         public List<Enemy> GetEnemies()
         {
             return enemies;
+        }
+
+        private Vector2 RandomPos() {
+            Random random = new Random();
+            int x = random.Next(1, 4);
+
+            return new Vector2(850, x * 100);
         }
     }
 

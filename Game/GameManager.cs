@@ -47,6 +47,7 @@ namespace Game
                     break;
                 case LevelType.Game:
                     currentLevel = new GameLevel(Engine.GetTexture("Textures/Screens/FondoNubes.png"), LevelType.Game);
+                    bossLevel = false;
                     soundPlayer.PlayLooping();
                     break;
                 case LevelType.Defeat:
