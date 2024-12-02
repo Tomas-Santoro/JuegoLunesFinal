@@ -51,23 +51,24 @@ namespace Game
             Random random = new Random();
             int enemyType = random.Next(1, 4); // 1, 2, o 3
 
-            Enemy enemyTemplate;
-            if (enemyType == 1)
-            {
-                enemyTemplate = new EnemyN();//("Textures/Animations/Enemy", position);
-            }
-            else if (enemyType == 2)
-            {
-                    enemyTemplate = new EnemigoR();//(position);
-            }
-            else if (enemyType == 3)
-            {
-                enemyTemplate = new EnemyL();
-            }
-            else
-            {
-                throw new ArgumentException("Tipo de enemigo desconocido.");
-            }
+            Enemy enemyTemplate = CreateSpecificEnemy(enemyType);
+            //if (enemyType == 1)
+            //{
+            //    enemyTemplate = new EnemyN();//("Textures/Animations/Enemy", position);
+            //}
+            //else if (enemyType == 2)
+            //{
+            //        enemyTemplate = new EnemigoR();//(position);
+            //}
+            //else if (enemyType == 3)
+            //{
+            //    enemyTemplate = new EnemyL();
+            //}
+            //else
+            //{
+            //    throw new ArgumentException("Tipo de enemigo desconocido.");
+            //}
+
 
             enemies.Add(enemyTemplate);
             //enemyTemplate.SetPosition(position);
@@ -86,7 +87,7 @@ namespace Game
 
         public void Update()
         {
-            if (GameManager.Instance.CurrentLevelType == LevelType.Game) {
+            //if (GameManager.Instance.CurrentLevelType == LevelType.Game) {
                 //Engine.Debug($"------- Enemy Count = {enemies.Count()}");
                 for (int i = enemies.Count() - 1; i >= 0; i--) // Iterar de atrás hacia adelante
                 {
@@ -115,12 +116,50 @@ namespace Game
                 if (quantity > 0 && GetEnemies().Count() <= 2 && (quantity - GetEnemies().Count() > 0)) {
                     CreateRandomEnemy();
                 }
-            } else {
-                //Engine.Debug("-------------------------- Se supone que estamos en el nivel 2");
-                if (quantity > 0 && GetEnemies().Count() <= 1 && (quantity - GetEnemies().Count() > 0))
-                {
-                    CreateRandomEnemy();
-                }
+            //} else {
+            //    //Engine.Debug("-------------------------- Se supone que estamos en el nivel 2 POR QUE NO ANDAAAAAAAAAAAAAAAAjjjjjjjjjjjjjjjjjjjjj");
+            //    if (quantity > 0 && GetEnemies().Count() <= 1 && (quantity - GetEnemies().Count() > 0))
+            //    {
+            //        //Engine.Debug("-------------------------- Se supone que estamos en el nivel 2");
+            //        enemies.Add(CreateSpecificEnemy(4));
+            //    }
+            //}
+        }
+
+        public void SetBossLevel() {
+            //if (GameManager.Instance.CurrentLevelType == LevelType.GameB)
+            //{
+            //    if (quantity > 0 && GetEnemies().Count() <= 1 && (quantity - GetEnemies().Count() > 0))
+            //    {
+                    //Engine.Debug("-------------------------- Se supone que estamos en el nivel 2");
+                    enemies.Add(CreateSpecificEnemy(4));
+            //    }
+            //}
+        }
+
+        public Enemy CreateSpecificEnemy(int enemyType) {
+            Enemy enemyTemplate;
+
+            Engine.Debug($"-------CREANDO ENEMIGO--------- Enemigo especifico de tipo: {enemyType}");
+
+            if (enemyType == 1)
+            {
+                return enemyTemplate = new EnemyN();//("Textures/Animations/Enemy", position);
+            }
+            else if (enemyType == 2)
+            {
+                return enemyTemplate = new EnemigoR();//(position);
+            }
+            else if (enemyType == 3)
+            {
+                return enemyTemplate = new EnemyL();
+            }
+            else if (enemyType == 4) {
+                return enemyTemplate = new Boss();
+            }
+            else
+            {
+                throw new ArgumentException("Tipo de enemigo desconocido.");
             }
         }
 

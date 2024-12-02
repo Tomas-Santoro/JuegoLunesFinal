@@ -66,6 +66,9 @@ namespace Game
 
                 tilelist[i] = "Textures/Terrain/Grass/" + i + ".png";
             }
+
+
+
             if (p_levelType == LevelType.Game)
             {
                 player.OnChangedLife += OnLifeChangedHandler;
@@ -76,7 +79,8 @@ namespace Game
             }
             else if (p_levelType == LevelType.GameB) {
                 EnemyManager.Instance.quantity = 1;
-                Engine.Debug("El nivel 2 se cargó satisfactoriamente");
+                EnemyManager.Instance.SetBossLevel();
+                Engine.Debug("*************************El nivel 2 se cargó satisfactoriamente");
             }
          
             

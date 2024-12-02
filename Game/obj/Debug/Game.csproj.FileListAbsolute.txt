@@ -321,3 +321,17 @@ D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Animati
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Sprites\arrow.png
 D:\Tomas\Escritorio\dasdasd\ProyectoBase - 02-09\Game\bin\Debug\Textures\Screens\CreditsScreen.png
 E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Screens\CreditsScreen.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Hit\0.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Idle\0.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Idle\1.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Idle\2.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Idle\3.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Idle\4.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Idle\5.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Idle\6.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Walk\0.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Walk\1.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Walk\2.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Walk\3.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Walk\4.png
+E:\GitHub\JuegoLunesFinalFinalFinal\Game\bin\Debug\Textures\Animations\Boss\Walk\5.png
